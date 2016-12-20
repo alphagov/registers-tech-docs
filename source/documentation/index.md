@@ -12,4 +12,4 @@ Open registers APIs provide a direct and standard way to access data so you can 
 
 You can use the data from open registers to build menus and other widgets for forms. For example, you could use the country register to populate a menu for a user to select their location.
 
-Contact the GDS open registers team at registerteam@digital.cabinet-office.gov.uk if you have any problems or questions that are not covered in this guide.
+Contact the GDS open registers team at <a href="mailto:registerteam@digital.cabinet-office.gov.uk">registerteam@digital.cabinet-office.gov.uk</a> if you have any problems or questions that are not covered in this guide.

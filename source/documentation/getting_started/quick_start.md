@@ -1,3 +1,5 @@
+## Quick start guide
+
 1. Find out [what registers are available](#availablereg) and which you want to use. Each register has a read-only API. No authentication is required.
 2. [Find the endpoints you want](#apireference).
 3. Add `.json`, `.yaml`, `.csv`, `.tsv`, or `.ttl` to the end of the request URL (before any query parameters) to choose the format of the response, or amend headers to `accept application/json` or equivalent.

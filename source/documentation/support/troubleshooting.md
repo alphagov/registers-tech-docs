@@ -1,4 +1,4 @@
-Please find information below about common problems when using open registers. If your issue is not included or you are struggling to use open registers in your product or service, please contact the GDS open registers team at <a href="mailto:registerteam@digital.cabinet-office.gov.uk">registerteam@digital.cabinet-office.gov.uk</a>.
+Please find information below about common problems when using registers. If your issue is not included or you are struggling to use registers in your product or service, please contact the GDS registers team at <a href="mailto:registerteam@digital.cabinet-office.gov.uk">registerteam@digital.cabinet-office.gov.uk</a>.
 
 ### Error codes
 
@@ -10,11 +10,11 @@ Please find information below about common problems when using open registers. I
 
 ### Common issues
 
-**Open registers still in beta**
+**Registers still in beta**
 
 A register must pass certain criteria to move from discovery through to live. To move from beta to live, duplicate lists of the same information must be removed. For example, the country register will remain in beta until duplicate lists of countries are removed.  
 
-Despite the beta label, open registers in beta are reliable to use in products and services.
+Despite the beta label, registers in beta are reliable to use in products and services.
 
 **If you can't find a specific record**
 

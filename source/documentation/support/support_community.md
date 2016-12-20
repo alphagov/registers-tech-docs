@@ -1,10 +1,10 @@
 ## Support and community
 
-GDS maintains the open registers APIs and helps custodians to run their open registers.
+GDS maintains the registers APIs and helps custodians to run their registers.
 
-Contact the GDS open registers team at <a href="mailto:registerteam@digital.cabinet-office.gov.uk">registerteam@digital.cabinet-office.gov.uk</a> if you have any problems or questions that are not covered in this guide. Please include error messages if relevant.
+Contact the GDS registers team at <a href="mailto:registerteam@digital.cabinet-office.gov.uk">registerteam@digital.cabinet-office.gov.uk</a> if you have any problems or questions that are not covered in this guide. Please include error messages if relevant.
 
-The open registers team blog about their progress on the [Data in Government blog](https://data.blog.gov.uk/) and the [GDS blog](https://gds.blog.gov.uk/). Previous posts include:    
+The GDS registers team blog about their progress on the [Data in Government blog](https://data.blog.gov.uk/) and the [GDS blog](https://gds.blog.gov.uk/). Previous posts include:    
 
 * [Registers: authoritative lists you can trust](https://gds.blog.gov.uk/2015/09/01/registers-authoritative-lists-you-can-trust/)
 * [Linking registers](https://gds.blog.gov.uk/2015/12/16/linking-registers/)
@@ -13,4 +13,4 @@ The open registers team blog about their progress on the [Data in Government blo
 * [Local authority England alpha register](https://data.blog.gov.uk/2016/09/07/local-authority-england-alpha-register/)
 * [Registers in a digital ecosystem](https://data.blog.gov.uk/2016/09/12/registers-in-a-digital-ecosystem/)
 
-GDS also maintains a [technical specification](https://openregister.github.io/specification/) for open registers.
+GDS also maintains a [technical specification](https://openregister.github.io/specification/) for registers.

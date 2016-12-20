@@ -1,6 +1,6 @@
-## <a name="availablereg"></a>Available open registers
+## <a name="availablereg"></a>Available registers
 
-There are many open registers currently in discovery and alpha. These include open registers of territories, local authorities, and schools.
+There are many registers currently in discovery and alpha. These include registers of territories, local authorities, and schools.
 
 The country register is in beta, but available to use in your service.
 

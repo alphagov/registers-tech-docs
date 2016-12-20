@@ -9,7 +9,7 @@ Each register has a read-only API that allows you to:
 
 The base URL for each register API is of the form: https://{register name}.register.gov.uk/
 
-See the [list of available open registers](#availablereg) to find out the base URL for each register.
+See the [list of available registers](#availablereg) to find out the base URL for each register.
 
 Most of the APIs return paginated results. Follow the specific guidance for each endpoint to get the page(s) of entries, items, and records you need.  
 

@@ -1,13 +1,11 @@
-# Hello, World!
+# How to use registers
 
-## Edit Me!
+## Using registers in a service
 
-Open `source/documentation/index.md` in your favourite text editor and start editing!
+This is the API reference and general technical guide for open registers built by Government Digital Service (GDS). This guide is for developers, technical architects, and other members of service teams interested in using open registers in a service.
 
-You can write content in [Markdown](https://daringfireball.net/projects/markdown/) using **all** of the _usual_ syntax that you're used to!
+Open registers APIs provide a direct and standard way to access data so you can be confident the data in your service is accurate, up-to-date and authoritative.
 
-To change the title of the page or include additional files you'll need to edit `source/index.html.md.erb`.
+You can use the data from open registers to build menus and other widgets for forms. For example, you could use the country register to populate a menu for a user to select their location.
 
-If you want slightly more control, you can always use <strong>HTML</strong>.
-
-For more detail and troubleshooting, take a look at the `README.md` file in the root of this project.
+Contact the GDS open registers team at registerteam@digital.cabinet-office.gov.uk if you have any problems or questions that are not covered in this guide.

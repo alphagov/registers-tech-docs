@@ -1,6 +1,7 @@
 ## <a name="apireference"></a>API reference
 
-Each register has a read-only API that allows you to:
+Each register has a read-only API that allows you to:  
+
 * find out information about a register
 * get all the records from a register
 * find records that share attributes with each other

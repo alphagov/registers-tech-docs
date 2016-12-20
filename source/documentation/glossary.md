@@ -1,3 +1,5 @@
+## Glossary
+
 **custodian** - The person who is responsible for the data in the register. They're from the government department or agency responsible for the information in the register. They make sure the register is accurate and up-to-date.
 
 **entry** - An entry describes how a record has changed over time. An entry is a particular set of fields and values that were correct at one point in time. Entries are ordered by when they were added to a register.

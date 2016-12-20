@@ -1,3 +1,5 @@
+## Before you start
+
 To start using registers, you’ll need:  
 
 * a new or existing digital service that needs a reliable source of data, such as a list of countries

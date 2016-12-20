@@ -1,8 +1,8 @@
 ## Why use a register?
 
-An register has [distinct characteristics](https://gds.blog.gov.uk/2015/10/13/the-characteristics-of-a-register/) that make it different from a traditional database, for example.
+A register has [distinct characteristics](https://gds.blog.gov.uk/2015/10/13/the-characteristics-of-a-register/) that make it different from a traditional database, for example.
 
-An register:  
+A register:  
 
 * is canonical so it is the only place where government holds that data
 * only contains the data it was created to record and is append-only

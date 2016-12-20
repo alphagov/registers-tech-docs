@@ -298,9 +298,10 @@ Example URL: https://local-authority-eng.register.gov.uk/download-register
 
 Example request: `curl -o country.zip --request GET --url https://local-authority-eng.register.gov.uk/download-register`
 
-## Download updates from a register
+## Getting updates from a register
 
-You can download the new entries in 2 ways:
+You can download the new entries in 2 ways:  
+
 * download another copy of the full register
 * download individual updated entries for the records you are using
 

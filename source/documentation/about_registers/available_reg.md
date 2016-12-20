@@ -21,6 +21,20 @@ The country register contains the following fields:
 
 You may need to remove records with an end-date, such as East Germany, if your service or product only requires data about existing countries.
 
+### Territory register
+
+The [territory register](https://territory.register.gov.uk/) is a list of British English-language names and descriptive terms for political, administrative and geographical entities that aren’t recognised as countries by the UK. The register is maintained by the Foreign and Commonwealth Office (FCO) and is currently in beta.
+
+The register contains the following fields:     
+
+* `territory` (3 letter ISO 3166-1 code or equivalent)   
+* `name`(commnonly used name of a territory)  
+* `official-name`(official name of territory)  
+* `start-date` (when the territory was first recognised)  
+* `end-date`(when the territory was dissolved or changed its name)  
+
+You may need to remove records with an end-date if your service or product only requires data about existing local authorities.
+
 ### Local authorities (England) register
 
 The [register of local authorities in England](https://local-authority-eng.register.gov.uk/) is maintained by the Department for Communities and Local Government.
@@ -29,9 +43,22 @@ The register contains the following fields:
 
 * `local-authority-eng` (3 letter ISO code or equivalent)  
 * `local-authority-type` (type of local government organisation)  
-* `name`(commnonly used name of a local authority)  
+* `name`(commonly used name of a local authority)  
 * `official-name`(official name of local authority)  
 * `start-date` (when the local authority was first established)  
 * `end-date`(when the local authority was dissolved or changed its name)  
 
 You may need to remove records with an end-date if your service or product only requires data about existing local authorities.
+
+### Local authority type register
+
+The [register of local authority types](https://local-authority-type.register.gov.uk/) is a list of the types of local authority across the United Kingdom. The register is maintained by Government Digital Service.
+
+The register contains the following fields:     
+
+* `local-authority-type` (type of local government organisation)  
+* `name`(commonly used name of a local authority)  
+* `start-date` (when the local authority was first established)  
+* `end-date`(when the local authority was dissolved or changed its name)  
+
+You may need to remove records with an end-date if your service or product only requires data about existing local authority types.

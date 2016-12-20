@@ -293,6 +293,7 @@ Example response:
 Path: GET /download-register
 
 Download the full contents of the register in a ZIP file.
+
 *Note: This will download every entry and item as an individual JSON file. If you only want to download records, use `GET /records`.*
 
 Example URL: https://local-authority-eng.register.gov.uk/download-register

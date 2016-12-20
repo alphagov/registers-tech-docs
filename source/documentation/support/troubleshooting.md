@@ -1,5 +1,3 @@
-Please find information below about common problems when using registers. If your issue is not included or you are struggling to use registers in your product or service, please contact the GDS registers team at <a href="mailto:registerteam@digital.cabinet-office.gov.uk">registerteam@digital.cabinet-office.gov.uk</a>.
-
 ### Error codes
 
 | Error code | Description           |
@@ -9,6 +7,8 @@ Please find information below about common problems when using registers. If you
 | 500        | Internal server error |
 
 ### Common issues
+
+Please find information below about common problems when using registers. If your issue is not included or you are struggling to use registers in your product or service, please contact the GDS registers team at <a href="mailto:registerteam@digital.cabinet-office.gov.uk">registerteam@digital.cabinet-office.gov.uk</a>.
 
 **Registers still in beta**
 

@@ -1,4 +1,4 @@
-### Why open registers are different
+## Why open registers are different
 
 An open register has [distinct characteristics](https://gds.blog.gov.uk/2015/10/13/the-characteristics-of-a-register/) that make it different from a traditional database, for example.
 

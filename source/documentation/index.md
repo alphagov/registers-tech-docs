@@ -1,4 +1,4 @@
-# How to use registers
+# Technical user documentation for registers
 
 Registers are digital lists of accurate and up-to-date data about a particular topic from an authoritative source. For example, the [country register](https://country.register.gov.uk/) is a list of British English-language names and descriptive terms for countries. The [UK Government and Parliament petitions service](https://petition.parliament.uk/) uses the country register to populate a drop-down menu so a user can select their location.
 

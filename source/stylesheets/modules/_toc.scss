@@ -28,7 +28,7 @@
       a:link, a:visited {
         display: block;
         padding: 8px 0;
-        letter-spacing: 0.03em;
+        letter-spacing: 0.019em;
 
         &.toc-link--in-view {
           font-weight: bold;
@@ -133,11 +133,9 @@
         right: 0;
         top: 0;
 
+        float: right;
         width: 20px;
         height: 20px;
-        float: right;
-
-        text-indent: -10000px;
 
         background-image: file-url('govuk-icn-close.png');
         background-repeat: no-repeat;
@@ -156,6 +154,7 @@
         body {
           height: 100%;
           overflow: hidden;
+          pointer-events: none;
         }
 
         .toc-show {
@@ -164,6 +163,7 @@
 
         .toc {
           display: block;
+          pointer-events: auto;
           position: fixed;
           top: 0;
           bottom: 0;

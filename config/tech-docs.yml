@@ -3,16 +3,16 @@ host: registers-tech-docs.cloudapps.digital
 
 # Header-related options
 show_govuk_logo: true
-service_name: My First Service
-service_link: https://www.larry-the-cat.service.gov.uk
+service_name: Registers documentation
+service_link: https://registers.cloudapps.digital/
 phase: Beta
 
 # Links to show on right-hand-side of header
 header_links:
-  About: https://www.larry-the-cat.service.gov.uk
-  Get Started: https://www.larry-the-cat.service.gov.uk/get-started
+  About: https://registers.cloudapps.digital/
+  Using Registers: https://registers.cloudapps.digital/using-registers.html
   Documentation: /
-  Support: https://www.larry-the-cat.service.gov.uk/support
+  Support: https://registers.cloudapps.digital/support.html
 
 # Tracking ID from Google Analytics (e.g. UA-XXXX-Y)
 ga_tracking_id:

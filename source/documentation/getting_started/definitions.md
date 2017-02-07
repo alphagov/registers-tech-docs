@@ -4,7 +4,7 @@ Registers are made up of items, entries and records.
 
 **Items**
 
-Items are made up of fields and values containing information. They are the actual data contained within a register. For example, in the record for Great Britain in the country register, an item would be its country name, 'Great Britain' and its official citizen name, 'Brits'.
+Items are made up of fields and values containing information. They are the actual data contained within a register. For example, in the record for Great Britain in the country register, an item would be its country name, 'United Kingdom' and its official citizen name, 'Briton;British citizen'.
 
 Items are connected to entries with an item hash, an algorithm that maps data of arbitrary size to a byte string of fixed size. A hash is unique to its item and no item will have the same item-hash as another item, unless the item contains exactly the same information. For example, in the country register the item hash `sha-256:d97d6b34bc572e334cbd7898f785b72947557d9dbea59977077f231274259f3b` links that item with entry 195, which in turn is tied to the record for Vatican City.
 

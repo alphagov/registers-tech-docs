@@ -2,8 +2,8 @@
 host: registers-tech-docs.cloudapps.digital
 
 # Header-related options
-show_govuk_logo: true
-service_name: Registers documentation
+show_govuk_logo: false
+service_name: Registers
 service_link: https://registers.cloudapps.digital/
 phase: Beta
 

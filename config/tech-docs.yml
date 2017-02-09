@@ -1,5 +1,5 @@
 # Host to use for canonical URL generation (without trailing slash)
-host: registers-tech-docs.cloudapps.digital
+host: registers-docs.cloudapps.digital
 
 # Header-related options
 show_govuk_logo: false

@@ -8,7 +8,7 @@ The country register is in beta, but available to use in your service.
 
 The [country register](https://country.register.gov.uk/) is a list of British-English language country names. This register is maintained by the Foreign and Commonwealth Office (FCO) and is currently in beta.
 
-The country register doesn’t include territories, for example, Taiwan, Gibraltar, and the Occupied Palestinian Territories. These are included in the territories register, which is in discovery.
+The country register doesn’t include territories, for example, Taiwan, Gibraltar, and the Occupied Palestinian Territories. These are included in the territory register, which is in beta.
 
 The country register contains the following fields:  
 

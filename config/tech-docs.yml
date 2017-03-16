@@ -9,10 +9,10 @@ phase: Beta
 
 # Links to show on right-hand-side of header
 header_links:
-  About: https://registers.cloudapps.digital/
   Using Registers: https://registers.cloudapps.digital/using-registers.html
-  Documentation: /
+  Register status: https://registers.cloudapps.digital/registers
   Support: https://registers.cloudapps.digital/support.html
+  Documentation: /
 
 # Tracking ID from Google Analytics (e.g. UA-XXXX-Y)
 ga_tracking_id:

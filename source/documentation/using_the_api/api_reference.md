@@ -31,28 +31,29 @@ Example request: `curl --request GET --url https://country.register.gov.uk/regis
 Example response:
 
 ```
-{
-  "domain": "register.gov.uk",
-  "total-records": 199,
-  "total-entries": 204,
-  "register-record": {
-    "entry-number": "2",
-    "entry-timestamp": "2016-08-04T14:45:41Z",
-    "item-hash": "sha-256:610bde42d3ae2ed3dd829263fe461542742a10ca33865d96d31ae043b242c300",
-    "text": "British English-language names and descriptive terms for countries",
-    "phase": "beta",
-    "fields": [
-      "country",
-      "name",
-      "official-name",
-      "citizen-names",
-      "start-date",
-      "end-date"
-    ],
-    "register": "country",
-    "registry": "foreign-commonwealth-office"
-  },
-  "last-updated": "2016-04-05T13:23:05Z"
+{  
+   "domain":"register.gov.uk",
+   "total-records":199,
+   "total-entries":206,
+   "register-record":{  
+      "fields":[  
+         "country",
+         "name",
+         "official-name",
+         "citizen-names",
+         "start-date",
+         "end-date"
+      ],
+      "registry":"foreign-commonwealth-office",
+      "text":"British English-language names and descriptive terms for countries",
+      "phase":"beta",
+      "register":"country",
+      "entry-timestamp":"2016-08-04T14:45:41Z",
+      "key":"country",
+      "index-entry-number":"2",
+      "entry-number":"2"
+   },
+   "last-updated":"2017-03-29T14:22:30Z"
 }
 ```
 
@@ -71,34 +72,51 @@ Example request: `curl --request GET --url 'https://local-authority-eng.register
 Example response:
 
 ```
-{
-  "WYC": {
-    "entry-number": "345",
-    "entry-timestamp": "2016-10-21T16:11:20Z",
-    "item-hash": "sha-256:98dfc01067abd5ef237b98d225b44a13d2acb5015334c006aec50f9792e554c7",
-    "name": "Wychavon",
-    "official-name": "Wychavon District Council",
-    "local-authority-eng": "WYC",
-    "local-authority-type": "NMD"
-  },
-  "WYE": {
-    "entry-number": "346",
-    "entry-timestamp": "2016-10-21T16:11:20Z",
-    "item-hash": "sha-256:0ae4443fcb4f35e8ec4aabe09fe0ad21bc44342979d22a11e3503bf68b15c404",
-    "name": "Wyre Forest",
-    "official-name": "Wyre Forest District Council",
-    "local-authority-eng": "WYE",
-    "local-authority-type": "NMD"
-  },
-  "ADU": {
-    "entry-number": "348",
-    "entry-timestamp": "2016-10-21T16:11:20Z",
-    "item-hash": "sha-256:e12026ce69abe71ea0fdde46d2b8916be218678ad227a8324075117565bec7ea",
-    "name": "Adur",
-    "official-name": "Adur District Council",
-    "local-authority-eng": "ADU",
-    "local-authority-type": "NMD"
-  }
+{  
+   "KIN":{  
+      "index-entry-number":"357",
+      "entry-number":"357",
+      "entry-timestamp":"2017-01-26T12:34:10Z",
+      "key":"KIN",
+      "item":[  
+         {  
+            "local-authority-type":"NMD",
+            "official-name":"Borough Council of King's Lynn and West Norfolk",
+            "local-authority-eng":"KIN",
+            "name":"King's Lynn and West Norfolk"
+         }
+      ]
+   },
+   "GLA":{  
+      "index-entry-number":"356",
+      "entry-number":"356",
+      "entry-timestamp":"2016-11-01T14:16:54Z",
+      "key":"GLA",
+      "item":[  
+         {  
+            "local-authority-type":"SRA",
+            "official-name":"Greater London Authority",
+            "local-authority-eng":"GLA",
+            "name":"Greater London",
+            "start-date":"1905-06-22"
+         }
+      ]
+   },
+   "LND":{  
+      "index-entry-number":"355",
+      "entry-number":"355",
+      "entry-timestamp":"2016-10-31T12:59:03Z",
+      "key":"LND",
+      "item":[  
+         {  
+            "local-authority-type":"CC",
+            "official-name":"City of London Corporation",
+            "local-authority-eng":"LND",
+            "name":"City of London",
+            "start-date":"1905-06-28"
+         }
+      ]
+   }
 }
 ```
 
@@ -117,14 +135,21 @@ Example request: `curl --request GET --url https://country.register.gov.uk/recor
 Example response:
 
 ```
-{
-  "entry-number": "204",
-  "entry-timestamp": "2016-04-05T13:23:05Z",
-  "item-hash": "sha-256:466d194d5100532edd115e3f0035967b09bc7b7f5fc444166df6f4a5f7cb9127",
-  "name": "Vatican City",
-  "country": "VA",
-  "citizen-names": "Vatican citizen",
-  "official-name": "Vatican City State"
+{  
+   "VA":{  
+      "index-entry-number":"204",
+      "entry-number":"204",
+      "entry-timestamp":"2016-04-05T13:23:05Z",
+      "key":"VA",
+      "item":[  
+         {  
+            "country":"VA",
+            "official-name":"Vatican City State",
+            "name":"Vatican City",
+            "citizen-names":"Vatican citizen"
+         }
+      ]
+   }
 }
 ```
 
@@ -143,39 +168,49 @@ Example request: `curl --request GET --url https://local-authority-eng.register.
 Example response:
 
 ```
-{
-  "NTH": {
-    "entry-number": "269",
-    "entry-timestamp": "2016-10-21T16:11:20Z",
-    "item-hash": "sha-256:3dd0676f10ab535ed46df5ee7f779afc83f60ca9787598f8fd108ad17a4110e1",
-    "name": "Northamptonshire",
-    "official-name": "Northamptonshire County Council",
-    "local-authority-eng": "NTH",
-    "local-authority-type": "CTY"
-  },
-  "LND": {
-    "entry-number": "38",
-    "entry-timestamp": "2016-10-21T16:11:20Z",
-    "item-hash": "sha-256:0bd11d488aadc456d4814853613a28dd26a1867702816376f4b5040968de3ad7",
-    "name": "City of London",
-    "start-date": "1905-06-28",
-    "official-name": "City of London Corporation",
-    "local-authority-eng": "LND",
-    "local-authority-type": "CTY"
-  },
-  "WAR": {
-    "entry-number": "334",
-    "entry-timestamp": "2016-10-21T16:11:20Z",
-    "item-hash": "sha-256:9c4fbebee1030717a580d67c8424c6fa8164c8ec6ede2636faeb997bed826e22",
-    "name": "Warwickshire",
-    "official-name": "Warwickshire County Council",
-    "local-authority-eng": "WAR",
-    "local-authority-type": "CTY"
-   }
-}
-
-...
-
+{  
+   "NTH":{  
+      "index-entry-number":"269",
+      "entry-number":"269",
+      "entry-timestamp":"2016-10-21T16:11:20Z",
+      "key":"NTH",
+      "item":[  
+         {  
+            "local-authority-type":"CTY",
+            "official-name":"Northamptonshire County Council",
+            "local-authority-eng":"NTH",
+            "name":"Northamptonshire"
+         }
+      ]
+   },
+   "WAR":{  
+      "index-entry-number":"334",
+      "entry-number":"334",
+      "entry-timestamp":"2016-10-21T16:11:20Z",
+      "key":"WAR",
+      "item":[  
+         {  
+            "local-authority-type":"CTY",
+            "official-name":"Warwickshire County Council",
+            "local-authority-eng":"WAR",
+            "name":"Warwickshire"
+         }
+      ]
+   },
+   "HRT":{  
+      "index-entry-number":"208",
+      "entry-number":"208",
+      "entry-timestamp":"2016-10-21T16:11:20Z",
+      "key":"HRT",
+      "item":[  
+         {  
+            "local-authority-type":"CTY",
+            "official-name":"Hertfordshire County Council",
+            "local-authority-eng":"HRT",
+            "name":"Hertfordshire"
+         }
+      ]
+   },
 ```
 
 ### View all entries
@@ -193,57 +228,97 @@ Example request: `curl --request GET --url 'https://local-authority-eng.register
 Example response:
 
 ```
-[
-  {
-    "entry-number": "1",
-    "entry-timestamp": "2016-10-21T16:11:20Z",
-    "item-hash": "sha-256:6c4c815895ea675857ee4ec3fb40571ce54faf5ebcdd5d73a2aae347d4003c31"
-  },
-  {
-    "entry-number": "2",
-    "entry-timestamp": "2016-10-21T16:11:20Z",
-    "item-hash": "sha-256:37dd060a3efa6d5bf16f876e08fa867210f424e2e4a7989d0322218f6772332d"
-  },
-  {
-    "entry-number": "3",
-    "entry-timestamp": "2016-10-21T16:11:20Z",
-    "item-hash": "sha-256:01cda95d102807943d68f71bbe7b9b290dec2ebdb15967ca66820f825ece5831"
-  },
-  {
-    "entry-number": "4",
-    "entry-timestamp": "2016-10-21T16:11:20Z",
-    "item-hash": "sha-256:bdc17a29807f47a94cf612abf92fcadd2d83176f9ea419b4eeda23af2cf25ef9"
-  },
-  {
-    "entry-number": "5",
-    "entry-timestamp": "2016-10-21T16:11:20Z",
-    "item-hash": "sha-256:37ca110698ea569fc229e5042830384890ab1095737f1630c9de30692cfcf973"
-  },
-  {
-    "entry-number": "6",
-    "entry-timestamp": "2016-10-21T16:11:20Z",
-    "item-hash": "sha-256:792c58bf07b54a3a072c8c8a7e9b0681490e3cc76ee6e95da20434520b66d9c7"
-  },
-  {
-    "entry-number": "7",
-    "entry-timestamp": "2016-10-21T16:11:20Z",
-    "item-hash": "sha-256:99d5b1631c6241b31d4c22a867802035763649efa50cc8e4c5c25a71e484d412"
-  },
-  {
-    "entry-number": "8",
-    "entry-timestamp": "2016-10-21T16:11:20Z",
-    "item-hash": "sha-256:2cfa1b4bd729bde785a1fdb004c6be6a04eda3ed0ac1198401ef144b218545e0"
-  },
-  {
-    "entry-number": "9",
-    "entry-timestamp": "2016-10-21T16:11:20Z",
-    "item-hash": "sha-256:0cd1103a9b0e4dcd774f6c52a4d541e8a029e78ae609b46eb1d0546df9587a6a"
-  },
-  {
-    "entry-number": "10",
-    "entry-timestamp": "2016-10-21T16:11:20Z",
-    "item-hash": "sha-256:00a2c66ab69086fd9ed8d43a46e04d1577340468bd43e8fb46dcf4d6ae59c439"
-  }
+[  
+   {  
+      "index-entry-number":"1",
+      "entry-number":"1",
+      "entry-timestamp":"2016-10-21T16:11:20Z",
+      "key":"BAS",
+      "item-hash":[  
+         "sha-256:6c4c815895ea675857ee4ec3fb40571ce54faf5ebcdd5d73a2aae347d4003c31"
+      ]
+   },
+   {  
+      "index-entry-number":"2",
+      "entry-number":"2",
+      "entry-timestamp":"2016-10-21T16:11:20Z",
+      "key":"BBD",
+      "item-hash":[  
+         "sha-256:37dd060a3efa6d5bf16f876e08fa867210f424e2e4a7989d0322218f6772332d"
+      ]
+   },
+   {  
+      "index-entry-number":"3",
+      "entry-number":"3",
+      "entry-timestamp":"2016-10-21T16:11:20Z",
+      "key":"BDF",
+      "item-hash":[  
+         "sha-256:01cda95d102807943d68f71bbe7b9b290dec2ebdb15967ca66820f825ece5831"
+      ]
+   },
+   {  
+      "index-entry-number":"4",
+      "entry-number":"4",
+      "entry-timestamp":"2016-10-21T16:11:20Z",
+      "key":"BIR",
+      "item-hash":[  
+         "sha-256:bdc17a29807f47a94cf612abf92fcadd2d83176f9ea419b4eeda23af2cf25ef9"
+      ]
+   },
+   {  
+      "index-entry-number":"5",
+      "entry-number":"5",
+      "entry-timestamp":"2016-10-21T16:11:20Z",
+      "key":"BMH",
+      "item-hash":[  
+         "sha-256:37ca110698ea569fc229e5042830384890ab1095737f1630c9de30692cfcf973"
+      ]
+   },
+   {  
+      "index-entry-number":"6",
+      "entry-number":"6",
+      "entry-timestamp":"2016-10-21T16:11:20Z",
+      "key":"BNH",
+      "item-hash":[  
+         "sha-256:792c58bf07b54a3a072c8c8a7e9b0681490e3cc76ee6e95da20434520b66d9c7"
+      ]
+   },
+   {  
+      "index-entry-number":"7",
+      "entry-number":"7",
+      "entry-timestamp":"2016-10-21T16:11:20Z",
+      "key":"BNS",
+      "item-hash":[  
+         "sha-256:99d5b1631c6241b31d4c22a867802035763649efa50cc8e4c5c25a71e484d412"
+      ]
+   },
+   {  
+      "index-entry-number":"8",
+      "entry-number":"8",
+      "entry-timestamp":"2016-10-21T16:11:20Z",
+      "key":"BOL",
+      "item-hash":[  
+         "sha-256:2cfa1b4bd729bde785a1fdb004c6be6a04eda3ed0ac1198401ef144b218545e0"
+      ]
+   },
+   {  
+      "index-entry-number":"9",
+      "entry-number":"9",
+      "entry-timestamp":"2016-10-21T16:11:20Z",
+      "key":"BPL",
+      "item-hash":[  
+         "sha-256:0cd1103a9b0e4dcd774f6c52a4d541e8a029e78ae609b46eb1d0546df9587a6a"
+      ]
+   },
+   {  
+      "index-entry-number":"10",
+      "entry-number":"10",
+      "entry-timestamp":"2016-10-21T16:11:20Z",
+      "key":"BRC",
+      "item-hash":[  
+         "sha-256:00a2c66ab69086fd9ed8d43a46e04d1577340468bd43e8fb46dcf4d6ae59c439"
+      ]
+   }
 ]
 ```
 
@@ -251,7 +326,7 @@ Example response:
 
 Path: GET /entry/{entry-number}
 
-Find a specific entry from a register. For example, an update to the record for the USSR in the country register.
+Find a specific entry from a register. For example, an update to the record for the USSR in the country register. An entry can include multiple items, which will return in a list of `item-hash`
 
 Example URL: https://country.register.gov.uk/entry/204
 
@@ -260,11 +335,17 @@ Example request: `curl --request GET --url https://country.register.gov.uk/entry
 Example response:
 
 ```
-{
-  "entry-number": "204",
-  "entry-timestamp": "2016-04-05T13:23:05Z",
-  "item-hash": "sha-256:466d194d5100532edd115e3f0035967b09bc7b7f5fc444166df6f4a5f7cb9127"
-}
+[  
+   {  
+      "index-entry-number":"204",
+      "entry-number":"204",
+      "entry-timestamp":"2016-04-05T13:23:05Z",
+      "key":"VA",
+      "item-hash":[  
+         "sha-256:466d194d5100532edd115e3f0035967b09bc7b7f5fc444166df6f4a5f7cb9127"
+      ]
+   }
+]
 ```
 
 ### <a name="items"></a>View a specific item

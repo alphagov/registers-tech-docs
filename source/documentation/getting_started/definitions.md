@@ -10,7 +10,7 @@ Items are connected to entries with an item hash, an algorithm that maps data of
 
 **Entries**
 
-Entries are the metadata which describes how a register evolves over time. They describe how and when items were introduced to the register.
+Entries are the metadata which describes how a register evolves over time. They describe how and when items were introduced to the register. An entry can have multiple items.
 
 For example, if a country changed its name, the country register would be updated. An entry would be created to point to the item with the new information. This entry would then describe the date/time and position of that item (with new name) in the register. That entry would become the current version of the record for that country. Older entries are also kept to show a history of a record. Entries are ordered by when they were added to a register.
 

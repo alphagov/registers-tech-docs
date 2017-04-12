@@ -1,10 +1,10 @@
 ## Support and community
 
-GDS maintains the platform behind registers and helps custodians to run their registers. Custodians are expected to keep their registers data up to date. 
+GDS maintains the platform behind registers and helps custodians to run their registers. Custodians are expected to keep their registers data up to date.
 
 GDS provides operational support from 09:00 - 17:00 Monday-Friday.
 
-Contact the GDS registers team at <a href="mailto:registerteam@digital.cabinet-office.gov.uk">registerteam@digital.cabinet-office.gov.uk</a> if you have any problems or questions that are not covered in this guide. Please include error messages if relevant.
+[Contact the GDS registers team](https://registers.cloudapps.digital/support.html) if you have any problems or questions that are not covered in this guide. Please include error messages if relevant.
 
 The GDS registers team blog about their progress on the [Data in Government blog](https://data.blog.gov.uk/) and the [GDS blog](https://gds.blog.gov.uk/). Previous posts include:    
 

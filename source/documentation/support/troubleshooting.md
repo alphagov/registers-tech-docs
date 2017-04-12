@@ -8,7 +8,7 @@
 
 ### Common issues
 
-Please find information below about common problems when using registers. If your issue is not included or you are struggling to use registers in your product or service, please contact the GDS registers team at <a href="mailto:registerteam@digital.cabinet-office.gov.uk">registerteam@digital.cabinet-office.gov.uk</a>.
+Please find information below about common problems when using registers. If your issue is not included or you are struggling to use registers in your product or service, please contact the [GDS registers team](https://registers.cloudapps.digital/support.html).
 
 **Registers still in beta**
 

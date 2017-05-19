@@ -1,64 +1,9 @@
 ## <a name="availablereg"></a>Available registers
 
-There are many registers currently in discovery and alpha. These include registers of territories, local authorities, and schools.
+The [register pipeline](https://registers.cloudapps.digital/registers) shows a list of registers in discovery, alpha, and beta.
 
-The country register is in beta, but available to use in your service.
+Beta registers are safe to use in your service. For a register to move to live, it should be the only list of its kind. Until duplicate lists have been removed, a register will stay in beta.
 
-### Country register
+Alpha registers are still in development and their shape and data may change. You are welcome to use alpha registers in your service, and we would appreciate any feedback you may have.
 
-The [country register](https://country.register.gov.uk/) is a list of British-English language country names. This register is maintained by the Foreign and Commonwealth Office (FCO) and is currently in beta.
-
-The country register doesn’t include territories, for example, Taiwan, Gibraltar, and the Occupied Palestinian Territories. These are included in the territory register, which is in beta.
-
-The country register contains the following fields:  
-
-* `country` (a 2 letter ISO 3166-2 code)  
-* `name` (commonly used name of a country)  
-* `official-name` (official name of a country)   
-* `citizen-names` (name of the citizens of a country)  
-* `start-date` (when the country was first recognised)  
-* `end-date` (when the country was dissolved or changed its name)   
-
-You may need to remove records with an end-date, such as East Germany, if your service or product only requires data about existing countries.
-
-### Territory register
-
-The [territory register](https://territory.register.gov.uk/) is a list of British English-language names and descriptive terms for political, administrative and geographical entities that aren’t recognised as countries by the UK. The register is maintained by the Foreign and Commonwealth Office (FCO) and is currently in beta.
-
-The register contains the following fields:     
-
-* `territory` (3 letter ISO 3166-1 code or equivalent)   
-* `name`(commnonly used name of a territory)  
-* `official-name`(official name of territory)  
-* `start-date` (when the territory was first recognised)  
-* `end-date`(when the territory was dissolved or changed its name)  
-
-You may need to remove records with an end-date if your service or product only requires data about existing local authorities.
-
-### Local authorities (England) register
-
-The [register of local authorities in England](https://local-authority-eng.register.gov.uk/) is maintained by the Department for Communities and Local Government.
-
-The register contains the following fields:     
-
-* `local-authority-eng` (3 letter ISO code or equivalent)  
-* `local-authority-type` (type of local government organisation)  
-* `name`(commonly used name of a local authority)  
-* `official-name`(official name of local authority)  
-* `start-date` (when the local authority was first established)  
-* `end-date`(when the local authority was dissolved or changed its name)  
-
-You may need to remove records with an end-date if your service or product only requires data about existing local authorities.
-
-### Local authority type register
-
-The [register of local authority types](https://local-authority-type.register.gov.uk/) is a list of the types of local authority across the United Kingdom. The register is maintained by Government Digital Service.
-
-The register contains the following fields:     
-
-* `local-authority-type` (type of local government organisation)  
-* `name`(commonly used name of a local authority)  
-* `start-date` (when the local authority was first established)  
-* `end-date`(when the local authority was dissolved or changed its name)  
-
-You may need to remove records with an end-date if your service or product only requires data about existing local authority types.
+You can [contact the registers team](https://registers.cloudapps.digital/support.html) if you have any questions about any of the registers in the pipeline.

@@ -9,7 +9,7 @@ phase: Beta
 
 # Links to show on right-hand-side of header
 header_links:
-  Using Registers: https://registers.cloudapps.digital/using-registers.html
+  Using registers: https://registers.cloudapps.digital/using-registers.html
   Register status: https://registers.cloudapps.digital/registers
   Support: https://registers.cloudapps.digital/support.html
   Documentation: /

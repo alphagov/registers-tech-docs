@@ -1,19 +1,5 @@
 ## <a name="apireference"></a>API reference
 
-Each register has a read-only API that allows you to:  
-
-* find out information about a register
-* get all the records from a register
-* find records that share attributes with each other
-* download the whole or part of a register
-* find a single record, entry or item
-
-The base URL for each register API is of the form: https://{register name}.register.gov.uk/
-
-See the [list of available registers](#availablereg) to find out the base URL for each register.
-
-Most of the APIs return paginated results. Follow the specific guidance for each endpoint to get the page(s) of entries, items, and records you need.  
-
 ### Find out more about a register
 
 Path: GET /register

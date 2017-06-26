@@ -6,7 +6,9 @@
 
 **field** - A data structure for a single piece of data and they are the smallest part of a register. Every item contains a set of fields. In the country register, fields include country, name, official-name, and citizen-name. Each field is a name that is used consistently between open registers. A list of all the fields that are used in open registers are kept in the field register.
 
-**items** - An item is  made up of fields and values containing information. Items are the actual data contained within a register. For example, in the record for Great Britain in the country register, an item would be its country name, 'United Kingdom' and its official citizen name, 'Briton;British citizen'.
+**item** - An item is  made up of fields and values containing information. Items are the actual data contained within a register. For example, in the record for Great Britain in the country register, an item would be its country name, 'United Kingdom' and its official citizen name, 'Briton;British citizen'.
+
+Items are connected to entries with an item hash, an algorithm that maps data of arbitrary size to a byte string of fixed size. A hash is unique to its item and no item will have the same item-hash as another item, unless the item contains exactly the same information. For example, in the country register the item hash `sha-256:d97d6b34bc572e334cbd7898f785b72947557d9dbea59977077f231274259f3b` links that item with entry 195, which in turn is tied to the record for Vatican City.
 
 **record** - A record contains all the information about a single thing in a register. For example, in the country register, there are currently 199 records, one for each country recognised by the Foreign and Commonwealth Office. A record points to the most recent entry.
 

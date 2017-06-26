@@ -1,6 +1,6 @@
 ## Quick start guide
 
-1. Find out [what registers are available](#availablereg) and which you want to use. Each register has a read-only API. No authentication is required.
+1. [Find the base URL for the register(s) you want to use](https://registers.cloudapps.digital/registers)
 2. [Find the endpoints you want](#apireference).
 3. Add `.json`, `.yaml`, `.csv`, `.tsv`, or `.ttl` to the end of the request URL (before any query parameters) to choose the format of the response, or amend headers to `accept application/json` or equivalent.
 4. Parse register data and use it in your product or service.

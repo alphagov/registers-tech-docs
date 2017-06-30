@@ -1,4 +1,6 @@
-### Case study
+## Case studies
+
+GOV.UK Pay, the Department for International Development (DFID), and the e-petitions service are among the users of registers.
 
 **E-petitions**
 

@@ -12,8 +12,6 @@ Please find information below about common problems when using registers. If you
 
 **Registers still in beta**
 
-A register must pass certain criteria to move from discovery through to live. To move from beta to live, duplicate lists of the same information must be removed. For example, the country register will remain in beta until duplicate lists of countries are removed.  
-
 Despite the beta label, registers in beta are reliable to use in products and services.
 
 **If you can't find a specific record**

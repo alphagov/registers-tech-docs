@@ -30,7 +30,7 @@ You may need to remove records with an end-date if your product or service only 
 
 **Missing countries in country register**
 
-The country register only contains countries recognised by the Foreign and Commonwealth Office. As such, the country register does not contain territories such as Gibraltar and the Occupied Palestinian Territories. These are included in the territories register, which is in discovery.
+The country register only contains countries recognised by the Foreign and Commonwealth Office. As such, the country register does not contain territories such as Gibraltar and the Occupied Palestinian Territories. These are included in the territories register.
 
 **Adding additional data**
 

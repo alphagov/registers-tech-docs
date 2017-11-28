@@ -10,36 +10,33 @@ View information about a register, including:
 * when the register was last updated
 * how many entries and records the register contains
 
-Example URL: https://country.register.gov.uk/register
+Example URL: `https://local-authority-eng.register.gov.uk/register/`
 
-Example request: `curl --request GET --url https://country.register.gov.uk/register --header 'accept: application/json'`
+Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/register/ --header 'accept: application/json'`
 
 Example response:
 
 ```
-{  
-   "domain":"register.gov.uk",
-   "total-records":199,
-   "total-entries":206,
-   "register-record":{  
-      "fields":[  
-         "country",
-         "name",
-         "official-name",
-         "citizen-names",
-         "start-date",
-         "end-date"
-      ],
-      "registry":"foreign-commonwealth-office",
-      "text":"British English-language names and descriptive terms for countries",
-      "phase":"beta",
-      "register":"country",
-      "entry-timestamp":"2016-08-04T14:45:41Z",
-      "key":"country",
-      "index-entry-number":"2",
-      "entry-number":"2"
-   },
-   "last-updated":"2017-03-29T14:22:30Z"
+{
+  "domain": "register.gov.uk",
+  "total-records": 354,
+  "total-entries": 358,
+  "register-record": {
+    "fields": [
+      "local-authority-eng",
+      "local-authority-type",
+      "name",
+      "official-name",
+      "start-date",
+      "end-date"
+    ],
+    "registry": "department-for-communities-and-local-government",
+    "text": "Local authorities in England",
+    "phase": "beta",
+    "register": "local-authority-eng"
+  },
+  "custodian": "Mark Coram",
+  "last-updated": "2017-07-04T10:55:43Z"
 }
 ```
 
@@ -47,11 +44,11 @@ Example response:
 
 Path: GET /records
 
-Get all records from the register. For example, all of the countries from the country register.
+Get all records from the register. For example, all of the English local authorities from the 'Local authority eng' register.
 
 *Note: Results from this API call are paginated. This call will return the first 100 records from the first page of the register. Use `page-size` to define the number of records you want and `page-index` to define the pages you want. The maximum `page-size` is 5000.*
 
-Example URL: https://local-authority-eng.register.gov.uk/records
+Example URL: `https://local-authority-eng.register.gov.uk/records/`
 
 Example request: `curl --request GET --url 'https://local-authority-eng.register.gov.uk/records?page-index=1&page-size=3' --header 'accept: application/json'`
 
@@ -110,32 +107,32 @@ Example response:
 
 Path: GET /record/{field-value}
 
-Find a specific record within a register. For example, the record for Vatican City in the country register.
+Find a specific record within a register. For example, the record for the Borough Council of King's Lynn and West Norfolk in the 'Local authority eng' register. 
 
 *Note: You must have the exact field value of the unique identifier for the record to get a match from the register. In the country register, for example, the field value of the unique identifier, the ICO country code, must be in capital letters.*
 
-Example URL: https://country.register.gov.uk/record/VA
+Example URL: `https://local-authority-eng.register.gov.uk/record/KIN/`
 
-Example request: `curl --request GET --url https://country.register.gov.uk/record/VA --header 'accept: application/json'`
+Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/record/KIN --header 'accept: application/json'`
 
 Example response:
 
 ```
-{  
-   "VA":{  
-      "index-entry-number":"204",
-      "entry-number":"204",
-      "entry-timestamp":"2016-04-05T13:23:05Z",
-      "key":"VA",
-      "item":[  
-         {  
-            "country":"VA",
-            "official-name":"Vatican City State",
-            "name":"Vatican City",
-            "citizen-names":"Vatican citizen"
-         }
-      ]
-   }
+{
+  "KIN": {
+    "index-entry-number": "357",
+    "entry-number": "357",
+    "entry-timestamp": "2017-01-26T12:34:10Z",
+    "key": "KIN",
+    "item": [
+      {
+        "local-authority-type": "NMD",
+        "official-name": "Borough Council of King's Lynn and West Norfolk",
+        "local-authority-eng": "KIN",
+        "name": "King's Lynn and West Norfolk"
+      }
+    ]
+  }
 }
 ```
 
@@ -143,13 +140,13 @@ Example response:
 
 Path: GET /records/{field-name}/{field-value}
 
-Find all records that share a field-value for a particular field. For example, all schools marked as Quaker schools from the school register.
+Find all records that share a field-value for a particular field. For example, all local authorities marked as county councils from the 'Local authority eng' register. 
 
 *Note: Results from this API call are paginated. This call will return the first 100 records from the first page of the register. Use `page-size` to define the number of records you want and `page-index` to define the pages you want. The maximum `page-size` is 5000.*
 
-Example URL: https://local-authority-eng.register.gov.uk/records/local-authority-type/CTY
+Example URL: `https://local-authority-eng.register.gov.uk/records/local-authority-type/CTY/`
 
-Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/records/local-authority-type/CTY --header 'accept: application/json'`
+Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/records/local-authority-type/CTY --header 'accept: application/json/'`
 
 Example response:
 
@@ -203,11 +200,11 @@ Example response:
 
 Path: GET /entries
 
-Get all entries from the register. For example, all updates there have ever been to the country register.
+Get all entries from the register. For example, all updates there have ever been to the 'Local authority eng' register.
 
 *Note: Results from this API call are paginated. This call will return the first 100 entries from the first page of the register. Use `page-size` to define the number of entries you want and `page-index` to define the pages you want. The maximum `page-size` is 5000.*
 
-Example URL: https://local-authority-eng.register.gov.uk/entries?start=1&limit=10
+Example URL: `https://local-authority-eng.register.gov.uk/entries?start=1&limit=10`
 
 Example request: `curl --request GET --url 'https://local-authority-eng.register.gov.uk/entries?start=1&limit=10' --header 'accept: application/json'`
 
@@ -312,25 +309,25 @@ Example response:
 
 Path: GET /entry/{entry-number}
 
-Find a specific entry from a register. For example, an update to the record for the USSR in the country register. An entry can include multiple items, which will return in a list of `item-hash`
+Find a specific entry from a register. For example, an update to the record for the New Forest District Council in the 'Local authority eng' register. An entry can include multiple items, which will return in a list of `item-hash`
 
-Example URL: https://country.register.gov.uk/entry/204
+Example URL: `https://local-authority-eng.register.gov.uk/entry/204/`
 
-Example request: `curl --request GET --url https://country.register.gov.uk/entry/204 --header 'accept: application/json'`
+Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/entry/204/ --header 'accept: application/json'`
 
 Example response:
 
 ```
-[  
-   {  
-      "index-entry-number":"204",
-      "entry-number":"204",
-      "entry-timestamp":"2016-04-05T13:23:05Z",
-      "key":"VA",
-      "item-hash":[  
-         "sha-256:466d194d5100532edd115e3f0035967b09bc7b7f5fc444166df6f4a5f7cb9127"
-      ]
-   }
+[
+  {
+    "index-entry-number": "204",
+    "entry-number": "204",
+    "entry-timestamp": "2016-10-21T16:11:20Z",
+    "key": "NEW",
+    "item-hash": [
+      "sha-256:53187fa5562b658b68da23fcd64bd595688ead21da3ba443531ed21164be775e"
+    ]
+  }
 ]
 ```
 
@@ -340,18 +337,18 @@ Path: GET /item/{item-hash}
 
 Find a specific item within a register.
 
-Example URL: https://country.register.gov.uk/item/sha-256:466d194d5100532edd115e3f0035967b09bc7b7f5fc444166df6f4a5f7cb9127
-
-Example request: `curl --request GET --url https://country.register.gov.uk/item/sha-256:466d194d5100532edd115e3f0035967b09bc7b7f5fc444166df6f4a5f7cb9127 --header 'accept: application/json'`
+Example URL: `https://local-authority-eng.register.gov.uk/item/sha-256:6c4c815895ea675857ee4ec3fb40571ce54faf5ebcdd5d73a2aae347d4003c31`
+Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/item/sha-256:6c4c815895ea675857ee4ec3fb40571ce54faf5ebcdd5d73a2aae347d4003c31 --header 'accept: application/json'`
 
 Example response:
 
 ```
 {
-  "country": "VA",
-  "official-name": "Vatican City State",
-  "name": "Vatican City",
-  "citizen-names": "Vatican citizen"
+  "local-authority-type": "UA",
+  "official-name": "Bath and North East Somerset Council",
+  "local-authority-eng": "BAS",
+  "name": "Bath and North East Somerset",
+  "start-date": "1996-04-01"
 }
 ```
 
@@ -363,9 +360,9 @@ Download the full contents of the register in a ZIP file.
 
 *Note: This will download every entry and item as an individual JSON file. If you only want to download records, use `GET /records`.*
 
-Example URL: https://local-authority-eng.register.gov.uk/download-register
+Example URL: `https://local-authority-eng.register.gov.uk/download-register`
 
-Example request: `curl -o country.zip --request GET --url https://local-authority-eng.register.gov.uk/download-register`
+Example request: `curl -o localauthorityeng.zip --request GET --url https://local-authority-eng.register.gov.uk/download-register`
 
 ## Getting updates
 
@@ -380,7 +377,7 @@ Path: GET /register
 
 You can find the latest entry number by looking at the register information and comparing the most recent entry number with your own copy.
 
-Example request: https://country.register.gov.uk/register
+Example request: `https://local-authority-eng.register.gov.uk/`
 
 ### Download a full new copy of the register
 
@@ -392,23 +389,31 @@ Path: GET /record/{field-value}/entries
 
 Get all entries for a single record.
 
-Example URL: https://country.register.gov.uk/record/VA/entries
+Example URL: `https://local-authority-eng.register.gov.uk/record/KIN/entries/`
 
-Example request: `curl --request GET --url https://country.register.gov.uk/record/VA/entries --header 'accept: application/json'`
+Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/record/KIN/entries/ --header 'accept: application/json'`
 
 Example response:
 
 ```
 [
   {
-    "entry-number": "195",
-    "entry-timestamp": "2016-04-05T13:23:05Z",
-    "item-hash": "sha-256:d97d6b34bc572e334cbd7898f785b72947557d9dbea59977077f231274259f3b"
+    "index-entry-number": "265",
+    "entry-number": "265",
+    "entry-timestamp": "2016-10-21T16:11:20Z",
+    "key": "KIN",
+    "item-hash": [
+      "sha-256:5a8571fc6e78f8688c66b72ea45f921a7cd1562b9a9b5b9dab8f49f842d1e391"
+    ]
   },
   {
-    "entry-number": "204",
-    "entry-timestamp": "2016-04-05T13:23:05Z",
-    "item-hash": "sha-256:466d194d5100532edd115e3f0035967b09bc7b7f5fc444166df6f4a5f7cb9127"
+    "index-entry-number": "357",
+    "entry-number": "357",
+    "entry-timestamp": "2017-01-26T12:34:10Z",
+    "key": "KIN",
+    "item-hash": [
+      "sha-256:3f4da33a33c24de11cca3539f14ee663359608be0ba218d4fc05792c1d19c00f"
+    ]
   }
 ]
 ```

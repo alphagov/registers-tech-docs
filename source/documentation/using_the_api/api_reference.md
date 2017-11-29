@@ -1,8 +1,6 @@
 ## <a name="apireference"></a>API reference
 
-### Find out more about a register
-
-Path: GET /register
+### GET /register
 
 View information about a register, including:  
 
@@ -43,9 +41,7 @@ Example response:
 }
 ```
 
-### Get all records
-
-Path: GET /records
+### GET /records
 
 Get all records from the register. For example, all of the countries from the country register.
 
@@ -106,9 +102,7 @@ Example response:
 }
 ```
 
-### View a specific record
-
-Path: GET /record/{field-value}
+### GET /record/{field-value}
 
 Find a specific record within a register. For example, the record for Vatican City in the country register.
 
@@ -139,9 +133,7 @@ Example response:
 }
 ```
 
-### View records that share attributes  
-
-Path: GET /records/{field-name}/{field-value}
+### GET /records/{field-name}/{field-value}  
 
 Find all records that share a field-value for a particular field. For example, all schools marked as Quaker schools from the school register.
 
@@ -199,9 +191,7 @@ Example response:
    },
 ```
 
-### View all entries
-
-Path: GET /entries
+### GET /entries
 
 Get all entries from the register. For example, all updates there have ever been to the country register.
 
@@ -308,9 +298,7 @@ Example response:
 ]
 ```
 
-### View a specific entry
-
-Path: GET /entry/{entry-number}
+### GET /entry/{entry-number}
 
 Find a specific entry from a register. For example, an update to the record for the USSR in the country register. An entry can include multiple items, which will return in a list of `item-hash`
 
@@ -334,9 +322,7 @@ Example response:
 ]
 ```
 
-### <a name="items"></a>View a specific item
-
-Path: GET /item/{item-hash}
+### <a name="items"></a>GET /item/{item-hash}
 
 Find a specific item within a register.
 
@@ -355,9 +341,7 @@ Example response:
 }
 ```
 
-### <a name="downloadreg"></a>Download the full register
-
-Path: GET /download-register
+### <a name="downloadreg"></a>GET /download-register
 
 Download the full contents of the register in a ZIP file.
 

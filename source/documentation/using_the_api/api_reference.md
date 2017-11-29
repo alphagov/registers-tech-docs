@@ -10,7 +10,7 @@ View information about a register, including:
 * when the register was last updated
 * how many entries and records the register contains
 
-Example URL: `https://local-authority-eng.register.gov.uk/register/`
+Example URL: `https://local-authority-eng.register.gov.uk/register`
 
 Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/register/ --header 'accept: application/json'`
 
@@ -44,11 +44,11 @@ Example response:
 
 Path: GET /records
 
-Get all records from the register. For example, all of the English local authorities from the 'Local authority eng' register.
+Get all records from the register. For example, all of the English local authorities from the `local-authority-eng` register.
 
 *Note: Results from this API call are paginated. This call will return the first 100 records from the first page of the register. Use `page-size` to define the number of records you want and `page-index` to define the pages you want. The maximum `page-size` is 5000.*
 
-Example URL: `https://local-authority-eng.register.gov.uk/records/`
+Example URL: `https://local-authority-eng.register.gov.uk/records`
 
 Example request: `curl --request GET --url 'https://local-authority-eng.register.gov.uk/records?page-index=1&page-size=3' --header 'accept: application/json'`
 
@@ -107,11 +107,11 @@ Example response:
 
 Path: GET /record/{field-value}
 
-Find a specific record within a register. For example, the record for the Borough Council of King's Lynn and West Norfolk in the 'Local authority eng' register. 
+Find a specific record within a register. For example, the record for the Borough Council of King's Lynn and West Norfolk in the `local-authority-eng` register. 
 
-*Note: You must have the exact field value of the unique identifier for the record to get a match from the register. In the country register, for example, the field value of the unique identifier, the ICO country code, must be in capital letters.*
+*Note: You must have the exact field value of the unique identifier for the record to get a match from the register. For example, in the `local-authority-eng` register, the field value of the unique identifier (the three-letter code for the county council) must be in capital letters.*
 
-Example URL: `https://local-authority-eng.register.gov.uk/record/KIN/`
+Example URL: `https://local-authority-eng.register.gov.uk/record/KIN`
 
 Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/record/KIN --header 'accept: application/json'`
 
@@ -140,13 +140,13 @@ Example response:
 
 Path: GET /records/{field-name}/{field-value}
 
-Find all records that share a field-value for a particular field. For example, all local authorities marked as county councils from the 'Local authority eng' register. 
+Find all records that share a field-value for a particular field. For example, all local authorities marked as county councils from the `local-authority-eng` register. 
 
 *Note: Results from this API call are paginated. This call will return the first 100 records from the first page of the register. Use `page-size` to define the number of records you want and `page-index` to define the pages you want. The maximum `page-size` is 5000.*
 
-Example URL: `https://local-authority-eng.register.gov.uk/records/local-authority-type/CTY/`
+Example URL: `https://local-authority-eng.register.gov.uk/records/local-authority-type/CTY`
 
-Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/records/local-authority-type/CTY --header 'accept: application/json/'`
+Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/records/local-authority-type/CTY --header 'accept: application/json'`
 
 Example response:
 
@@ -200,7 +200,7 @@ Example response:
 
 Path: GET /entries
 
-Get all entries from the register. For example, all updates there have ever been to the 'Local authority eng' register.
+Get all entries from the register. For example, all updates there have ever been to the `local-authority-eng` register.
 
 *Note: Results from this API call are paginated. This call will return the first 100 entries from the first page of the register. Use `page-size` to define the number of entries you want and `page-index` to define the pages you want. The maximum `page-size` is 5000.*
 
@@ -309,9 +309,9 @@ Example response:
 
 Path: GET /entry/{entry-number}
 
-Find a specific entry from a register. For example, an update to the record for the New Forest District Council in the 'Local authority eng' register. An entry can include multiple items, which will return in a list of `item-hash`
+Find a specific entry from a register. For example, an update to the record for the New Forest District Council in the `local-authority-eng` register. An entry can include multiple items, which will return in a list of `item-hash`
 
-Example URL: `https://local-authority-eng.register.gov.uk/entry/204/`
+Example URL: `https://local-authority-eng.register.gov.uk/entry/204`
 
 Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/entry/204/ --header 'accept: application/json'`
 
@@ -377,7 +377,7 @@ Path: GET /register
 
 You can find the latest entry number by looking at the register information and comparing the most recent entry number with your own copy.
 
-Example request: `https://local-authority-eng.register.gov.uk/`
+Example request: `https://local-authority-eng.register.gov.uk/register`
 
 ### Download a full new copy of the register
 
@@ -389,7 +389,7 @@ Path: GET /record/{field-value}/entries
 
 Get all entries for a single record.
 
-Example URL: `https://local-authority-eng.register.gov.uk/record/KIN/entries/`
+Example URL: `https://local-authority-eng.register.gov.uk/record/KIN/entries`
 
 Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/record/KIN/entries/ --header 'accept: application/json'`
 

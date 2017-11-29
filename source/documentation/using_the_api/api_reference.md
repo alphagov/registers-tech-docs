@@ -358,21 +358,17 @@ You can download the new entries in 2 ways:
 * download another copy of the full register
 * download individual updated entries for the records you are using
 
-### Check for updates
-
-Path: GET /register
+### GET /register
 
 You can find the latest entry number by looking at the register information and comparing the most recent entry number with your own copy.
 
 Example request: https://country.register.gov.uk/register
 
-### Download a full new copy of the register
+### <a name="downloadreg"></a>GET /download-register
 
 See [endpoint for downloading register](#downloadreg).
 
-### Download all updates for one record
-
-Path: GET /record/{field-value}/entries
+### GET /record/{field-value}/entries
 
 Get all entries for a single record.
 

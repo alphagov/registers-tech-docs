@@ -1,6 +1,6 @@
 ## <a name="apireference"></a>API reference
 
-### GET /register
+### `GET /register`
 
 View information about a register, including:  
 
@@ -41,7 +41,7 @@ Example response:
 }
 ```
 
-### GET /records
+### `GET /records`
 
 Get all records from the register. For example, all of the countries from the country register.
 
@@ -102,7 +102,7 @@ Example response:
 }
 ```
 
-### GET /record/{field-value}
+### `GET /record/{field-value}`
 
 Find a specific record within a register. For example, the record for Vatican City in the country register.
 
@@ -133,7 +133,7 @@ Example response:
 }
 ```
 
-### GET /records/{field-name}/{field-value}  
+### `GET /records/{field-name}/{field-value}`
 
 Find all records that share a field-value for a particular field. For example, all schools marked as Quaker schools from the school register.
 
@@ -191,7 +191,7 @@ Example response:
    },
 ```
 
-### GET /entries
+### `GET /entries`
 
 Get all entries from the register. For example, all updates there have ever been to the country register.
 
@@ -298,7 +298,7 @@ Example response:
 ]
 ```
 
-### GET /entry/{entry-number}
+### `GET /entry/{entry-number}`
 
 Find a specific entry from a register. For example, an update to the record for the USSR in the country register. An entry can include multiple items, which will return in a list of `item-hash`
 
@@ -322,7 +322,7 @@ Example response:
 ]
 ```
 
-### <a name="items"></a>GET /item/{item-hash}
+### <a name="items"></a>`GET /item/{item-hash}`
 
 Find a specific item within a register.
 
@@ -341,7 +341,7 @@ Example response:
 }
 ```
 
-### <a name="downloadreg"></a>GET /download-register
+### <a name="downloadreg"></a>`GET /download-register`
 
 Download the full contents of the register in a ZIP file.
 
@@ -358,17 +358,17 @@ You can download the new entries in 2 ways:
 * download another copy of the full register
 * download individual updated entries for the records you are using
 
-### GET /register
+### `GET /register`
 
 You can find the latest entry number by looking at the register information and comparing the most recent entry number with your own copy.
 
 Example request: https://country.register.gov.uk/register
 
-### <a name="downloadreg"></a>GET /download-register
+### <a name="downloadreg"></a>`GET /download-register`
 
 See [endpoint for downloading register](#downloadreg).
 
-### GET /record/{field-value}/entries
+### `GET /record/{field-value}/entries`
 
 Get all entries for a single record.
 

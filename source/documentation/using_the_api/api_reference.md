@@ -8,6 +8,8 @@ View information about a register, including:
 * when the register was last updated
 * how many entries and records the register contains
 
+You can find the latest entry number by looking at the register information and comparing the most recent entry number with your own copy.
+
 Example URL: `https://local-authority-eng.register.gov.uk/register`
 
 Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/register/ --header 'accept: application/json'`
@@ -338,6 +340,13 @@ Example response:
 }
 ```
 
+## Getting updates
+
+You can download the new entries in 2 ways:  
+
+* download a copy of the full register
+* download individual updated entries for the records you are using
+
 ### <a name="downloadreg"></a>`GET /download-register`
 
 Download the full contents of the register in a ZIP file.
@@ -347,23 +356,6 @@ Download the full contents of the register in a ZIP file.
 Example URL: `https://local-authority-eng.register.gov.uk/download-register`
 
 Example request: `curl -o localauthorityeng.zip --request GET --url https://local-authority-eng.register.gov.uk/download-register`
-
-## Getting updates
-
-You can download the new entries in 2 ways:  
-
-* download another copy of the full register
-* download individual updated entries for the records you are using
-
-### `GET /register`
-
-You can find the latest entry number by looking at the register information and comparing the most recent entry number with your own copy.
-
-Example request: `https://local-authority-eng.register.gov.uk/register`
-
-### <a name="downloadreg"></a>`GET /download-register`
-
-See [endpoint for downloading register](#downloadreg).
 
 ### `GET /record/{field-value}/entries`
 

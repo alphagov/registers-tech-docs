@@ -8,7 +8,7 @@ View information about a register, including:
 * when the register was last updated
 * how many entries and records the register contains
 
-You can find the latest entry number by looking at the register information and comparing the most recent entry number with your own copy.
+You can check the entry number you have locally is up to date with the register by comparing the value of `total-entries` for each. 
 
 Example URL: `https://local-authority-eng.register.gov.uk/register`
 
@@ -340,24 +340,7 @@ Example response:
 }
 ```
 
-## Getting updates
-
-You can download the new entries in 2 ways:  
-
-* download a copy of the full register
-* download individual updated entries for the records you are using
-
-### <a name="downloadreg"></a>`GET /download-register`
-
-Download the full contents of the register in a ZIP file.
-
-*Note: This will download every entry and item as an individual JSON file. If you only want to download records, use `GET /records`.*
-
-Example URL: `https://local-authority-eng.register.gov.uk/download-register`
-
-Example request: `curl -o localauthorityeng.zip --request GET --url https://local-authority-eng.register.gov.uk/download-register`
-
-### `GET /record/{field-value}/entries`
+### <a name="entries">`GET /record/{field-value}/entries`
 
 Get all entries for a single record.
 
@@ -391,3 +374,24 @@ Example response:
 ```
 
 You can then download the latest item, for example entry 204 in the above example. Follow the [guidance for downloading items](#items).
+
+### <a name="download">`GET /download-register`
+
+Download the full contents of the register in a ZIP file.
+
+*Note: This will download every entry and item as an individual JSON file. If you only want to download records, use `GET /records`.*
+
+Example URL: `https://local-authority-eng.register.gov.uk/download-register`
+
+Example request: `curl -o localauthorityeng.zip --request GET --url https://local-authority-eng.register.gov.uk/download-register`
+
+## Getting updates
+
+You can download new entries in 2 ways:  
+
+* [download a copy of the full register](#download)
+* [GET individual new entries for the records you are using](#entries)
+
+
+
+

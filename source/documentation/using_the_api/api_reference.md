@@ -340,7 +340,7 @@ Example response:
 }
 ```
 
-### <a name="entries">`GET /record/{field-value}/entries`
+### <a name="record-entries">`GET /record/{field-value}/entries`
 
 Get all entries for a single record.
 

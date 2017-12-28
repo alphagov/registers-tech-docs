@@ -101,37 +101,6 @@ Example response:
 }
 ```
 
-### `GET /record/{field-value}`
-
-Find a specific record within a register. For example, the record for the Borough Council of King's Lynn and West Norfolk in the `local-authority-eng` register. 
-
-*Note: You must have the exact field value of the unique identifier for the record to get a match from the register. For example, in the `local-authority-eng` register, the field value of the unique identifier (the three-letter code for the county council) must be in capital letters.*
-
-Example URL: `https://local-authority-eng.register.gov.uk/record/KIN`
-
-Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/record/KIN --header 'accept: application/json'`
-
-Example response:
-
-```
-{
-  "KIN": {
-    "index-entry-number": "357",
-    "entry-number": "357",
-    "entry-timestamp": "2017-01-26T12:34:10Z",
-    "key": "KIN",
-    "item": [
-      {
-        "local-authority-type": "NMD",
-        "official-name": "Borough Council of King's Lynn and West Norfolk",
-        "local-authority-eng": "KIN",
-        "name": "King's Lynn and West Norfolk"
-      }
-    ]
-  }
-}
-```
-
 ### `GET /records/{field-name}/{field-value}`
 
 Find all records that share a field-value for a particular field. For example, all local authorities marked as county councils from the `local-authority-eng` register. 
@@ -189,6 +158,71 @@ Example response:
       ]
    },
 ```
+
+### `GET /record/{field-value}`
+
+Find a specific record within a register. For example, the record for the Borough Council of King's Lynn and West Norfolk in the `local-authority-eng` register. 
+
+*Note: You must have the exact field value of the unique identifier for the record to get a match from the register. For example, in the `local-authority-eng` register, the field value of the unique identifier (the three-letter code for the county council) must be in capital letters.*
+
+Example URL: `https://local-authority-eng.register.gov.uk/record/KIN`
+
+Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/record/KIN --header 'accept: application/json'`
+
+Example response:
+
+```
+{
+  "KIN": {
+    "index-entry-number": "357",
+    "entry-number": "357",
+    "entry-timestamp": "2017-01-26T12:34:10Z",
+    "key": "KIN",
+    "item": [
+      {
+        "local-authority-type": "NMD",
+        "official-name": "Borough Council of King's Lynn and West Norfolk",
+        "local-authority-eng": "KIN",
+        "name": "King's Lynn and West Norfolk"
+      }
+    ]
+  }
+}
+```
+### <a name="record-entries">`GET /record/{field-value}/entries`
+
+Get all entries for a single record.
+
+Example URL: `https://local-authority-eng.register.gov.uk/record/KIN/entries`
+
+Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/record/KIN/entries/ --header 'accept: application/json'`
+
+Example response:
+
+```
+[
+  {
+    "index-entry-number": "265",
+    "entry-number": "265",
+    "entry-timestamp": "2016-10-21T16:11:20Z",
+    "key": "KIN",
+    "item-hash": [
+      "sha-256:5a8571fc6e78f8688c66b72ea45f921a7cd1562b9a9b5b9dab8f49f842d1e391"
+    ]
+  },
+  {
+    "index-entry-number": "357",
+    "entry-number": "357",
+    "entry-timestamp": "2017-01-26T12:34:10Z",
+    "key": "KIN",
+    "item-hash": [
+      "sha-256:3f4da33a33c24de11cca3539f14ee663359608be0ba218d4fc05792c1d19c00f"
+    ]
+  }
+]
+```
+
+You can then download the latest item, for example entry 204 in the above example. Follow the [guidance for downloading items](#items).
 
 ### `GET /entries`
 
@@ -339,41 +373,6 @@ Example response:
   "start-date": "1996-04-01"
 }
 ```
-
-### <a name="record-entries">`GET /record/{field-value}/entries`
-
-Get all entries for a single record.
-
-Example URL: `https://local-authority-eng.register.gov.uk/record/KIN/entries`
-
-Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/record/KIN/entries/ --header 'accept: application/json'`
-
-Example response:
-
-```
-[
-  {
-    "index-entry-number": "265",
-    "entry-number": "265",
-    "entry-timestamp": "2016-10-21T16:11:20Z",
-    "key": "KIN",
-    "item-hash": [
-      "sha-256:5a8571fc6e78f8688c66b72ea45f921a7cd1562b9a9b5b9dab8f49f842d1e391"
-    ]
-  },
-  {
-    "index-entry-number": "357",
-    "entry-number": "357",
-    "entry-timestamp": "2017-01-26T12:34:10Z",
-    "key": "KIN",
-    "item-hash": [
-      "sha-256:3f4da33a33c24de11cca3539f14ee663359608be0ba218d4fc05792c1d19c00f"
-    ]
-  }
-]
-```
-
-You can then download the latest item, for example entry 204 in the above example. Follow the [guidance for downloading items](#items).
 
 ### <a name="download">`GET /download-register`
 

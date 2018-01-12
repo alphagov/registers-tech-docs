@@ -192,7 +192,7 @@ Example response:
 
 Get all entries from the register. For example, all updates there have ever been to the `local-authority-eng` register.
 
-*Note: Results from this API call are paginated. This call will return the first 100 entries from the first page of the register. Use `page-size` to define the number of entries you want and `page-index` to define the pages you want. The maximum `page-size` is 5000.*
+*Note: Results from this API call are paginated. This call will return the first 100 entries from the first page of the register. Use `limit` to define the maximum number of entries you want and `start` to define the entry number you want to start from (in ascending order).
 
 Example URL: `https://local-authority-eng.register.gov.uk/entries?start=1&limit=10`
 

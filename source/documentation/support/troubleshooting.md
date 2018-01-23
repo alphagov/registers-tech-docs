@@ -16,11 +16,11 @@ Despite the beta label, registers in beta are reliable to use in products and se
 
 **If you can't find a specific record**
 
-If you can't find a specific record, check you have the correct field value. You must use the exact field value to get a match from the register. For example, in the country register the field value must be in capital letters.
+If you cannot find a specific record, check you have the correct field value. You must use the exact field value to get a match from the register. For example, in the `local-authority-eng` register, you must capitalise the field value: 
 
-Incorrect request: https://country.register.gov.uk/record/gb
+Incorrect request: https://local-authority-eng.register.gov.uk/record/bir
 
-Correct request: https://country.register.gov.uk/record/GB
+Correct request: https://local-authority-eng.register.gov.uk/record/BIR
 
 **End-date field**
 

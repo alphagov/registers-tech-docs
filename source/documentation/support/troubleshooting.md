@@ -35,3 +35,7 @@ The country register only contains countries recognised by the Foreign and Commo
 **Adding additional data**
 
 If you want to combine register data with data from other sources, it can be useful to keep the data from each source in separate files and combine them at a later stage. For example, you could keep separate files for data about countries and data about territories.
+
+### HTTPS
+
+GOV.UK Registers follows [government HTTPS security guidelines](https://www.gov.uk/service-manual/technology/using-https). This means you must make sure your service (including APIs) is only accessible through secure connections. For web-based services this means HTTPS only, with an HTTP Strict Transport Security (HSTS). 

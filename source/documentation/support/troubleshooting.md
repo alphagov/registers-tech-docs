@@ -28,9 +28,9 @@ If you want to combine register data with data from other sources, you may find 
 
 ### Technical specification
 
-GDS maintains a technical specification for registers (click [here](https://openregister.github.io/specification/)).
+GDS maintains a [technical specification for registers](https://openregister.github.io/specification/).
 
 ## Contact us 
 
-If you experience difficulties using registers in your product or service, please contact the GDS registers team [here](https://registers.cloudapps.digital/support.html).
+If you experience difficulties using registers in your product or service, please [contact the GDS registers team](https://registers.cloudapps.digital/support.html).
 

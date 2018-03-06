@@ -1,5 +1,7 @@
 ## Quick start guide
 
+Registers in beta are reliable and are ready for use in products and services.
+
 1. [Find the base URL for the register(s) you want to use](https://registers.cloudapps.digital/registers). For example, for the 'Local authority eng' register: `https://local-authority-eng.register.gov.uk/`.
 2. [Find the endpoints you want](#apireference). For example, `/record/BIR` in `https://local-authority-eng.register.gov.uk/record/BIR`.
 3. Add `.json`, `.yaml`, `.csv`, `.tsv`, or `.ttl` to the end of the request URL (before any query parameters) to choose the format of the response, or amend headers to `accept application/json` or equivalent.

@@ -18,8 +18,6 @@ Despite the beta label, registers in beta are reliable and ready for use in prod
 
 If you can't find a specific record, check you have the correct field value. You must use the exact field value to get a match from the register. For example, in the `local-authority-eng` register, you must capitalise the field value: 
 
-Incorrect request: https://local-authority-eng.register.gov.uk/record/bir
-
 Correct request: https://local-authority-eng.register.gov.uk/record/BIR
 
 **Adding additional data**

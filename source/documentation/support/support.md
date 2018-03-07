@@ -1,4 +1,4 @@
-## Troubleshooting 
+## Support 
 
 ### Error codes
 

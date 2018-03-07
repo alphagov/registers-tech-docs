@@ -8,6 +8,8 @@ View information about a register, including:
 * when the register was last updated
 * how many entries and records the register contains
 
+You can check the entry number you have locally is up to date with the register by comparing the value of `total-entries` for each. 
+
 Example URL: `https://local-authority-eng.register.gov.uk/register`
 
 Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/register/ --header 'accept: application/json'`
@@ -223,6 +225,71 @@ Example response:
    },
 ```
 
+### `GET /record/{field-value}`
+
+Find a specific record within a register. For example, the record for the Borough Council of King's Lynn and West Norfolk in the `local-authority-eng` register. 
+
+*Note: You must have the exact field value of the unique identifier for the record to get a match from the register. For example, in the `local-authority-eng` register, the field value of the unique identifier (the three-letter code for the county council) must be in capital letters.*
+
+Example URL: `https://local-authority-eng.register.gov.uk/record/KIN`
+
+Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/record/KIN --header 'accept: application/json'`
+
+Example response:
+
+```
+{
+  "KIN": {
+    "index-entry-number": "357",
+    "entry-number": "357",
+    "entry-timestamp": "2017-01-26T12:34:10Z",
+    "key": "KIN",
+    "item": [
+      {
+        "local-authority-type": "NMD",
+        "official-name": "Borough Council of King's Lynn and West Norfolk",
+        "local-authority-eng": "KIN",
+        "name": "King's Lynn and West Norfolk"
+      }
+    ]
+  }
+}
+```
+### <a name="record-entries">`GET /record/{field-value}/entries`
+
+Get all entries for a single record.
+
+Example URL: `https://local-authority-eng.register.gov.uk/record/KIN/entries`
+
+Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/record/KIN/entries/ --header 'accept: application/json'`
+
+Example response:
+
+```
+[
+  {
+    "index-entry-number": "265",
+    "entry-number": "265",
+    "entry-timestamp": "2016-10-21T16:11:20Z",
+    "key": "KIN",
+    "item-hash": [
+      "sha-256:5a8571fc6e78f8688c66b72ea45f921a7cd1562b9a9b5b9dab8f49f842d1e391"
+    ]
+  },
+  {
+    "index-entry-number": "357",
+    "entry-number": "357",
+    "entry-timestamp": "2017-01-26T12:34:10Z",
+    "key": "KIN",
+    "item-hash": [
+      "sha-256:3f4da33a33c24de11cca3539f14ee663359608be0ba218d4fc05792c1d19c00f"
+    ]
+  }
+]
+```
+
+You can then download the latest item, for example entry 204 in the above example. Follow the [guidance for downloading items](#items).
+
 ### `GET /entries`
 
 Get all entries from the register. For example, all updates there have ever been to the `local-authority-eng` register.
@@ -373,7 +440,7 @@ Example response:
 }
 ```
 
-### <a name="downloadreg"></a>`GET /download-register`
+### <a name="download">`GET /download-register`
 
 Download the full contents of the register in a ZIP file.
 
@@ -385,17 +452,7 @@ Example request: `curl -o localauthorityeng.zip --request GET --url https://loca
 
 ## Getting updates
 
-You can download the new entries in 2 ways:  
+You can download new entries in 2 ways:  
 
-* download another copy of the full register
-* download individual updated entries for the records you are using
-
-### `GET /register`
-
-You can find the latest entry number by looking at the register information and comparing the most recent entry number with your own copy.
-
-Example request: `https://local-authority-eng.register.gov.uk/register`
-
-### <a name="downloadreg"></a>`GET /download-register`
-
-See [endpoint for downloading register](#downloadreg).
+* [download a copy of the full register](#download)
+* [GET individual new entries for the records you are using](#entries)

@@ -24,7 +24,6 @@ Correct request: https://local-authority-eng.register.gov.uk/record/BIR
 
 If you want to combine register data with data from other sources, you may find it useful to keep the data from each source in separate files and combine them at a later stage. For example, you could keep separate files for data about countries and for data about territories.
 
-=======
 ### Finding a specific record
 
 If you cannot find a specific record, check you have the correct field value. You must use the exact field value to get a match from the register. For example, in the `local-authority-eng` register, you must capitalise the field value: 

@@ -8,7 +8,6 @@
 | 404        | Data not found        |
 | 500        | Internal server error |
 
-<<<<<<< HEAD
 ### Common issues
 
 **Registers still in beta**
@@ -40,16 +39,11 @@ If you want to combine register data with data from other sources, you may find 
 
 GOV.UK Registers follows government [HTTPS security guidelines](https://www.gov.uk/service-manual/technology/using-https). This means you must make sure your service (including APIs) is only accessible through secure connections. For web-based services this means HTTPS only, with an HTTP Strict Transport Security (HSTS).
 
->>>>>>> 36da939c7e29339fecc44c5991e418c7de3c8db2
 ### Technical specification
 
 GDS maintains a [technical specification for registers](https://openregister.github.io/specification/).
 
 ## Contact us 
 
-<<<<<<< HEAD
-If you experience difficulties using registers in your product or service, please [contact the GDS registers team](https://registers.cloudapps.digital/support.html).
-=======
 Please [contact the GDS Registers team](https://registers.cloudapps.digital/support.html) if you have difficulty using registers in your product or service.
->>>>>>> 36da939c7e29339fecc44c5991e418c7de3c8db2
 

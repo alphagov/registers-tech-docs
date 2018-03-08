@@ -440,7 +440,7 @@ Example response:
 }
 ```
 
-### <a name="download">`GET /download-register`
+### <a name="download">`GET /download-register`</a>
 
 Download the full contents of the register in a ZIP file.
 

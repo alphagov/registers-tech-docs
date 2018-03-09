@@ -452,17 +452,17 @@ Example request: `curl -o localauthorityeng.zip --request GET --url https://loca
 
 ## Getting updates
 
-You can find the latest entry number by looking at the register information (use the [`GET /register` endpoint]) and comparing the most recent entry number with your own copy.
+You can find the latest entry number by looking at the register information (use the [`GET /register` endpoint](#getregister)) and comparing the most recent entry number with your own copy.
 
 Example request: `https://local-authority-eng.register.gov.uk/register`
 
 Download a full new copy of the register by using [the `GET /download-register` endpoint](#download).
 
-Download all updates for one record by using the [`GET /record/{field-value}/entries` endpoint[(#api-reference-get-record-field-value-entries):
+Download all updates for one record by [using the `GET /record/{field-value}/entries` endpoint](#record-entries):
 
 Example URL: `https://local-authority-eng.register.gov.uk/record/KIN/entries`
 
-Example request: `curl --request GET --url `https://local-authority-eng.register.gov.uk/record/KIN/entries` --header 'accept: application/json'`
+Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/record/KIN/entries --header 'accept: application/json'`
 
 Example response:
 

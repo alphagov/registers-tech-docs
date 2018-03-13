@@ -469,14 +469,22 @@ Example response:
 ```
 [
   {
+    "index-entry-number": "195",
     "entry-number": "195",
     "entry-timestamp": "2016-04-05T13:23:05Z",
-    "item-hash": "sha-256:d97d6b34bc572e334cbd7898f785b72947557d9dbea59977077f231274259f3b"
+    "key": "KIN",
+    "item-hash": [
+      "sha-256:d97d6b34bc572e334cbd7898f785b72947557d9dbea59977077f231274259f3b"
+    ]
   },
   {
+    "index-entry-number": "204",
     "entry-number": "204",
     "entry-timestamp": "2016-04-05T13:23:05Z",
-    "item-hash": "sha-256:466d194d5100532edd115e3f0035967b09bc7b7f5fc444166df6f4a5f7cb9127"
+    "key": "KIN",
+    "item-hash": [
+      "sha-256:466d194d5100532edd115e3f0035967b09bc7b7f5fc444166df6f4a5f7cb9127"
+    ]
   }
 ]
 ```

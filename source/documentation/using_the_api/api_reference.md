@@ -1,6 +1,6 @@
-## <a name="apireference"></a>API reference
+## <a name="apireference">API reference</a>
 
-### `GET /register`
+### <a name="getregister">`GET /register`</a>
 
 View information about a register, including:  
 
@@ -132,7 +132,7 @@ Example response:
 }
 ```
 
-### <a name="record-entries">`GET /record/{field-value}/entries`
+### <a name="record-entries">`GET /record/{field-value}/entries`</a>
 
 Get all entries for a single record.
 
@@ -255,7 +255,7 @@ Example response:
   }
 }
 ```
-### <a name="record-entries">`GET /record/{field-value}/entries`
+### <a name="record-entries">`GET /record/{field-value}/entries`</a>
 
 Get all entries for a single record.
 
@@ -421,7 +421,7 @@ Example response:
 ]
 ```
 
-### <a name="items"></a>`GET /item/{item-hash}`
+### <a name="items">`GET /item/{item-hash}`</a>
 
 Find a specific item within a register.
 
@@ -452,7 +452,42 @@ Example request: `curl -o localauthorityeng.zip --request GET --url https://loca
 
 ## Getting updates
 
-You can download new entries in 2 ways:  
+You can find the latest entry number by looking at the register information (use the [`GET /register` endpoint](#getregister)) and comparing the most recent entry number with your own copy.
 
-* [download a copy of the full register](#download)
-* [GET individual new entries for the records you are using](#entries)
+Example request: `https://local-authority-eng.register.gov.uk/register`
+
+Download a full new copy of the register by using [the `GET /download-register` endpoint](#download).
+
+Download all updates for one record by [using the `GET /record/{field-value}/entries` endpoint](#record-entries):
+
+Example URL: `https://local-authority-eng.register.gov.uk/record/KIN/entries`
+
+Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/record/KIN/entries --header 'accept: application/json'`
+
+Example response:
+
+```
+[
+  {
+    "index-entry-number": "195",
+    "entry-number": "195",
+    "entry-timestamp": "2016-04-05T13:23:05Z",
+    "key": "KIN",
+    "item-hash": [
+      "sha-256:d97d6b34bc572e334cbd7898f785b72947557d9dbea59977077f231274259f3b"
+    ]
+  },
+  {
+    "index-entry-number": "204",
+    "entry-number": "204",
+    "entry-timestamp": "2016-04-05T13:23:05Z",
+    "key": "KIN",
+    "item-hash": [
+      "sha-256:466d194d5100532edd115e3f0035967b09bc7b7f5fc444166df6f4a5f7cb9127"
+    ]
+  }
+]
+```
+
+You can then download the latest item, for example entry 204 in the above example. Use the [`GET /item/{item-hash}
+` endpoint](#items) for downloading items. 

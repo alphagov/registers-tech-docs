@@ -75,3 +75,7 @@ the HTML and asset files ready to be published.
 
 [rvm]: https://www.ruby-lang.org/en/documentation/installation/#managers
 [bundler]: http://bundler.io/
+
+## Code of conduct
+
+Please refer to the `alphagov` [code of conduct](https://github.com/alphagov/code-of-conduct). 

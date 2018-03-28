@@ -14,21 +14,21 @@ You can find a full list of register base URLs on our [Registers collection page
 | `country` | `https://country.register.gov.uk/` |
 | `allergen`  | `https://allergen.register.gov.uk/` |
 
-**2. [Find the endpoints you want to use](#apireference).**
+**2. Find the endpoints you want to use.**
 
 For example, `GET record/BIR` is the endpoint for Birmingham City Council in the `local-authority-eng` register.
 
 | Endpoint | Description |
 |----------|----------|
-| `GET /register`     | View information about a register. |
-| `GET /records` | Get all records from a register. |
-| `GET /record/{field-value}`  | Find a specific record within a register. |
-| `GET /record/{field-value}/entries`  | Get all entries for a single record. |
-| `GET /records/{field-name}/{field-value}`  | Find all records that share a field-value for a particular field. |
-| `GET /entries`  | Get all entries from a register. |
-| `GET /entry/{entry-number}`     | Find a specific entry from a register. |
-| `GET /item/{item-hash}` | Find a specific item within a register. |
-| `GET /download-register`  | Download the full contents of a register in a ZIP file. |
+| [`GET /register`](#get-register)     | View information about a register. |
+| [`GET /records`](#get-records) | Get all records from a register. |
+| [`GET /record/{field-value}`](#get-record-field-value)  | Find a specific record within a register. |
+| [`GET /record/{field-value}/entries`](#get-record-field-value-entries)  | Get all entries for a single record. |
+| [`GET /records/{field-name}/{field-value}`](#get-records-field-name-field-value) | Find all records that share a field-value for a particular field. |
+| [`GET /entries`](#get-entries)  | Get all entries from a register. |
+| [`GET /entry/{entry-number}`](#get-entry-entry-number)     | Find a specific entry from a register. |
+| [`GET /item/{item-hash}`](#get-item-item-hash) | Find a specific item within a register. |
+| [`GET /download-register`](#get-download-register)  | Download the full contents of a register in a ZIP file. |
 
 **3. Add `.json`, `.yaml`, `.csv`, `.tsv`, or `.ttl` to the end of the request URL (before any query parameters) to choose the format of the response, or amend headers to `accept application/json` or equivalent.**
 

@@ -6,7 +6,9 @@ You can follow this guide to quickly get started with GOV.UK Registers APIs.
 
 **1. Find the base URL for the register(s) you want to use.** 
 
-You can find a full list of register base URLs on our [Registers collection page] (https://registers.cloudapps.digital/registers), but the following are some examples:
+You can find a full list of register base URLs [here](https://registers.cloudapps.digital/registers).
+
+The following are some examples of base URLs:
 
 | Register name | Base URL |
 |----------|----------|
@@ -16,21 +18,41 @@ You can find a full list of register base URLs on our [Registers collection page
 
 **2. Find the endpoints you want to use.**
 
-For example, `GET record/BIR` is the endpoint for Birmingham City Council in the `local-authority-eng` register.
+Using different endpoints, you can:
 
-| Endpoint | Description |
-|----------|----------|
-| [`GET /register`](#get-register)     | View information about a register. |
-| [`GET /records`](#get-records) | Get all records from a register. |
-| [`GET /record/{field-value}`](#get-record-field-value)  | Find a specific record within a register. |
-| [`GET /record/{field-value}/entries`](#get-record-field-value-entries)  | Get all entries for a single record. |
-| [`GET /records/{field-name}/{field-value}`](#get-records-field-name-field-value) | Find all records that share a field-value for a particular field. |
-| [`GET /entries`](#get-entries)  | Get all entries from a register. |
-| [`GET /entry/{entry-number}`](#get-entry-entry-number)     | Find a specific entry from a register. |
-| [`GET /item/{item-hash}`](#get-item-item-hash) | Find a specific item within a register. |
-| [`GET /download-register`](#get-download-register)  | Download the full contents of a register in a ZIP file. |
+* [view information about a register](#get-register) 
+* [get all records from a register](#get-records) 
+* [find a specific record within a register](#get-record-field-value) 
+* [get all entries for a single record](#get-record-field-value-entries) 
+* [find all records that share a `field-value` for a particular field](#get-records-field-name-field-value) 
+* [get all entries from a register](#get-entries)
+* [find a specific entry from a register](#get-entry-entry-number)
+* [find a specific item within a register](#get-item-item-hash)
+* [download the full contents of a register in a ZIP file](#get-download-register) 
 
-**3. Add `.json`, `.yaml`, `.csv`, `.tsv`, or `.ttl` to the end of the request URL (before any query parameters) to choose the format of the response, or amend headers to `accept application/json` or equivalent.**
+For example, `GET record/BIR` is the endpoint for Birmingham City Council in the `local-authority-eng` register, and 'BIR' is the `field-value`. 
+
+**3. Choose the format of the response.**
+
+You can choose from the following response formats:
+
+* `.json` (JSON)
+* `.yaml` (YAML) 
+* `.csv` (CSV) 
+* `.tsv` (TSV)
+* `.ttl` (TTL)
+
+You can specify a format by adding the appropriate extension to the request URL. For example, this is a valid request: 
+
+```
+curl https://country.register.gov.uk/record/GB.json
+```
+
+You can also specify a format by making a request with different headers. For example, this is also a valid request:
+
+```
+curl https://country.register.gov.uk/record/GB --header 'accept: application/json'
+```
 
 **4. Parse register data and use it in your product or service.**
 

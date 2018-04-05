@@ -28,8 +28,6 @@ Using different endpoints, you can:
 * [find a specific item within a register](#get-item-item-hash)
 * [download the full contents of a register in a ZIP file](#get-download-register) 
 
-For example, `GET /record/BIR` is the endpoint for Birmingham City Council in the `local-authority-eng` register, and 'BIR' is the `field-value`. 
-
 **3. Choose the format of the response.**
 
 You can choose from the following response formats, and adding the appropriate suffix to the request URL:

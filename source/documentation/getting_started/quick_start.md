@@ -1,16 +1,16 @@
 ## Quick start guide
 
-Registers which are in beta are reliable and ready for use in products and services. Each register has an open, RESTful API which you can use to access the data in the register. 
+Each register has an open, RESTful API which you can use to access the data in the register. 
 
 You can follow this guide to quickly get started with GOV.UK Registers APIs. 
 
 **1. Find the base URL for the register(s) you want to use.** 
 
-You can find a full list of register base URLs [here](https://registers.cloudapps.digital/registers).
+You can find the base URL for each register from the API inspector. For example, for the `local-authority-eng` register the API inspector is located at `https://local-authority-eng.register.gov.uk/`. 
 
-The following are some examples of base URLs:
+The following are some example of base URLs:
 
-| Register name | Base URL |
+| Register ID | Base URL |
 |----------|----------|
 | `local-authority-eng`     | `https://local-authority-eng.register.gov.uk/`|
 | `country` | `https://country.register.gov.uk/` |
@@ -30,19 +30,21 @@ Using different endpoints, you can:
 * [find a specific item within a register](#get-item-item-hash)
 * [download the full contents of a register in a ZIP file](#get-download-register) 
 
-For example, `GET record/BIR` is the endpoint for Birmingham City Council in the `local-authority-eng` register, and 'BIR' is the `field-value`. 
+For example, `GET /record/BIR` is the endpoint for Birmingham City Council in the `local-authority-eng` register, and 'BIR' is the `field-value`. 
 
 **3. Choose the format of the response.**
 
-You can choose from the following response formats:
+You can choose from the following response formats, and adding the appropriate suffix to the request URL:
 
-* `.json` (JSON)
-* `.yaml` (YAML) 
-* `.csv` (CSV) 
-* `.tsv` (TSV)
-* `.ttl` (TTL)
+| Format | Suffix | Media type |
+|--------|--------|------------|
+| JSON | .json | application/json |
+| YAML | .yaml | text/ yaml |
+| CSV | .csv | text/csv |
+| TSV | .tsv | text/tsv |
+| Turtle | .ttl | text/ttl |
 
-You can specify a format by adding the appropriate extension to the request URL. For example, this is a valid request: 
+For example, this is a valid request: 
 
 ```
 curl https://country.register.gov.uk/record/GB.json
@@ -54,6 +56,6 @@ You can also specify a format by making a request with different headers. For ex
 curl https://country.register.gov.uk/record/GB --header 'accept: application/json'
 ```
 
-**4. Parse register data and use it in your product or service.**
+**4. Get register data and use it in your product or service.**
 
-Most of the API functions return paginated results. Follow the specific guidance for each endpoint to get the page(s) of entries, items, and records you need. Use `page-size` to define the number of results you want and `page-index` to define the pages you want. The maximum `page-size` is 5000.
+API calls on resource collections are paginated. Follow the specific guidance for each endpoint to get the page(s) of entries and records you need. For example, to paginate the records’ collection use `page-size` to define the amount of elements you want per page and `page-index` to define the page you want to get. The maximum `page-size` is 5000.

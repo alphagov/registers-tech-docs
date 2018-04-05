@@ -2,8 +2,6 @@
 
 Each register has an open, RESTful API which you can use to access the data in the register. 
 
-You can follow this guide to quickly get started with GOV.UK Registers APIs. 
-
 **1. Find the base URL for the register(s) you want to use.** 
 
 You can find the base URL for each register from the API inspector. For example, for the `local-authority-eng` register the API inspector is located at `https://local-authority-eng.register.gov.uk/`. 

@@ -24,5 +24,5 @@ GDS maintains a [technical specification for registers](https://openregister.git
 
 ## Contact us 
 
-Please [contact the GDS Registers team](https://registers.cloudapps.digital/support.html) if you have difficulty using registers in your product or service.
+Please [contact the GOV.UK Registers team](https://registers.cloudapps.digital/support.html) if you have difficulty using registers in your product or service.
 

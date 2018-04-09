@@ -17,7 +17,7 @@ If you have created an API key then you can use it with all registers.
 Your API key should be included in all requests using the `Authorization` header:
 
 ```
-curl https://country.register.gov.uk/record/GB.json --header "Authorization: 76415efc-3d0f-4522-affd-bb6464e5ea88"
+curl https://country.register.gov.uk/record/GB.json --header "Authorization: <YOUR-API-KEY>"
 ```
 
 ###Find the base URL(s) you need

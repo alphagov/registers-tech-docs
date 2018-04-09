@@ -4,17 +4,13 @@ Each register has an open, RESTful API which you can use to access the data in t
 
 ###Generate an API key 
 
-Visit the "Use the API" tab on the register you want to use and click **Create API key**. 
-
-![](./images/use_the_api.png?raw=true "Use the API")
-
-Fill in the requested information and your API key will be emailed to you. 
+Visit the (Create your API Key page)[https://registers-trial.service.gov.uk/api_users/new] and fill in the requested information. Your API key will be emailed to you. 
 
 ![](./images/create_an_api_key.png?raw=true "Create an API key")
 
-If you have created an API key then you can use it with all registers.
+Your API key can be used for all registers. 
 
-Your API key should be included in all requests using the `Authorization` header:
+You should include your key in all requests using the `Authorization` header:
 
 ```
 curl https://country.register.gov.uk/record/GB.json --header "Authorization: <YOUR-API-KEY>"

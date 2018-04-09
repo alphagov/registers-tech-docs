@@ -12,6 +12,14 @@ Fill in the requested information and your API key will be emailed to you.
 
 ![](./images/create_an_api_key.png?raw=true "Create an API key")
 
+If you have created an API key then you can use it with all registers.
+
+Your API key should be included in all requests using the `Authorization` header:
+
+```
+curl https://country.register.gov.uk/record/GB.json --header "Authorization: 76415efc-3d0f-4522-affd-bb6464e5ea88"
+```
+
 ###Find the base URL(s) you need
 
 You can find the base URL for each register on its API inspector. For example, for the `local-authority-eng` register the API inspector is located at `https://local-authority-eng.register.gov.uk/`. 

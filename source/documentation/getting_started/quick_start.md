@@ -4,7 +4,7 @@ Each register has an open, RESTful API which you can use to access the data in t
 
 ###Generate an API key 
 
-Visit the (Create your API Key page)[https://registers-trial.service.gov.uk/api_users/new] and fill in the requested information. Your API key will be emailed to you. 
+Visit the [Create your API Key page](https://registers-trial.service.gov.uk/api_users/new) and fill in the requested information. Your API key will be emailed to you. 
 
 ![](./images/create_an_api_key.png?raw=true "Create an API key")
 

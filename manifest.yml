@@ -1,6 +1,6 @@
 ---
 applications:
-- name: registers-docs
+- name: registers-docs-testing
   memory: 64M
   path: ./build
   buildpack: staticfile_buildpack

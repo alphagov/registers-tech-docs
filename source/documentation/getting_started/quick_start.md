@@ -10,6 +10,8 @@ Visit the [Create your API Key](https://registers-trial.service.gov.uk/api_users
 
 Your API key can be used for all registers. 
 
+###Authenticate with your API key
+
 You should include your key in all requests using the `Authorization` header:
 
 ```

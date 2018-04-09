@@ -59,6 +59,15 @@ If all goes well something like the following output will be displayed:
 
 You should now be able to view a live preview at http://localhost:4567.
 
+### Docker way
+
+Instead of all the above, assuming you have Docker and Docker Compose running
+in your machine, you can do:
+
+```
+docker-compose up
+```
+
 ## Build
 
 If you want to publish the website without using a build script you may need to

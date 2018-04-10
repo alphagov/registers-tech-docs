@@ -46,7 +46,7 @@ Using different endpoints, you can:
 
 ### Choose the format of the response
 
-You can choose a response format by adding the appropriate suffix to the request URL:
+Choose a response format by adding the appropriate suffix to the request URL:
 
 | Format | Suffix | Media type |
 |--------|--------|------------|

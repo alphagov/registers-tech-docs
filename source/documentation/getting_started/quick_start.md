@@ -13,7 +13,7 @@ Your API key can be used for all registers.
 You should include your key in all requests using the `Authorization` header:
 
 ```
-curl https://country.register.gov.uk/record/GB.json --header "Authorization: <YOUR-API-KEY>"
+curl https://country.register.gov.uk/record/GB.json --header "Authorization: YOUR-API-KEY-HERE"
 ```
 
 ### Find the base URL(s) you need

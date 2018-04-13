@@ -20,9 +20,9 @@ curl https://country.register.gov.uk/record/GB.json --header "Authorization: <YO
 
 ### Find the base URL(s) you need
 
-Find the base URL for each register on its API inspector. For example, the API inspector for the `local-authority-eng` register is located at `https://local-authority-eng.register.gov.uk/`. 
+You can find the base URL for each register on its API inspector. For example, for the `local-authority-eng` register the API inspector is located at `https://local-authority-eng.register.gov.uk/`. 
 
-The following are some examples of base URLs:
+The following are some example of base URLs:
 
 | Register ID | Base URL |
 |----------|----------|
@@ -46,7 +46,7 @@ Using different endpoints, you can:
 
 ### Choose the format of the response
 
-Choose a response format by adding the appropriate suffix to the request URL:
+You can choose from the following response formats, and adding the appropriate suffix to the request URL:
 
 | Format | Suffix | Media type |
 |--------|--------|------------|
@@ -56,13 +56,13 @@ Choose a response format by adding the appropriate suffix to the request URL:
 | TSV | .tsv | text/tsv |
 | Turtle | .ttl | text/ttl |
 
-For example: 
+For example, this is a valid request: 
 
 ```
 curl https://country.register.gov.uk/record/GB.json
 ```
 
-You can also specify a format by making a request with different headers. For example:
+You can also specify a format by making a request with different headers. For example, this is also a valid request:
 
 ```
 curl https://country.register.gov.uk/record/GB --header 'accept: application/json'

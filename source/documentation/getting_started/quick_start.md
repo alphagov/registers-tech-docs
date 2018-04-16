@@ -2,7 +2,7 @@
 
 Each register has an open, RESTful API which you can use to access the data in the register. 
 
-**1. Find the base URL for the register(s) you want to use.** 
+### Find the base URL for the register(s) you want to use.
 
 Find the base URL for each register on its API inspector. For example, the API inspector for the `local-authority-eng` register is located at `https://local-authority-eng.register.gov.uk/`. 
 
@@ -14,7 +14,7 @@ The following are some examples of base URLs:
 | `country` | `https://country.register.gov.uk/` |
 | `allergen`  | `https://allergen.register.gov.uk/` |
 
-**2. Find the endpoints you want to use.**
+### Find the endpoints you want to use.
 
 Using different endpoints, you can:
 
@@ -28,7 +28,7 @@ Using different endpoints, you can:
 * [find a specific item within a register](#get-item-item-hash)
 * [download the full contents of a register in a ZIP file](#get-download-register) 
 
-**3. Choose the format of the response.**
+### Choose the format of the response.
 
 Choose a response format by adding the appropriate suffix to the request URL:
 
@@ -52,6 +52,6 @@ You can also specify a format by making a request with different headers. For ex
 curl https://country.register.gov.uk/record/GB --header 'accept: application/json'
 ```
 
-**4. Get register data and use it in your product or service.**
+### Get register data and use it in your product or service.
 
 API calls on resource collections are paginated. Follow the specific guidance for each endpoint to get the page(s) of entries and records you need. For example, to paginate the records’ collection use `page-size` to define the amount of elements you want per page and `page-index` to define the page you want to get. The maximum `page-size` is 5000.

@@ -45,8 +45,7 @@ For example:
 ```
 curl https://country.register.gov.uk/record/GB.json
 ```
-
-You can also specify a format by making a request with different headers. For example:
+You can also specify a format by making a request with the `accept` header. For example:
 
 ```
 curl https://country.register.gov.uk/record/GB --header 'accept: application/json'

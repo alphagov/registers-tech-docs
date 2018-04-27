@@ -101,15 +101,15 @@ Example response:
 }
 ```
 
-### `GET /record/{field-value}`
+### `GET /records/{field-value}`
 
 Find a specific record within a register. For example, the record for the Borough Council of King's Lynn and West Norfolk in the `local-authority-eng` register. 
 
 *Note: You must have the exact field value of the unique identifier for the record to get a match from the register. For example, in the `local-authority-eng` register, the field value of the unique identifier (the three-letter code for the county council) must be in capital letters.*
 
-Example URL: `https://local-authority-eng.register.gov.uk/record/KIN`
+Example URL: `https://local-authority-eng.register.gov.uk/records/KIN`
 
-Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/record/KIN --header 'Accept: application/json'`
+Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/records/KIN --header 'Accept: application/json'`
 
 Example response:
 
@@ -132,13 +132,13 @@ Example response:
 }
 ```
 
-### <a name="record-entries">`GET /record/{field-value}/entries`</a>
+### <a name="record-entries">`GET /records/{field-value}/entries`</a>
 
 Get all entries for a single record.
 
-Example URL: `https://local-authority-eng.register.gov.uk/record/KIN/entries`
+Example URL: `https://local-authority-eng.register.gov.uk/records/KIN/entries`
 
-Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/record/KIN/entries/ --header 'Accept: application/json'`
+Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/records/KIN/entries/ --header 'Accept: application/json'`
 
 Example response:
 
@@ -332,13 +332,13 @@ Example response:
 ]
 ```
 
-### `GET /entry/{entry-number}`
+### `GET /entries/{entry-number}`
 
 Find a specific entry from a register. For example, an update to the record for the New Forest District Council in the `local-authority-eng` register. An entry can include multiple items, which will return in a list of `item-hash`
 
-Example URL: `https://local-authority-eng.register.gov.uk/entry/204`
+Example URL: `https://local-authority-eng.register.gov.uk/entries/204`
 
-Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/entry/204/ --header 'Accept: application/json'`
+Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/entries/204/ --header 'Accept: application/json'`
 
 Example response:
 
@@ -356,12 +356,12 @@ Example response:
 ]
 ```
 
-### <a name="items">`GET /item/{item-hash}`</a>
+### <a name="items">`GET /items/{item-hash}`</a>
 
 Find a specific item within a register.
 
-Example URL: `https://local-authority-eng.register.gov.uk/item/sha-256:6c4c815895ea675857ee4ec3fb40571ce54faf5ebcdd5d73a2aae347d4003c31`
-Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/item/sha-256:6c4c815895ea675857ee4ec3fb40571ce54faf5ebcdd5d73a2aae347d4003c31 --header 'Accept: application/json'`
+Example URL: `https://local-authority-eng.register.gov.uk/items/sha-256:6c4c815895ea675857ee4ec3fb40571ce54faf5ebcdd5d73a2aae347d4003c31`
+Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/items/sha-256:6c4c815895ea675857ee4ec3fb40571ce54faf5ebcdd5d73a2aae347d4003c31 --header 'Accept: application/json'`
 
 Example response:
 
@@ -393,11 +393,11 @@ Example request: `https://local-authority-eng.register.gov.uk/register`
 
 Download a full new copy of the register by using [the `GET /download-register` endpoint](#download).
 
-Download all updates for one record by [using the `GET /record/{field-value}/entries` endpoint](#record-entries):
+Download all updates for one record by [using the `GET /records/{field-value}/entries` endpoint](#record-entries):
 
-Example URL: `https://local-authority-eng.register.gov.uk/record/KIN/entries`
+Example URL: `https://local-authority-eng.register.gov.uk/records/KIN/entries`
 
-Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/record/KIN/entries --header 'Accept: application/json'`
+Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/records/KIN/entries --header 'Accept: application/json'`
 
 Example response:
 
@@ -424,5 +424,5 @@ Example response:
 ]
 ```
 
-You can then download the latest item, for example entry 204 in the above example. Use the [`GET /item/{item-hash}
+You can then download the latest item, for example entry 204 in the above example. Use the [`GET /items/{item-hash}
 ` endpoint](#items) for downloading items. 

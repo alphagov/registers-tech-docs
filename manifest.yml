@@ -5,5 +5,5 @@ applications:
   path: ./build
   buildpack: staticfile_buildpack
   routes:
-    - docs.registers.service.gov.uk
-    - registers-docs.cloudapps.digital
+    - route: docs.registers.service.gov.uk
+    - route: registers-docs.cloudapps.digital

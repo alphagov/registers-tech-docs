@@ -4,14 +4,14 @@ host: registers-docs.cloudapps.digital
 # Header-related options
 show_govuk_logo: false
 service_name: Registers
-service_link: https://registers.cloudapps.digital/
+service_link: https://www.registers.service.gov.uk/
 phase: Alpha
 
 # Links to show on right-hand-side of header
 header_links:
-  Using registers: https://registers.cloudapps.digital/using-registers.html
-  Register pipeline: https://registers.cloudapps.digital/registers
-  Support: https://registers.cloudapps.digital/support.html
+  Using registers: https://www.registers.service.gov.uk/using-registers
+  Register pipeline: https://www.registers.service.gov.uk/registers
+  Support: https://www.registers.service.gov.uk/support
   Documentation: /
 
 # Tracking ID from Google Analytics (e.g. UA-XXXX-Y)

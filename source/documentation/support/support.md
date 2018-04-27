@@ -1,4 +1,4 @@
-## Support 
+## Support
 
 ### Error codes
 
@@ -10,7 +10,7 @@
 
 ### Finding a specific record
 
-If you cannot find a specific record, check you have the correct field value. You must use the exact field value to get a match from the register. For example, in the `local-authority-eng` register, you must capitalise the field value (`BIR`): 
+If you cannot find a specific record, check you have the correct field value. You must use the exact field value to get a match from the register. For example, in the `local-authority-eng` register, you must capitalise the field value (`BIR`):
 
 Correct request: https://local-authority-eng.register.gov.uk/record/BIR
 
@@ -22,7 +22,7 @@ GOV.UK Registers follows government [HTTPS security guidelines](https://www.gov.
 
 GDS maintains a [technical specification for registers](https://openregister.github.io/specification/).
 
-## Contact us 
+## Contact us
 
-Please [contact the GDS Registers team](https://registers.cloudapps.digital/support.html) if you have difficulty using registers in your product or service.
+Please [contact the GDS Registers team](https://www.registers.service.gov.uk/support) if you have difficulty using registers in your product or service.
 

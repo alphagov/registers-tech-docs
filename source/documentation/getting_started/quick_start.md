@@ -43,13 +43,13 @@ Choose a response format by adding the appropriate suffix to the request URL:
 For example: 
 
 ```
-curl https://country.register.gov.uk/record/GB.json
+curl https://country.register.gov.uk/records/GB.json
 ```
 
 You can also specify a format by making a request with the `Accept` header. For example:
 
 ```
-curl https://country.register.gov.uk/record/GB --header 'Accept: application/json'
+curl https://country.register.gov.uk/records/GB --header 'Accept: application/json'
 ```
 
 ### Get register data and use it in your product or service.

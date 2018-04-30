@@ -1,8 +1,18 @@
 ## Quick start guide
 
-Each register has an open, RESTful API which you can use to access the data in the register. 
+### Generate an API key
 
-### Find the base URL for the register(s) you want to use.
+[Create your API key](https://www.registers.service.gov.uk/api_users/new) and fill in the requested information. Your API key will be displayed and emailed to you. 
+
+Your API key can be used for all registers. 
+
+### Authenticate with your API key 
+
+You should include your key in all requests using the `Authorization` header:
+
+`curl https://country.register.gov.uk/record/GB.json --header "Authorization: YOUR-API-KEY-HERE"`
+
+### Find the base URL for register(s) 
 
 Find the base URL for each register on its API inspector. For example, the API inspector for the `local-authority-eng` register is located at `https://local-authority-eng.register.gov.uk/`. 
 
@@ -14,7 +24,7 @@ The following are some examples of base URLs:
 | `country` | `https://country.register.gov.uk/` |
 | `allergen`  | `https://allergen.register.gov.uk/` |
 
-### Find the endpoints you want to use.
+### Choose an endpoint  
 
 Using different endpoints, you can:
 
@@ -28,7 +38,7 @@ Using different endpoints, you can:
 * [find a specific item within a register](#get-item-item-hash)
 * [download the full contents of a register in a ZIP file](#get-download-register) 
 
-### Choose the format of the response.
+### Choose a response format 
 
 Choose a response format by adding the appropriate suffix to the request URL:
 
@@ -52,6 +62,6 @@ You can also specify a format by making a request with the `Accept` header. For 
 curl https://country.register.gov.uk/records/GB --header 'Accept: application/json'
 ```
 
-### Get register data and use it in your product or service.
+### Pagination 
 
 API calls on resource collections are paginated. Follow the specific guidance for each endpoint to get the page(s) of entries and records you need. For example, to paginate the records’ collection use `page-size` to define the amount of elements you want per page and `page-index` to define the page you want to get. The maximum `page-size` is 5000.

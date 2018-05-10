@@ -1,3 +1,3 @@
 require 'govuk_tech_docs'
 
-GovukTechDocs.configure(self)
+GovukTechDocs.configure(self, livereload: { js_host: "localhost" })

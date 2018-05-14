@@ -8,11 +8,11 @@
 | 404        | Data not found        |
 | 500        | Internal server error |
 
-### Finding a specific record
+### If you cannot find a speciifc reccord 
 
-If you cannot find a specific record, check you have the correct field value. You must use the exact field value to get a match from the register. For example, in the `local-authority-eng` register, you must capitalise the field value (`BIR`):
+Check you have the correct field value. You must use the exact field value to get a match from the register. 
 
-Correct request: https://local-authority-eng.register.gov.uk/records/BIR
+For example, in the `local-authority-eng` register, you must capitalise the field value (`BIR`) as in `https://local-authority-eng.register.gov.uk/records/BIR`
 
 ### Technical specification
 

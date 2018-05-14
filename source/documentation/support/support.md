@@ -14,10 +14,6 @@ If you cannot find a specific record, check you have the correct field value. Yo
 
 Correct request: https://local-authority-eng.register.gov.uk/records/BIR
 
-### HTTPS
-
-GOV.UK Registers follows government [HTTPS security guidelines](https://www.gov.uk/service-manual/technology/using-https). This means you must make sure your service (including APIs) is only accessible through secure connections. For web-based services this means HTTPS only, with an HTTP Strict Transport Security (HSTS).
-
 ### Technical specification
 
 GDS maintains a [technical specification for registers](https://openregister.github.io/specification/).

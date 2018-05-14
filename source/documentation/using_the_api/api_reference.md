@@ -44,7 +44,7 @@ Example response:
 
 Get all records from the register. For example, all of the English local authorities from the `local-authority-eng` register.
 
-*Note: Results from this API call are paginated. This call will return the first 100 records from the first page of the register. Use `page-size` to define the number of records you want and `page-index` to define the pages you want. The maximum `page-size` is 5000.*
+> Results from this API call are paginated. This call will return the first 100 records from the first page of the register. Use `page-size` to define the number of records you want and `page-index` to define the pages you want. The maximum `page-size` is 5000.
 
 Example URL: `https://local-authority-eng.register.gov.uk/records`
 
@@ -105,7 +105,7 @@ Example response:
 
 Get a specific record within a register based on a particular key. For example, the record for the Borough Council of King's Lynn and West Norfolk in the `local-authority-eng` register. 
 
-*Note: You must have the exact field value of the unique identifier for the record to get a match from the register. For example, in the `local-authority-eng` register, the field value of the unique identifier (the three-letter code for the county council) must be in capital letters.*
+> You must have the exact field value of the unique identifier for the record to get a match from the register. For example, in the `local-authority-eng` register, the field value of the unique identifier (the three-letter code for the county council) must be in capital letters.
 
 Example URL: `https://local-authority-eng.register.gov.uk/records/KIN`
 
@@ -171,7 +171,7 @@ You can then download the latest item. For example, entry 265 in the above code 
 
 Get all records that share a field-value for a particular field. For example, all local authorities marked as county councils from the `local-authority-eng` register. 
 
-*Note: Results from this API call are paginated. This call will return the first 100 records from the first page of the register. Use `page-size` to define the number of records you want and `page-index` to define the pages you want. The maximum `page-size` is 5000.*
+> Results from this API call are paginated. This call will return the first 100 records from the first page of the register. Use `page-size` to define the number of records you want and `page-index` to define the pages you want. The maximum `page-size` is 5000.
 
 Example URL: `https://local-authority-eng.register.gov.uk/records/local-authority-type/CTY`
 
@@ -229,7 +229,7 @@ Example response:
 
 Get all entries from the register. For example, all updates there have ever been to the `local-authority-eng` register.
 
-*Note: Results from this API call are paginated. This call will return the first 100 entries from the first page of the register. Use `limit` to define the maximum number of entries you want and `start` to define the entry number you want to start from (in ascending order).*
+> Results from this API call are paginated. This call will return the first 100 entries from the first page of the register. Use `limit` to define the maximum number of entries you want and `start` to define the entry number you want to start from (in ascending order).
 
 Example URL: `https://local-authority-eng.register.gov.uk/entries?start=1&limit=10`
 
@@ -361,6 +361,7 @@ Example response:
 Get a specific item within a register.
 
 Example URL: `https://local-authority-eng.register.gov.uk/items/sha-256:6c4c815895ea675857ee4ec3fb40571ce54faf5ebcdd5d73a2aae347d4003c31`
+
 Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/items/sha-256:6c4c815895ea675857ee4ec3fb40571ce54faf5ebcdd5d73a2aae347d4003c31 --header 'Accept: application/json'`
 
 Example response:
@@ -379,7 +380,7 @@ Example response:
 
 Download the full contents of the register in a ZIP file.
 
-*Note: This will download every entry and item as an individual JSON file. If you only want to download records, use `GET /records`.*
+> This will download every entry and item as an individual JSON file. If you only want to download records, use `GET /records`.
 
 Example URL: `https://local-authority-eng.register.gov.uk/download-register`
 

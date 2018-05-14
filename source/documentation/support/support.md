@@ -16,7 +16,7 @@ For example, in the `local-authority-eng` register, you must capitalise the fiel
 
 ### Technical specification
 
-GDS maintains a [technical specification for registers](https://openregister.github.io/specification/).
+The Government Digital Service maintains a [technical specification for registers](https://openregister.github.io/specification/).
 
 ## Contact us
 

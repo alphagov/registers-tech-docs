@@ -101,9 +101,9 @@ Example response:
 }
 ```
 
-### `GET /records/{field-value}`
+### `GET /records/{key}`
 
-Find a specific record within a register. For example, the record for the Borough Council of King's Lynn and West Norfolk in the `local-authority-eng` register. 
+Get a specific record within a register based on a particular key. For example, the record for the Borough Council of King's Lynn and West Norfolk in the `local-authority-eng` register. 
 
 > You must have the exact field value of the unique identifier for the record to get a match from the register. For example, in the `local-authority-eng` register, the field value of the unique identifier (the three-letter code for the county council) must be in capital letters.
 
@@ -132,7 +132,7 @@ Example response:
 }
 ```
 
-### <a name="record-entries">`GET /records/{field-value}/entries`</a>
+### <a name="record-entries">`GET /records/{key}/entries`</a>
 
 Get all entries for a single record.
 
@@ -165,11 +165,11 @@ Example response:
 ]
 ```
 
-You can then download the latest item, for example entry 204 in the above example. Follow the [guidance for downloading items](#items).
+You can then download the latest item. For example, entry 265 in the above code snippet. Follow the [guidance for downloading items](#items).
 
 ### `GET /records/{field-name}/{field-value}`
 
-Find all records that share a field-value for a particular field. For example, all local authorities marked as county councils from the `local-authority-eng` register. 
+Get all records that share a field-value for a particular field. For example, all local authorities marked as county councils from the `local-authority-eng` register. 
 
 > Results from this API call are paginated. This call will return the first 100 records from the first page of the register. Use `page-size` to define the number of records you want and `page-index` to define the pages you want. The maximum `page-size` is 5000.
 
@@ -334,7 +334,7 @@ Example response:
 
 ### `GET /entries/{entry-number}`
 
-Find a specific entry from a register. For example, an update to the record for the New Forest District Council in the `local-authority-eng` register. An entry can include multiple items, which will return in a list of `item-hash`
+Get a specific entry from a register. For example, an update to the record for the New Forest District Council in the `local-authority-eng` register. An entry can include multiple items, which will return in a list of `item-hash`
 
 Example URL: `https://local-authority-eng.register.gov.uk/entries/204`
 
@@ -358,7 +358,7 @@ Example response:
 
 ### <a name="items">`GET /items/{item-hash}`</a>
 
-Find a specific item within a register.
+Get a specific item within a register.
 
 Example URL: `https://local-authority-eng.register.gov.uk/items/sha-256:6c4c815895ea675857ee4ec3fb40571ce54faf5ebcdd5d73a2aae347d4003c31`
 
@@ -386,44 +386,4 @@ Example URL: `https://local-authority-eng.register.gov.uk/download-register`
 
 Example request: `curl -o localauthorityeng.zip --request GET --url https://local-authority-eng.register.gov.uk/download-register`
 
-## Getting updates
 
-You can find the latest entry number by looking at the register information (use the [`GET /register` endpoint](#getregister)) and comparing the most recent entry number with your own copy.
-
-Example request: `https://local-authority-eng.register.gov.uk/register`
-
-Download a full new copy of the register by using [the `GET /download-register` endpoint](#download).
-
-Download all updates for one record by [using the `GET /records/{field-value}/entries` endpoint](#record-entries):
-
-Example URL: `https://local-authority-eng.register.gov.uk/records/KIN/entries`
-
-Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/records/KIN/entries --header 'Accept: application/json'`
-
-Example response:
-
-```
-[
-  {
-    "index-entry-number": "195",
-    "entry-number": "195",
-    "entry-timestamp": "2016-04-05T13:23:05Z",
-    "key": "KIN",
-    "item-hash": [
-      "sha-256:d97d6b34bc572e334cbd7898f785b72947557d9dbea59977077f231274259f3b"
-    ]
-  },
-  {
-    "index-entry-number": "204",
-    "entry-number": "204",
-    "entry-timestamp": "2016-04-05T13:23:05Z",
-    "key": "KIN",
-    "item-hash": [
-      "sha-256:466d194d5100532edd115e3f0035967b09bc7b7f5fc444166df6f4a5f7cb9127"
-    ]
-  }
-]
-```
-
-You can then download the latest item, for example entry 204 in the above example. Use the [`GET /items/{item-hash}
-` endpoint](#items) for downloading items. 

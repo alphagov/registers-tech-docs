@@ -6,4 +6,3 @@ applications:
   buildpack: staticfile_buildpack
   routes:
     - route: docs.registers.service.gov.uk
-    - route: registers-docs.cloudapps.digital

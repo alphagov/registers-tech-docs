@@ -1,16 +1,15 @@
 # Host to use for canonical URL generation (without trailing slash)
-host: registers-docs.cloudapps.digital
+host: docs.registers.service.gov.uk
 
 # Header-related options
-show_govuk_logo: false
+show_govuk_logo: true
 service_name: Registers
 service_link: https://www.registers.service.gov.uk/
 phase: Alpha
 
 # Links to show on right-hand-side of header
 header_links:
-  Using registers: https://www.registers.service.gov.uk/using-registers
-  Register pipeline: https://www.registers.service.gov.uk/registers
+  Get data: https://www.registers.service.gov.uk/registers
   Support: https://www.registers.service.gov.uk/support
   Documentation: /
 

@@ -8,15 +8,11 @@
 | 404        | Data not found        |
 | 500        | Internal server error |
 
-### Finding a specific record
+### If you cannot find a specific record 
 
-If you cannot find a specific record, check you have the correct field value. You must use the exact field value to get a match from the register. For example, in the `local-authority-eng` register, you must capitalise the field value (`BIR`):
+Check you have the correct field value. You must use the exact field value to get a match from the register. 
 
-`https://local-authority-eng.register.gov.uk/records/BIR`
-
-### HTTPS
-
-Registers follow government [HTTPS security guidelines](https://www.gov.uk/service-manual/technology/using-https). This means you must make sure your service (including APIs) is only accessible through secure connections. For web-based services this means HTTPS only, with an HTTP Strict Transport Security (HSTS).
+For example, in the `local-authority-eng` register, you must capitalise the field value (`BIR`) as in `https://local-authority-eng.register.gov.uk/records/BIR`
 
 ### Technical specification
 

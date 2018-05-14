@@ -30,12 +30,12 @@ Using different endpoints, you can:
 
 * [view information about a register](#get-register) 
 * [get all records from a register](#get-records) 
-* [find a specific record within a register](#get-record-field-value) 
-* [get all entries for a single record](#get-record-field-value-entries) 
-* [find all records that share a `field-value` for a particular field](#get-records-field-name-field-value) 
+* [get a specific record within a register based on a particular key](#get-record-key) 
+* [get all entries for a single record based on a particular key](#get-record-key-entries) 
+* [get all records that share a `field-value` for a particular field](#get-records-field-name-field-value) 
 * [get all entries from a register](#get-entries)
-* [find a specific entry from a register](#get-entry-entry-number)
-* [find a specific item within a register](#get-item-item-hash)
+* [get a specific entry from a register](#get-entry-entry-number)
+* [get a specific item within a register](#get-item-item-hash)
 * [download the full contents of a register in a ZIP file](#get-download-register) 
 
 ### Choose a response format 

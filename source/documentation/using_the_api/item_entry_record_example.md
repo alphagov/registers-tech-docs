@@ -20,3 +20,5 @@ To summarise this:
 * items contain actual data
 * item hashes are unique for given items, and link given items and entries
 * records correspond to the latest entry for a particular primary key 
+
+> Warning: if the primary key 'CI' is updated in a future entry to the `country` register, this example will be partially obsolete 

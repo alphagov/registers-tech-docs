@@ -10,9 +10,9 @@
 
 ### If you cannot find a speciifc reccord 
 
-Check you have the correct field value. You must use the exact field value to get a match from the register. For example, in the `local-authority-eng` register, you must capitalise the field value (`BIR`):
+Check you have the correct field value. You must use the exact field value to get a match from the register. 
 
-`https://local-authority-eng.register.gov.uk/records/BIR`
+For example, in the `local-authority-eng` register, you must capitalise the field value (`BIR`) as in `https://local-authority-eng.register.gov.uk/records/BIR`
 
 ### Technical specification
 

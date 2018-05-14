@@ -10,9 +10,9 @@ The `country` register, and one of its keys, ‘CI’, provides a useful example
 
 Using the `GET /items/{item-hash}` endpoint on the [90th entry to the `country` register](https://country.register.gov.uk/entries/90.json) returns the item, which reveals that the `official-name` field for this entry is “The Republic of Cote D’Ivoire”. Looking much later, the [207th entry to the `country` register](https://country.register.gov.uk/entries/207.json)  also relates to the key ‘CI’. However, this time the item hash addresses to an item that reveals that the `official-name` field for the corresponding item is “The Republic of Côte D’Ivoire”, and has a correction to an accent above the ‘o’.
 
-Following the example above, using the `GET /records/{field-value}` endpoint for ‘CI’ [indicates the later spelling](https://country.register.gov.uk/records/CI.json) (“The Republic of Côte D’Ivoire”), because the record currently corresponds to the 207th entry to the `country` register, which is more recent than the 90th entry. 
+Following the example above, using the `GET /records/{key}` endpoint for ‘CI’ [indicates the later spelling](https://country.register.gov.uk/records/CI.json) (“The Republic of Côte D’Ivoire”), because the record currently corresponds to the 207th entry to the `country` register, which is more recent than the 90th entry. 
 
-Using the `GET /records/{field-value}` endpoint, where `{field-value}` is ‘CI’, [returns the record for ‘CI’, where the data is presented with the item already resolved](https://country.register.gov.uk/records/CI/.json). That is, the data is expressed as a function of the latest entry, which in this case is the 207th. Using the `GET /records/{field-value}/entries` endpoint, where `{field-value}` is again ‘CI’, [returns both the 90th and the 207th entries](https://country.register.gov.uk/records/CI/entries.json). 
+Using the `GET /records/{key}` endpoint, where `{key}` is ‘CI’, [returns the record for ‘CI’, where the data is presented with the item already resolved](https://country.register.gov.uk/records/CI/.json). That is, the data is expressed as a function of the latest entry, which in this case is the 207th. Using the `GET /records/{key}/entries` endpoint, where `{key}` is again ‘CI’, [returns both the 90th and the 207th entries](https://country.register.gov.uk/records/CI/entries.json). 
 
 To summarise this:
 

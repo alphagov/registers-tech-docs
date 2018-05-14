@@ -6,7 +6,7 @@ Example request: `https://local-authority-eng.register.gov.uk/register`
 
 Download a full new copy of the register by using [the `GET /download-register` endpoint](#download).
 
-Download all updates for one record by [using the `GET /records/{field-value}/entries` endpoint](#record-entries):
+Download all updates for one record according to a particular key by [using the `GET /records/{key}/entries` endpoint](#get-record-key-entries):
 
 Example URL: `https://local-authority-eng.register.gov.uk/records/KIN/entries`
 

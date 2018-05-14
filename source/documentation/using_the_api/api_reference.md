@@ -165,7 +165,7 @@ Example response:
 ]
 ```
 
-You can then download the latest item, for example entry 204 in the above example. Follow the [guidance for downloading items](#items).
+You can then download the latest item. For example, entry 265 in the above code snippet. Follow the [guidance for downloading items](#items).
 
 ### `GET /records/{field-name}/{field-value}`
 

@@ -1,6 +1,6 @@
 ## The entry/item/record relationship
 
-An **entry** expresses a change in a register. For example, using the `GET /entries` endpoint for the `country` register will return all entries there have ever been to that register. The very [first entry to the `country` register](https://country.register.gov.uk/entries/1.json) introduced a change for the **key** ‘SU’, corresponding to the country of the USSR. 
+An **entry** expresses an update to a register. For example, using the `GET /entries` endpoint for the `country` register will return all entries there have ever been to that register. The very [first entry to the `country` register](https://country.register.gov.uk/entries/1.json) introduced an update for the **key** ‘SU’, corresponding to the country of the USSR. 
 
 Each entry in a register has a relationship with one **item**, which contains actual data. This relationship is expressed through the **item hash**, which addresses to a specific item. **Records** are identifiable by keys and correspond to the latest entry for a particular key, as indicated by the entry number.
 

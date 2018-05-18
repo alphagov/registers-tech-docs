@@ -1,24 +1,26 @@
-## The entry/item/record relationship
+## The relationship between entries, items and records
 
-An **entry** expresses an update to a register. For example, using the `GET /entries` endpoint for the `country` register will return all entries there have ever been to that register. The very [first entry to the `country` register](https://country.register.gov.uk/entries/1.json) introduced an update for the **key** ‘SU’, corresponding to the country of the USSR. 
+Registers are made up of:
 
-Each entry in a register has a relationship with one **item**, which contains actual data. This relationship is expressed through the **item hash**, which addresses to a specific item. **Records** are identifiable by keys and correspond to the latest entry for a particular key, as indicated by the entry number.
+entries
+items
+records
+
+Entries contain metadata about what and when data has changed. 
+
+Each entry in a register has a relationship with one item, which contains data. An item is connected to an entry with an item hash.   
+
+Records represent things that change over time. Records are identifiable by keys and correspond to the latest entry for a particular key, as indicated by the entry number.
 
 ### A worked example
 
 The `country` register, and one of its keys, ‘CI’, provides a useful example. 
 
-Using the `GET /items/{item-hash}` endpoint on the [90th entry to the `country` register](https://country.register.gov.uk/entries/90.json) returns the item, which reveals that the `official-name` field for this entry is “The Republic of Cote D’Ivoire”. Looking much later, the [207th entry to the `country` register](https://country.register.gov.uk/entries/207.json)  also relates to the key ‘CI’. However, this time the item hash addresses to an item that reveals that the `official-name` field for the corresponding item is “The Republic of Côte D’Ivoire”, and has a correction to an accent above the ‘o’.
+Using the `GET /items/{item-hash}` endpoint on the [90th entry to the `country` register](https://country.register.gov.uk/entries/90.json) returns the item, which reveals that the `official-name` field for this entry is ‘The Republic of Cote D’Ivoire’. 
 
-Following the example above, using the `GET /records/{key}` endpoint for ‘CI’ [indicates the later spelling](https://country.register.gov.uk/records/CI.json) (“The Republic of Côte D’Ivoire”), because the record currently corresponds to the 207th entry to the `country` register, which is more recent than the 90th entry. 
+The more recent [207th entry to the `country` register](https://country.register.gov.uk/entries/207.json) also relates to the key ‘CI’. However, this time the item hash addresses to an item that reveals that the `official-name` field for the corresponding item is ‘The Republic of Côte D’Ivoire’. The change to the accent above the ‘o’ required a new entry to the register.
 
-Using the `GET /records/{key}` endpoint, where `{key}` is ‘CI’, [returns the record for ‘CI’, where the data is presented with the item already resolved](https://country.register.gov.uk/records/CI/.json). That is, the data is expressed as a function of the latest entry, which in this case is the 207th. Using the `GET /records/{key}/entries` endpoint, where `{key}` is again ‘CI’, [returns both the 90th and the 207th entries](https://country.register.gov.uk/records/CI/entries.json). 
+Using the `GET /records/{key}` endpoint will return the most recent entry. For example, 'GET /records/CI` returns the 207th entry. 
 
-To summarise this:
+Using the `GET /records/CI/entries` endpoint will return both the 90th and the 207th entries. Using the `GET /entries` endpoint will return all the entries there have ever been. 
 
-* entries contain metadata about what and when data has changed
-* items contain actual data
-* item hashes are unique for given items, and link given items and entries
-* records correspond to the latest entry for a particular key 
-
-> Warning: if the key 'CI' is updated in a future entry to the `country` register, this example will be partially obsolete 

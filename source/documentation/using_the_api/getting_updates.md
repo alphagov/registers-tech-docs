@@ -10,7 +10,7 @@ Download all updates for one record according to a particular key by [using the 
 
 Example URL: `https://local-authority-eng.register.gov.uk/records/KIN/entries`
 
-Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/records/KIN/entries --header 'Accept: application/json'`
+Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/records/KIN/entries --header 'Accept: application/json' --header 'Authorization: YOUR-API-KEY-HERE'`
 
 Example response:
 

@@ -12,7 +12,7 @@ You can check the entry number you have locally is up to date with the register 
 
 Example URL: `https://local-authority-eng.register.gov.uk/register`
 
-Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/register/ --header 'Accept: application/json'`
+Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/register/ --header 'Accept: application/json' --header 'Authorization: YOUR-API-KEY-HERE'`
 
 Example response:
 
@@ -48,7 +48,7 @@ Get all records from the register. For example, all of the English local authori
 
 Example URL: `https://local-authority-eng.register.gov.uk/records`
 
-Example request: `curl --request GET --url 'https://local-authority-eng.register.gov.uk/records?page-index=1&page-size=3' --header 'Accept: application/json'`
+Example request: `curl --request GET --url 'https://local-authority-eng.register.gov.uk/records?page-index=1&page-size=3' --header 'Accept: application/json' --header 'Authorization: YOUR-API-KEY-HERE'`
 
 Example response:
 
@@ -109,7 +109,7 @@ Get a specific record within a register based on a particular key. For example, 
 
 Example URL: `https://local-authority-eng.register.gov.uk/records/KIN`
 
-Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/records/KIN --header 'Accept: application/json'`
+Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/records/KIN --header 'Accept: application/json' --header 'Authorization: YOUR-API-KEY-HERE'`
 
 Example response:
 
@@ -138,7 +138,7 @@ Get all entries for a single record.
 
 Example URL: `https://local-authority-eng.register.gov.uk/records/KIN/entries`
 
-Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/records/KIN/entries/ --header 'Accept: application/json'`
+Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/records/KIN/entries/ --header 'Accept: application/json' --header 'Authorization: YOUR-API-KEY-HERE'`
 
 Example response:
 
@@ -175,7 +175,7 @@ Get all records that share a field-value for a particular field. For example, al
 
 Example URL: `https://local-authority-eng.register.gov.uk/records/local-authority-type/CTY`
 
-Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/records/local-authority-type/CTY --header 'Accept: application/json'`
+Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/records/local-authority-type/CTY --header 'Accept: application/json' --header 'Authorization: YOUR-API-KEY-HERE'`
 
 Example response:
 
@@ -233,7 +233,7 @@ Get all entries from the register. For example, all updates there have ever been
 
 Example URL: `https://local-authority-eng.register.gov.uk/entries?start=1&limit=10`
 
-Example request: `curl --request GET --url 'https://local-authority-eng.register.gov.uk/entries?start=1&limit=10' --header 'Accept: application/json'`
+Example request: `curl --request GET --url 'https://local-authority-eng.register.gov.uk/entries?start=1&limit=10' --header 'Accept: application/json' --header 'Authorization: YOUR-API-KEY-HERE'`
 
 Example response:
 
@@ -338,7 +338,7 @@ Get a specific entry from a register. For example, an update to the record for t
 
 Example URL: `https://local-authority-eng.register.gov.uk/entries/204`
 
-Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/entries/204/ --header 'Accept: application/json'`
+Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/entries/204/ --header 'Accept: application/json' --header 'Authorization: YOUR-API-KEY-HERE'`
 
 Example response:
 
@@ -362,7 +362,7 @@ Get a specific item within a register.
 
 Example URL: `https://local-authority-eng.register.gov.uk/items/sha-256:6c4c815895ea675857ee4ec3fb40571ce54faf5ebcdd5d73a2aae347d4003c31`
 
-Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/items/sha-256:6c4c815895ea675857ee4ec3fb40571ce54faf5ebcdd5d73a2aae347d4003c31 --header 'Accept: application/json'`
+Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/items/sha-256:6c4c815895ea675857ee4ec3fb40571ce54faf5ebcdd5d73a2aae347d4003c31 --header 'Accept: application/json' --header 'Authorization: YOUR-API-KEY-HERE'`
 
 Example response:
 
@@ -384,6 +384,6 @@ Download the full contents of the register in a ZIP file.
 
 Example URL: `https://local-authority-eng.register.gov.uk/download-register`
 
-Example request: `curl -o localauthorityeng.zip --request GET --url https://local-authority-eng.register.gov.uk/download-register`
+Example request: `curl -o localauthorityeng.zip --request GET --url https://local-authority-eng.register.gov.uk/download-register  --header 'Authorization: YOUR-API-KEY-HERE'`
 
 

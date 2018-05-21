@@ -20,7 +20,7 @@ Using the `GET /entries/{entry-number}` where `{entry-number}` is '90' returns t
 
 The more recent [207th entry to the `country` register](https://country.register.gov.uk/entries/207.json) also relates to the key ‘CI’. However, this time the item hash addresses to an item that reveals that the `official-name` field for the corresponding item is ‘The Republic of Côte D’Ivoire’. The need to change the accent above the ‘o’ required a new entry to the register.
 
-Using the `GET /records/{key}` endpoint returns the most recent entry to the register for a given `{key}`, with the item data already resolved. For example, 'GET /records/CI` returns the 207th entry. 
+Using the `GET /records/{key}` endpoint returns the most recent entry to the register for a given `{key}`, with the item data already resolved. For example, `GET /records/CI` returns the 207th entry. 
 
 Using the `GET /records/CI/entries` endpoint will return both the 90th and the 207th entries. 
 

@@ -1,6 +1,6 @@
 ## Entries, items and records 
 
-Registers are made up of:
+Registers are primarily made up of:
 
 * entries
 * items

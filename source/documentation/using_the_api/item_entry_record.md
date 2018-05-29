@@ -1,4 +1,4 @@
-## Entries, items and records 
+## The components of a register
 
 Registers are primarily made up of:
 

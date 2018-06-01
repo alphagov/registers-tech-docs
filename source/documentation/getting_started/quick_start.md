@@ -16,6 +16,8 @@ You should include your key in all requests using the `Authorization` header:
 
 Find the base URL for each register on its API inspector. For example, the API inspector for the `local-authority-eng` register is located at `https://local-authority-eng.register.gov.uk/`. 
 
+The base URL of a register is always of the form `https://{register}.{domain}`. For example, the base URL for the `local-authority-eng` register is `https://local-authority-eng.register.gov.uk`, so the domain for this register is `register.gov.uk`. 
+
 The following are some examples of base URLs:
 
 | Register ID | Base URL |

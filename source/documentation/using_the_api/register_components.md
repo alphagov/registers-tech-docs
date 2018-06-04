@@ -1,18 +1,30 @@
-## The relationship between entries, items and records
+## The components of a register
 
-Registers are made up of:
+Registers are primarily composed of:
 
 * entries
 * items
 * records
 
+### Entries
+
 Entries contain metadata about what and when data has changed. 
 
-Each entry in a register has a relationship with one item, which contains data. An item is connected to an entry with an item hash.   
+Entries are made up of the fields `entry-number`, `index-entry-number`, `entry-timestamp`, `item-hash` and `key`. 
 
-Records represent things that change over time. Records are identifiable by keys and correspond to the latest entry for a particular key, as indicated by the entry number.
+The `entry-number` is unique and defines an entry’s position within the ordered list of a register. The `index-entry-number` is unique and defines an entry’s position within the ordered list of an index. For any given entry in a register, the `entry-number` and `index-entry-number` are always identical. 
 
-### A worked example
+The `entry-timestamp` is the time when an entry was introduced to a given register, but it is no guarantee of the order of entries in a register. The `entry-number` is.
+
+### Items
+
+Each entry in a register has a relationship with one item. Items contain data for a given register. Entries and items are connected by a given `item-hash`.  
+
+### Records
+
+Records represent things that change over time. Records are identifiable by keys and correspond to the latest entry for a particular key, as indicated by a given `entry-number`. 
+
+### How entries, items and records relate (a worked example)
 
 The `country` register, and one of its keys, ‘CI’, provides a useful example. 
 

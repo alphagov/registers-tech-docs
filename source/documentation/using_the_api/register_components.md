@@ -10,19 +10,23 @@ Registers are primarily composed of:
 
 Entries contain metadata about what and when data has changed. 
 
-Entries are made up of the fields `entry-number`, `index-entry-number`, `entry-timestamp`, `item-hash` and `key`. 
+Entries contain the fields `entry-number`,  `entry-timestamp`, `item-hash` and `key`. 
 
-The `entry-number` is unique and defines an entry’s position within the ordered list of a register. The `index-entry-number` is unique and defines an entry’s position within the ordered list of an index. For any given entry in a register, the `entry-number` and `index-entry-number` are always identical. 
+The `entry-number` is unique and defines an entry’s position within the ordered list of a register. The `entry-timestamp` is the time when an entry was introduced to a given register, but it is no guarantee of the order of entries in a register. The `entry-number` is.
 
-The `entry-timestamp` is the time when an entry was introduced to a given register, but it is no guarantee of the order of entries in a register. The `entry-number` is.
+Entries are connected to items by a given `item-hash`. 
+
+Each `key` is an alphanumeric string unique to the data in a register. The primary key (i.e. the unique identifier) always has the same name as the name of the register. For example, every entry in the `local-authority-eng` register has a field called `local-authority-eng`. Foreign keys, which are not always present, link to other registers. 
+
+> Entries also contain the field `index-entry-number`, which is a unique number that defines an entry's position within the ordered list of an index. Indexes are not a reliable feature yet, which are not ready for use by most users.  
 
 ### Items
 
-Each entry in a register has a relationship with one item. Items contain data for a given register. Entries and items are connected by a given `item-hash`.  
+Items contain structured data for a given primary key in a register. Items have predefined fields which are consistent within a register.
 
 ### Records
 
-Records represent things that change over time. Records are identifiable by keys and correspond to the latest entry for a particular key, as indicated by a given `entry-number`. 
+A record corresponds to the latest entry for a particular key, as indicated by the `entry-number`.  
 
 ### How entries, items and records relate (a worked example)
 

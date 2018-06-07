@@ -4,7 +4,7 @@ Registers can be linked by CURIEs and foreign keys. CURIEs are the preferred mec
 
 ### CURIEs 
 
-Any value in a field with a datatype of `curie` must be a CURIE. In registers, all CURIEs are of the form `{prefix}:{key}`, where `{prefix}` is mapped to a base URL `https://{register}.register.gov.uk/records/` for a given `{register}`. 
+Any value in a field with a datatype of `curie` must be a CURIE. In registers, all CURIEs are of the form `{prefix}:{key}`, where `{prefix}` is mapped to a base URL  `https://{register}.register.gov.uk/records/` for a given register (`{register}`). This means that when the `{key}` is blank, it references the full set of records in that register.
 
 For example, [the `organisation` field in the `statistical-geography` register](https://field.register.gov.uk/records/organisation) has the datatype `curie`. In the [‘E09’ record of this register](https://statistical-geography.register.gov.uk/records/E09), the value of the `organisation` field is `government-organisation:D4`. The `{key}` is ‘D4’ and the `{prefix}` is `government-organisation`, which maps to the URL `https://government-organisation.register.gov.uk/records/`. The expanded URL is therefore `https://government-organisation.register.gov.uk/records/D4`.
 

@@ -1,6 +1,6 @@
 ## Linked registers
 
-Registers can be linked by CURIEs and foreign keys. CURIEs are the newest and preferred mechanism, and all new registers will only use CURIEs.
+Registers can be linked by CURIEs and foreign keys. CURIEs are the preferred mechanism, and all new registers will only use CURIEs.
 
 ### CURIEs 
 

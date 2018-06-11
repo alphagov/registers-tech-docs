@@ -16,7 +16,7 @@ The entry number is unique and defines an entry’s position within the ordered 
 
 Each entry is connected to an item by a given item hash. Entries reference items in the `item-hash` field using the hash derived from the corresponding item's content.
 
-Each key is a unique UTF-8 string which identifies something in a register. The `key` field holding this data always has the same name as the register. For example, every entry in the `local-authority-eng` register has a field called `local-authority-eng`.
+Each key (in the `key` field) is a unique UTF-8 string which identifies something in a register. 
 
 Entries also contain the field `index-entry-number`, which is a unique number that defines an entry's position within the ordered list of an index. 
 
@@ -25,6 +25,8 @@ The `index-entry-number` field depends on indexes, which are an experimental and
 ### Items
 
 Items contain structured data for a given primary key in a register. Items have predefined fields which are consistent within a register.
+
+The item always contains a field which has the same name as the register. For example, every item in the `local-authority-eng` register has a field called `local-authority-eng`. The data contained in this field will be the same as the data in the key property of the entry that introduced the item to the register.
 
 ### Records
 

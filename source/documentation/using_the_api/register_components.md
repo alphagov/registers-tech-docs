@@ -32,7 +32,7 @@ The item always contains a field which has the same name as the register. For ex
 
 A record corresponds to the latest entry for a particular key, as indicated by the `entry-number` field.  
 
-### How entries, items and records relate (a worked example)
+### How entries, items and records relate 
 
 The `country` register, and one of its keys, ‘CI’, provides a useful example. 
 

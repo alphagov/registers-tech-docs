@@ -20,9 +20,3 @@ For example, the `local-authority-type` field is a foreign key, and has the URL 
 
 In the same example, the ‘SHE’ record of the `local-authority-eng` register has the URL `https://local-authority-eng.register.gov.uk/records/SHE`. The `local-authority-type` field here is populated by `NMD`, so this resolves to the ‘NMD’ record in the `local-authority-type` register, which has the URL `https://local-authority-type.register.gov.uk/records/NMD`.  
  
-
-
-
-
-
-

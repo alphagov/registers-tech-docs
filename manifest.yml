@@ -2,7 +2,6 @@
 applications:
 - name: registers-docs
   memory: 64M
-  path: ./build
   buildpack: staticfile_buildpack
   routes:
     - route: docs.registers.service.gov.uk

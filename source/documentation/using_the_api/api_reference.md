@@ -141,7 +141,7 @@ Content-Type: application/json
 
 ### <a name="get-records-key-entries">Get all entries for a single record based on a particular key</a>
 
-Endpoint: `GET /records/{key}/entries`
+Endpoint: `GET /records/{key}/entries/`
 
 ```
 GET /records/{key}/entries/ HTTP/2
@@ -178,7 +178,7 @@ Content-Type: application/json
 
 ### <a name="get-records-field-name-field-value">Get all records that share a `{field-value}` for a particular field (`{field-name}`)</a>
 
-Endpoint: `GET /records/{field-name}/{field-value}`
+Endpoint: `GET /records/{field-name}/{field-value}/`
 
 Parameters: 
 * page-index (Optional): Collection page number. Defaults to 1.

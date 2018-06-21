@@ -245,6 +245,10 @@ Link: <?page-index=1&page-size=3>
 
 Endpoint: `GET /entries/`
 
+Parameters: 
+* start (Optional): Collection page number. Defaults to ?.
+* limit (Optional): Collection page size. Defaults to ?. Maximum is ?. 
+
 ```
 GET /entries/ HTTP/2
 Host: local-authority-eng.register.gov.uk
@@ -255,6 +259,7 @@ Authorization: YOUR-API-KEY-HERE
 ```
 HTTP/2 200
 Content-Type: application/json
+Link: <?start=1&limit=10>
 
 [  
    {  

@@ -176,7 +176,7 @@ Content-Type: application/json
 ]
 ```
 
-### <a name="get-records-field-name-field-value">Get all records that share a `{field-value}` for a particular field (`{field-name}`)</a>
+### <a name="get-records-field-name-field-value">Get all records that share a `field-value` for a particular `field-name`</a>
 
 Endpoint: `GET /records/{field-name}/{field-value}/`
 

@@ -4,15 +4,15 @@
 
 Endpoint: `GET /register/`
 
-```
-GET /register/ HTTP/2
+```http
+GET /register/ HTTP/1.1
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE
 ```
 
-```
-HTTP/2 200
+```http
+HTTP/1.1 200
 Content-Type: application/json
 
 {
@@ -43,20 +43,20 @@ Content-Type: application/json
 Endpoint: `GET /records/`
 
 Parameters: 
-* page-index (Optional): Collection page number. Defaults to 1.
-* page-size (Optional): Collection page size. Defaults to 100. Maximum is 5000. 
+* `page-index` (Optional): Collection page number. Defaults to 1.
+* `page-size` (Optional): Collection page size. Defaults to 100. Maximum is 5000. 
 
-```
-GET /records/ HTTP/2
+```http
+GET /records/?page-index=1&page-size=3 HTTP/1.1
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE
 ```
 
-```
-HTTP/2 200
+```http
+HTTP/1.1 200
 Content-Type: application/json
-Link: <?page-index=1&page-size=3>
+Link: <?page-index=2&page-size=3>; rel="next"
 
 {  
    "KIN":{  
@@ -110,15 +110,18 @@ Link: <?page-index=1&page-size=3>
 
 Endpoint: `GET /records/{key}/`
 
-```
-GET /records/{key} HTTP/2
+Parameters: 
+* `{key}` (Required): A unique UTF-8 string which identifies something in a register.
+
+```http
+GET /records/KIN HTTP/1.1
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE
 ```
 
-```
-HTTP/2 200
+```http
+HTTP/1.1 200
 Content-Type: application/json
 
 {
@@ -143,15 +146,18 @@ Content-Type: application/json
 
 Endpoint: `GET /records/{key}/entries/`
 
-```
-GET /records/{key}/entries/ HTTP/2
+Parameters: 
+* `{key}` (Required): A unique UTF-8 string which identifies something in a register.
+
+```http
+GET /records/KIN/entries/ HTTP/1.1
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE
 ```
 
-```
-HTTP/2 200
+```http
+HTTP/1.1 200
 Content-Type: application/json
 
 [
@@ -181,20 +187,22 @@ Content-Type: application/json
 Endpoint: `GET /records/{field-name}/{field-value}/`
 
 Parameters: 
-* page-index (Optional): Collection page number. Defaults to 1.
-* page-size (Optional): Collection page size. Defaults to 100. Maximum is 5000. 
+* `{field-name}` (Required): Field name. 
+* `{field-value}` (Required): Field value. 
+* `page-index` (Optional): Collection page number. Defaults to 1.
+* `page-size` (Optional): Collection page size. Defaults to 100. Maximum is 5000. 
 
-```
-GET /records/{field-name}/{field-value}/ HTTP/2
+```http
+GET /records/local-authority-type/CTY/?page-index=1&page-size=3 HTTP/1.1 
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE
 ```
 
-```
-HTTP/2 200
+```http
+HTTP/1.1 200
 Content-Type: application/json
-Link: <?page-index=1&page-size=3>
+Link: <?page-index=2&page-size=3>; rel="next"
 
 {  
    "NTH":{  
@@ -246,20 +254,21 @@ Link: <?page-index=1&page-size=3>
 Endpoint: `GET /entries/`
 
 Parameters: 
-* start (Optional): Collection page number. Defaults to ?.
-* limit (Optional): Collection page size. Defaults to ?. Maximum is ?. 
+* start (Optional): Collection page number. Defaults to 1.
+* limit (Optional): Collection page size. Defaults to 100. Maximum is PLACEHOLDER. 
 
-```
-GET /entries/ HTTP/2
+```http
+GET /entries/ HTTP/1.1
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE
 ```
 
-```
-HTTP/2 200
+```http
+HTTP/1.1 200
 Content-Type: application/json
-Link: <?start=1&limit=10>
+Link: <?start=101&limit=100>; rel="next"
+
 
 [  
    {  
@@ -359,15 +368,15 @@ Link: <?start=1&limit=10>
 
 Endpoint: `GET /entries/{entry-number}/`
 
-```
-GET /entries/{entry-number}/ HTTP/2
+```http
+GET /entries/{entry-number}/ HTTP/1.1
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE
 ```
 
-```
-HTTP/2 200
+```http
+HTTP/1.1 200
 Content-Type: application/json
 
 [
@@ -387,15 +396,15 @@ Content-Type: application/json
 
 Endpoint: `GET /items/{item-hash}/`
 
-```
-GET /items/{item-hash}/ HTTP/2
+```http
+GET /items/{item-hash}/ HTTP/1.1
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE
 ```
 
-```
-HTTP/2 200
+```http
+HTTP/1.1 200
 Content-Type: application/json
 
 {
@@ -411,22 +420,13 @@ Content-Type: application/json
 
 Endpoint: `GET /download-register/`
 
-```
-GET /download-register/ HTTP/2
+```http
+GET /download-register/ HTTP/1.1
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE
 ```
 
-```
-HTTP/2 200
-Content-Type: application/json
-
-
-> This will download every entry and item as an individual JSON file. If you only want to download records, use `GET /records`.
-
-Example URL: `https://local-authority-eng.register.gov.uk/download-register`
-
-Example request: `curl -o localauthorityeng.zip --request GET --url https://local-authority-eng.register.gov.uk/download-register  --header 'Authorization: YOUR-API-KEY-HERE'`
+This will download every entry and item as an individual JSON file. If you only want to download records, use `GET /records`.
 
 

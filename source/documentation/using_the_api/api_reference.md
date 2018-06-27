@@ -1,6 +1,6 @@
 ## <a name="apireference">API reference</a>
 
-### <a name="getregister">`GET /register`</a>	
+### <a name="getregister">`GET /register/`</a>	
 
 ```http
 GET /register/ HTTP/1.1

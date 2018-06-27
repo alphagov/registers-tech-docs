@@ -1,8 +1,6 @@
 ## <a name="apireference">API reference</a>
 
-### <a name="get-register">View information about a register</a>
-
-Endpoint: `GET /register/`
+### <a name="getregister">`GET /register`</a>	
 
 ```http
 GET /register/ HTTP/1.1
@@ -38,9 +36,7 @@ Content-Type: application/json
 }
 ```
 
-### <a name="get-records">Get all records from a register</a>
-
-Endpoint: `GET /records/`
+### <a name="get-records">`GET /records/`</a>
 
 Parameters: 
 * `page-index` (Optional): Collection page number. Defaults to 1.
@@ -106,9 +102,7 @@ Link: <?page-index=2&page-size=3>; rel="next"
 }
 ```
 
-### <a name="get-records-key">Get a specific record within a register based on a particular key</a>
-
-Endpoint: `GET /records/{key}/`
+### <a name="get-records-key">`GET /records/{key}/`</a>
 
 Parameters: 
 * `{key}` (Required): A unique UTF-8 string which identifies something in a register.
@@ -142,9 +136,7 @@ Content-Type: application/json
 }
 ```
 
-### <a name="get-records-key-entries">Get all entries for a single record based on a particular key</a>
-
-Endpoint: `GET /records/{key}/entries/`
+### <a name="get-records-key-entries">`GET /records/{key}/entries/`</a>
 
 Parameters: 
 * `{key}` (Required): A unique UTF-8 string which identifies something in a register.
@@ -182,9 +174,7 @@ Content-Type: application/json
 ]
 ```
 
-### <a name="get-records-field-name-field-value">Get all records that share a `field-value` for a particular `field-name`</a>
-
-Endpoint: `GET /records/{field-name}/{field-value}/`
+### <a name="get-records-field-name-field-value">`GET /records/{field-name}/{field-value}/`</a>
 
 Parameters: 
 * `{field-name}` (Required): Field name. 
@@ -249,9 +239,7 @@ Link: <?page-index=2&page-size=3>; rel="next"
    },
 ```
 
-### <a name="get-entries">Get all entries from a register</a>
-
-Endpoint: `GET /entries/`
+### <a name="get-entries">`GET /entries/`</a>
 
 Parameters: 
 * start (Optional): Collection page number. Defaults to 1.
@@ -364,9 +352,7 @@ Link: <?start=101&limit=100>; rel="next"
 ]
 ```
 
-### <a name="get-entries-entry-number">Get a specific entry from a register</a>
-
-Endpoint: `GET /entries/{entry-number}/`
+### <a name="get-entries-entry-number">`GET /entries/{entry-number}/`</a>
 
 ```http
 GET /entries/{entry-number}/ HTTP/1.1
@@ -392,9 +378,7 @@ Content-Type: application/json
 ]
 ```
 
-### <a name="items">Get a specific item within a register</a>
-
-Endpoint: `GET /items/{item-hash}/`
+### <a name="items">`GET /items/{item-hash}/`</a>
 
 ```http
 GET /items/{item-hash}/ HTTP/1.1
@@ -416,9 +400,7 @@ Content-Type: application/json
 }
 ```
 
-### <a name="items">Download the full contents of the register in a ZIP file</a>
-
-Endpoint: `GET /download-register/`
+### <a name="items">`GET /download-register/`</a>
 
 ```http
 GET /download-register/ HTTP/1.1

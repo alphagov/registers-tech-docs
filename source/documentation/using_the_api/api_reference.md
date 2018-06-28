@@ -2,6 +2,8 @@
 
 ### <a name="getregister">`GET /register/`</a>	
 
+View information about a register.
+
 ```http
 GET /register/ HTTP/1.1
 Host: local-authority-eng.register.gov.uk
@@ -37,6 +39,8 @@ Content-Type: application/json
 ```
 
 ### <a name="get-records">`GET /records/`</a>
+
+Get all records from a register.
 
 Parameters: 
 * `page-index` (Optional): Collection page number. Defaults to 1.
@@ -104,6 +108,8 @@ Link: <?page-index=2&page-size=3>; rel="next"
 
 ### <a name="get-records-key">`GET /records/{key}/`</a>
 
+Get a specific record within a register based on a particular key.
+
 Parameters: 
 * `{key}` (Required): A unique UTF-8 string which identifies something in a register.
 
@@ -137,6 +143,8 @@ Content-Type: application/json
 ```
 
 ### <a name="get-records-key-entries">`GET /records/{key}/entries/`</a>
+
+Get all entries for a single record based on a particular key.
 
 Parameters: 
 * `{key}` (Required): A unique UTF-8 string which identifies something in a register.
@@ -175,6 +183,8 @@ Content-Type: application/json
 ```
 
 ### <a name="get-records-field-name-field-value">`GET /records/{field-name}/{field-value}/`</a>
+
+Get all records that share a `field-value` for a particular `field-name`.
 
 Parameters: 
 * `{field-name}` (Required): Field name. 
@@ -240,6 +250,8 @@ Link: <?page-index=2&page-size=3>; rel="next"
 ```
 
 ### <a name="get-entries">`GET /entries/`</a>
+
+Get all entries from a register.
 
 Parameters: 
 * start (Optional): Collection page number. Defaults to 1.
@@ -354,6 +366,8 @@ Link: <?start=101&limit=100>; rel="next"
 
 ### <a name="get-entries-entry-number">`GET /entries/{entry-number}/`</a>
 
+Get a specific entry from a register.
+
 ```http
 GET /entries/{entry-number}/ HTTP/1.1
 Host: local-authority-eng.register.gov.uk
@@ -380,6 +394,8 @@ Content-Type: application/json
 
 ### <a name="items">`GET /items/{item-hash}/`</a>
 
+Get a specific item within a register.
+
 ```http
 GET /items/{item-hash}/ HTTP/1.1
 Host: local-authority-eng.register.gov.uk
@@ -401,6 +417,8 @@ Content-Type: application/json
 ```
 
 ### <a name="items">`GET /download-register/`</a>
+
+Download the full contents of the register in a ZIP file.
 
 ```http
 GET /download-register/ HTTP/1.1

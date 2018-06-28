@@ -113,7 +113,7 @@ Get a specific record within a register based on a particular key.
 
 Parameters: 
 
-* `{key}` (Required): A unique UTF-8 string which identifies something in a register.
+* `key` (Required): A unique UTF-8 string which identifies something in a register.
 
 ```http
 GET /records/KIN HTTP/1.1
@@ -150,7 +150,7 @@ Get all entries for a single record based on a particular key.
 
 Parameters: 
 
-* `{key}` (Required): A unique UTF-8 string which identifies something in a register.
+* `key` (Required): A unique UTF-8 string which identifies something in a register.
 
 ```http
 GET /records/KIN/entries/ HTTP/1.1

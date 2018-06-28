@@ -43,6 +43,7 @@ Content-Type: application/json
 Get all records from a register.
 
 Parameters: 
+
 * `page-index` (Optional): Collection page number. Defaults to 1.
 * `page-size` (Optional): Collection page size. Defaults to 100. Maximum is 5000. 
 
@@ -111,6 +112,7 @@ Link: <?page-index=2&page-size=3>; rel="next"
 Get a specific record within a register based on a particular key.
 
 Parameters: 
+
 * `{key}` (Required): A unique UTF-8 string which identifies something in a register.
 
 ```http
@@ -147,6 +149,7 @@ Content-Type: application/json
 Get all entries for a single record based on a particular key.
 
 Parameters: 
+
 * `{key}` (Required): A unique UTF-8 string which identifies something in a register.
 
 ```http
@@ -187,6 +190,7 @@ Content-Type: application/json
 Get all records that share a `field-value` for a particular `field-name`.
 
 Parameters: 
+
 * `{field-name}` (Required): Field name. 
 * `{field-value}` (Required): Field value. 
 * `page-index` (Optional): Collection page number. Defaults to 1.
@@ -254,8 +258,9 @@ Link: <?page-index=2&page-size=3>; rel="next"
 Get all entries from a register.
 
 Parameters: 
-* start (Optional): Collection page number. Defaults to 1.
-* limit (Optional): Collection page size. Defaults to 100. Maximum is 5000. 
+
+* `start` (Optional): Collection page number. Defaults to 1.
+* `limit` (Optional): Collection page size. Defaults to 100. Maximum is 5000. 
 
 ```http
 GET /entries/ HTTP/1.1

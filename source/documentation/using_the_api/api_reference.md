@@ -374,7 +374,7 @@ Link: <?start=101&limit=100>; rel="next"
 Get a specific entry from a register.
 
 ```http
-GET /entries/{entry-number}/ HTTP/1.1
+GET /entries/204/ HTTP/1.1
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE
@@ -402,7 +402,7 @@ Content-Type: application/json
 Get a specific item within a register.
 
 ```http
-GET /items/{item-hash}/ HTTP/1.1
+GET /items/sha-256:6c4c815895ea675857ee4ec3fb40571ce54faf5ebcdd5d73a2aae347d4003c31/ HTTP/1.1
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE

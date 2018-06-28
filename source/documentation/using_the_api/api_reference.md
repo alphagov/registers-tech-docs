@@ -259,8 +259,8 @@ Get all entries from a register.
 
 Parameters: 
 
-* start (Optional): Collection page number. Defaults to 1.
-* limit (Optional): Collection page size. Defaults to 100. Maximum is 5000. 
+* `start` (Optional): Collection page number. Defaults to 1.
+* `limit` (Optional): Collection page size. Defaults to 100. Maximum is 5000. 
 
 ```http
 GET /entries/ HTTP/1.1

@@ -1,22 +1,20 @@
 ## <a name="apireference">API reference</a>
 
-### <a name="getregister">`GET /register`</a>
+### <a name="getregister">`GET /register/`</a>	
 
-View information about a register, including:  
+Get information about a register.
 
-* the internet domain the register is on
-* when the register was last updated
-* how many entries and records the register contains
-
-You can check the entry number you have locally is up to date with the register by comparing the value of `total-entries` for each. 
-
-Example URL: `https://local-authority-eng.register.gov.uk/register`
-
-Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/register/ --header 'Accept: application/json' --header 'Authorization: YOUR-API-KEY-HERE'`
-
-Example response:
-
+```http
+GET /register/ HTTP/1.1
+Host: local-authority-eng.register.gov.uk
+Accept: application/json
+Authorization: YOUR-API-KEY-HERE
 ```
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
 {
   "domain": "register.gov.uk",
   "total-records": 354,
@@ -40,19 +38,26 @@ Example response:
 }
 ```
 
-### `GET /records`
+### <a name="get-records">`GET /records/`</a>
 
-Get all records from the register. For example, all of the English local authorities from the `local-authority-eng` register.
+Get all records from a register.
 
-> Results from this API call are paginated. This call will return the first 100 records from the first page of the register. Use `page-size` to define the number of records you want and `page-index` to define the pages you want. The maximum `page-size` is 5000.
+Parameters: 
+* `page-index` (Optional): Collection page number. Defaults to 1.
+* `page-size` (Optional): Collection page size. Defaults to 100. Maximum is 5000. 
 
-Example URL: `https://local-authority-eng.register.gov.uk/records`
-
-Example request: `curl --request GET --url 'https://local-authority-eng.register.gov.uk/records?page-index=1&page-size=3' --header 'Accept: application/json' --header 'Authorization: YOUR-API-KEY-HERE'`
-
-Example response:
-
+```http
+GET /records/?page-index=1&page-size=3 HTTP/1.1
+Host: local-authority-eng.register.gov.uk
+Accept: application/json
+Authorization: YOUR-API-KEY-HERE
 ```
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+Link: <?page-index=2&page-size=3>; rel="next"
+
 {  
    "KIN":{  
       "index-entry-number":"357",
@@ -101,19 +106,24 @@ Example response:
 }
 ```
 
-### `GET /records/{key}`
+### <a name="get-records-key">`GET /records/{key}/`</a>
 
-Get a specific record within a register based on a particular key. For example, the record for the Borough Council of King's Lynn and West Norfolk in the `local-authority-eng` register. 
+Get a specific record within a register based on a particular key.
 
-> You must have the exact field value of the unique identifier for the record to get a match from the register. For example, in the `local-authority-eng` register, the field value of the unique identifier (the three-letter code for the county council) must be in capital letters.
+Parameters: 
+* `{key}` (Required): A unique UTF-8 string which identifies something in a register.
 
-Example URL: `https://local-authority-eng.register.gov.uk/records/KIN`
-
-Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/records/KIN --header 'Accept: application/json' --header 'Authorization: YOUR-API-KEY-HERE'`
-
-Example response:
-
+```http
+GET /records/KIN HTTP/1.1
+Host: local-authority-eng.register.gov.uk
+Accept: application/json
+Authorization: YOUR-API-KEY-HERE
 ```
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
 {
   "KIN": {
     "index-entry-number": "357",
@@ -132,17 +142,24 @@ Example response:
 }
 ```
 
-### <a name="record-entries">`GET /records/{key}/entries`</a>
+### <a name="get-records-key-entries">`GET /records/{key}/entries/`</a>
 
-Get all entries for a single record.
+Get all entries for a single record based on a particular key.
 
-Example URL: `https://local-authority-eng.register.gov.uk/records/KIN/entries`
+Parameters: 
+* `{key}` (Required): A unique UTF-8 string which identifies something in a register.
 
-Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/records/KIN/entries/ --header 'Accept: application/json' --header 'Authorization: YOUR-API-KEY-HERE'`
-
-Example response:
-
+```http
+GET /records/KIN/entries/ HTTP/1.1
+Host: local-authority-eng.register.gov.uk
+Accept: application/json
+Authorization: YOUR-API-KEY-HERE
 ```
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
 [
   {
     "index-entry-number": "265",
@@ -165,21 +182,28 @@ Example response:
 ]
 ```
 
-You can then download the latest item. For example, entry 265 in the above code snippet. Follow the [guidance for downloading items](#items).
+### <a name="get-records-field-name-field-value">`GET /records/{field-name}/{field-value}/`</a>
 
-### `GET /records/{field-name}/{field-value}`
+Get all records that share a `field-value` for a particular `field-name`.
 
-Get all records that share a field-value for a particular field. For example, all local authorities marked as county councils from the `local-authority-eng` register. 
+Parameters: 
+* `{field-name}` (Required): Field name. 
+* `{field-value}` (Required): Field value. 
+* `page-index` (Optional): Collection page number. Defaults to 1.
+* `page-size` (Optional): Collection page size. Defaults to 100. Maximum is 5000. 
 
-> Results from this API call are paginated. This call will return the first 100 records from the first page of the register. Use `page-size` to define the number of records you want and `page-index` to define the pages you want. The maximum `page-size` is 5000.
-
-Example URL: `https://local-authority-eng.register.gov.uk/records/local-authority-type/CTY`
-
-Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/records/local-authority-type/CTY --header 'Accept: application/json' --header 'Authorization: YOUR-API-KEY-HERE'`
-
-Example response:
-
+```http
+GET /records/local-authority-type/CTY/?page-index=1&page-size=3 HTTP/1.1 
+Host: local-authority-eng.register.gov.uk
+Accept: application/json
+Authorization: YOUR-API-KEY-HERE
 ```
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+Link: <?page-index=2&page-size=3>; rel="next"
+
 {  
    "NTH":{  
       "index-entry-number":"269",
@@ -225,19 +249,27 @@ Example response:
    },
 ```
 
-### `GET /entries`
+### <a name="get-entries">`GET /entries/`</a>
 
-Get all entries from the register. For example, all updates there have ever been to the `local-authority-eng` register.
+Get all entries from a register.
 
-> Results from this API call are paginated. This call will return the first 100 entries from the first page of the register. Use `limit` to define the maximum number of entries you want and `start` to define the entry number you want to start from (in ascending order).
+Parameters: 
+* start (Optional): Collection page number. Defaults to 1.
+* limit (Optional): Collection page size. Defaults to 100. Maximum is 5000. 
 
-Example URL: `https://local-authority-eng.register.gov.uk/entries?start=1&limit=10`
-
-Example request: `curl --request GET --url 'https://local-authority-eng.register.gov.uk/entries?start=1&limit=10' --header 'Accept: application/json' --header 'Authorization: YOUR-API-KEY-HERE'`
-
-Example response:
-
+```http
+GET /entries/ HTTP/1.1
+Host: local-authority-eng.register.gov.uk
+Accept: application/json
+Authorization: YOUR-API-KEY-HERE
 ```
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+Link: <?start=101&limit=100>; rel="next"
+
+
 [  
    {  
       "index-entry-number":"1",
@@ -332,17 +364,21 @@ Example response:
 ]
 ```
 
-### `GET /entries/{entry-number}`
+### <a name="get-entries-entry-number">`GET /entries/{entry-number}/`</a>
 
-Get a specific entry from a register. For example, an update to the record for the New Forest District Council in the `local-authority-eng` register. An entry can include multiple items, which will return in a list of `item-hash`
+Get a specific entry from a register.
 
-Example URL: `https://local-authority-eng.register.gov.uk/entries/204`
-
-Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/entries/204/ --header 'Accept: application/json' --header 'Authorization: YOUR-API-KEY-HERE'`
-
-Example response:
-
+```http
+GET /entries/{entry-number}/ HTTP/1.1
+Host: local-authority-eng.register.gov.uk
+Accept: application/json
+Authorization: YOUR-API-KEY-HERE
 ```
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
 [
   {
     "index-entry-number": "204",
@@ -356,17 +392,21 @@ Example response:
 ]
 ```
 
-### <a name="items">`GET /items/{item-hash}`</a>
+### <a name="items">`GET /items/{item-hash}/`</a>
 
 Get a specific item within a register.
 
-Example URL: `https://local-authority-eng.register.gov.uk/items/sha-256:6c4c815895ea675857ee4ec3fb40571ce54faf5ebcdd5d73a2aae347d4003c31`
-
-Example request: `curl --request GET --url https://local-authority-eng.register.gov.uk/items/sha-256:6c4c815895ea675857ee4ec3fb40571ce54faf5ebcdd5d73a2aae347d4003c31 --header 'Accept: application/json' --header 'Authorization: YOUR-API-KEY-HERE'`
-
-Example response:
-
+```http
+GET /items/{item-hash}/ HTTP/1.1
+Host: local-authority-eng.register.gov.uk
+Accept: application/json
+Authorization: YOUR-API-KEY-HERE
 ```
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
 {
   "local-authority-type": "UA",
   "official-name": "Bath and North East Somerset Council",
@@ -376,14 +416,17 @@ Example response:
 }
 ```
 
-### <a name="download">`GET /download-register`</a>
+### <a name="items">`GET /download-register/`</a>
 
 Download the full contents of the register in a ZIP file.
 
-> This will download every entry and item as an individual JSON file. If you only want to download records, use `GET /records`.
+```http
+GET /download-register/ HTTP/1.1
+Host: local-authority-eng.register.gov.uk
+Accept: application/json
+Authorization: YOUR-API-KEY-HERE
+```
 
-Example URL: `https://local-authority-eng.register.gov.uk/download-register`
-
-Example request: `curl -o localauthorityeng.zip --request GET --url https://local-authority-eng.register.gov.uk/download-register  --header 'Authorization: YOUR-API-KEY-HERE'`
+This will download every entry and item as an individual JSON file. If you only want to download records, use `GET /records`.
 
 

@@ -113,7 +113,7 @@ Get a specific record within a register based on a particular key.
 
 Parameters: 
 
-* `{key}` (Required): A unique UTF-8 string which identifies something in a register.
+* `key` (Required): A unique UTF-8 string which identifies something in a register.
 
 ```http
 GET /records/KIN HTTP/1.1
@@ -150,7 +150,7 @@ Get all entries for a single record based on a particular key.
 
 Parameters: 
 
-* `{key}` (Required): A unique UTF-8 string which identifies something in a register.
+* `key` (Required): A unique UTF-8 string which identifies something in a register.
 
 ```http
 GET /records/KIN/entries/ HTTP/1.1
@@ -191,8 +191,8 @@ Get all records that share a `field-value` for a particular `field-name`.
 
 Parameters: 
 
-* `{field-name}` (Required): Field name. 
-* `{field-value}` (Required): Field value. 
+* `field-name` (Required): Field name. 
+* `field-value` (Required): Field value. 
 * `page-index` (Optional): Collection page number. Defaults to 1.
 * `page-size` (Optional): Collection page size. Defaults to 100. Maximum is 5000. 
 

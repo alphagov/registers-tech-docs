@@ -2,7 +2,7 @@
 
 ### <a name="getregister">`GET /register/`</a>	
 
-View information about a register.
+Get information about a register.
 
 ```http
 GET /register/ HTTP/1.1

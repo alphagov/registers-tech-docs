@@ -1,11 +1,11 @@
 ## <a name="apireference">API reference</a>
 
-### <a name="getregister">`GET /register/`</a>	
+### <a name="getregister">`GET /register`</a>	
 
 Get information about a register.
 
 ```http
-GET /register/ HTTP/1.1
+GET /register HTTP/1.1
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE
@@ -38,7 +38,7 @@ Content-Type: application/json
 }
 ```
 
-### <a name="get-records">`GET /records/`</a>
+### <a name="get-records">`GET /records`</a>
 
 Get all records from a register.
 
@@ -48,7 +48,7 @@ Parameters:
 * `page-size` (Optional): Collection page size. Defaults to 100. Maximum is 5000. 
 
 ```http
-GET /records/?page-index=1&page-size=3 HTTP/1.1
+GET /records?page-index=1&page-size=3 HTTP/1.1
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE
@@ -107,7 +107,7 @@ Link: <?page-index=2&page-size=3>; rel="next"
 }
 ```
 
-### <a name="get-records-key">`GET /records/{key}/`</a>
+### <a name="get-records-key">`GET /records/{key}`</a>
 
 Get a specific record within a register based on a particular key.
 
@@ -144,7 +144,7 @@ Content-Type: application/json
 }
 ```
 
-### <a name="get-records-key-entries">`GET /records/{key}/entries/`</a>
+### <a name="get-records-key-entries">`GET /records/{key}/entries`</a>
 
 Get all entries for a single record based on a particular key.
 
@@ -153,7 +153,7 @@ Parameters:
 * `key` (Required): A unique UTF-8 string which identifies something in a register.
 
 ```http
-GET /records/KIN/entries/ HTTP/1.1
+GET /records/KIN/entries HTTP/1.1
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE
@@ -185,7 +185,7 @@ Content-Type: application/json
 ]
 ```
 
-### <a name="get-records-field-name-field-value">`GET /records/{field-name}/{field-value}/`</a>
+### <a name="get-records-field-name-field-value">`GET /records/{field-name}/{field-value}`</a>
 
 Get all records that share a `field-value` for a particular `field-name`.
 
@@ -197,7 +197,7 @@ Parameters:
 * `page-size` (Optional): Collection page size. Defaults to 100. Maximum is 5000. 
 
 ```http
-GET /records/local-authority-type/CTY/?page-index=1&page-size=3 HTTP/1.1 
+GET /records/local-authority-type/CTY?page-index=1&page-size=3 HTTP/1.1 
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE
@@ -253,7 +253,7 @@ Link: <?page-index=2&page-size=3>; rel="next"
    },
 ```
 
-### <a name="get-entries">`GET /entries/`</a>
+### <a name="get-entries">`GET /entries`</a>
 
 Get all entries from a register.
 
@@ -263,7 +263,7 @@ Parameters:
 * `limit` (Optional): Collection page size. Defaults to 100. Maximum is 5000. 
 
 ```http
-GET /entries/ HTTP/1.1
+GET /entries HTTP/1.1
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE
@@ -369,12 +369,12 @@ Link: <?start=101&limit=100>; rel="next"
 ]
 ```
 
-### <a name="get-entries-entry-number">`GET /entries/{entry-number}/`</a>
+### <a name="get-entries-entry-number">`GET /entries/{entry-number}`</a>
 
 Get a specific entry from a register.
 
 ```http
-GET /entries/204/ HTTP/1.1
+GET /entries/204 HTTP/1.1
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE
@@ -397,12 +397,12 @@ Content-Type: application/json
 ]
 ```
 
-### <a name="items">`GET /items/{item-hash}/`</a>
+### <a name="items">`GET /items/{item-hash}`</a>
 
 Get a specific item within a register.
 
 ```http
-GET /items/sha-256:6c4c815895ea675857ee4ec3fb40571ce54faf5ebcdd5d73a2aae347d4003c31/ HTTP/1.1
+GET /items/sha-256:6c4c815895ea675857ee4ec3fb40571ce54faf5ebcdd5d73a2aae347d4003c31 HTTP/1.1
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE
@@ -421,12 +421,12 @@ Content-Type: application/json
 }
 ```
 
-### <a name="items">`GET /download-register/`</a>
+### <a name="items">`GET /download-register`</a>
 
 Download the full contents of the register in a ZIP file.
 
 ```http
-GET /download-register/ HTTP/1.1
+GET /download-register HTTP/1.1
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE

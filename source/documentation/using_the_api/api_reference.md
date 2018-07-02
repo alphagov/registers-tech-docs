@@ -272,7 +272,7 @@ Authorization: YOUR-API-KEY-HERE
 ```http
 HTTP/1.1 200
 Content-Type: application/json
-Link: <?start=1&limit=10>; rel="next"
+Link: <?start=11&limit=10>; rel="next"
 
 
 [  

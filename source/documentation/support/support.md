@@ -20,5 +20,5 @@ The Government Digital Service maintains a [technical specification for register
 
 ## Contact us
 
-Please [contact the GDS Registers team](https://www.registers.service.gov.uk/support) if you have difficulty using registers in your product or service.
+Please [contact the GOV.UK Registers team](https://www.registers.service.gov.uk/support) if you have difficulty using registers in your product or service.
 

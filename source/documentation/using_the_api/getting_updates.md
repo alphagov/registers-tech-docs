@@ -4,7 +4,9 @@ You can use the [`GET /register/` endpoint](#getregister) to obtain the current 
 
 ### Return all entries since your last update
 
-You can use the [`GET /entries/` endpoint](#getentries) with the `start` and `limit` parameters to return specific entries to a register. For example, your highest `entry-number` for a local copy of the `country` register could be 205. You could then use the following request to find out how many updates there have been since (if any):
+You can use the [`GET /entries/` endpoint](#getentries) with the `start` and `limit` parameters to return specific entries to a register. 
+
+For example, the highest entry number from the last time you got data from the `country` register could have been 205. You could then use the following request to find out how many updates there have been since (if any):
 
 ```http
 GET /entries?start=206/ HTTP/1.1

@@ -1,6 +1,6 @@
 ## Getting updates
 
-You can use the [`GET /register/` endpoint](#getregister) to return the `total-entries` property for a register. If you keep track of this value, you can compare it with a new query to the register to find out if there are any updates.
+You can use the [`GET /register/` endpoint](#getregister) to obtain the current highest entry number in a register from the `total-entries` property. If you keep track of this value, you can compare it with a new query to the register to find out if there are any updates.
 
 ### Return all entries since your last update
 

@@ -9,7 +9,7 @@ You can use the [`GET /entries/` endpoint](#getentries) with the `start` and `li
 For example, the highest entry number from the last time you got data from the `country` register could have been 205. You could then use the following request to find out how many updates there have been since (if any):
 
 ```http
-GET /entries?start=206/ HTTP/1.1
+GET /entries/?start=206/ HTTP/1.1
 Host: country.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE
@@ -56,7 +56,7 @@ To see what data is in the updates for each of these entries, you can use the [`
 Following the example above, you could use the following request for entry 208:
 
 ```http
-GET /items/sha-256:f89f36ed8b2a1417237a8e95b810e8ab4ead844277ad7bc7794cb5f83732c976
+GET /items/sha-256:f89f36ed8b2a1417237a8e95b810e8ab4ead844277ad7bc7794cb5f83732c976 HTTP/1.1
 Host: country.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE
@@ -73,7 +73,7 @@ Authorization: YOUR-API-KEY-HERE
 
 ### Return all updates for a particular key 
 
-You can use the [`GET /records/{key}/entries/` endpoint](#get-record-key-entries) to download all updates for a record according to a particular key. 
+You can use the [`GET /records/{key}/entries/` endpoint](#get-record-key-entries) to download all updates to a record.
 
 For example, for the `KIN` key in the `local-authority-register`:
 

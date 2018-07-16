@@ -45,10 +45,10 @@ Choose a response format by adding the appropriate suffix to the request URL:
 | Format | Suffix | Media type |
 |--------|--------|------------|
 | JSON | .json | application/json |
-| YAML | .yaml | text/ yaml |
+| YAML | .yaml | text/yaml |
 | CSV | .csv | text/csv |
-| TSV | .tsv | text/tsv |
-| Turtle | .ttl | text/ttl |
+| TSV | .tsv | text/tab-separated-values |
+| Turtle | .ttl | text/turtle |
 
 For example: 
 

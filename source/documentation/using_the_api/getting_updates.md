@@ -73,7 +73,7 @@ Authorization: YOUR-API-KEY-HERE
 
 ### Return all updates for a particular key 
 
-You can use the [`GET /records/{key}/entries/` endpoint](#get-record-key-entries) to download all updates to a record.
+You can use the [`GET /records/{key}/entries/` endpoint](#get-record-key-entries) to download all updates for a record.
 
 For example, for the `KIN` key in the `local-authority-register`:
 

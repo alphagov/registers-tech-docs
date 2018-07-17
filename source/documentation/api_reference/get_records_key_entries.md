@@ -1,0 +1,40 @@
+### <a name="get-records-key-entries">`GET /records/{key}/entries/`</a>
+
+Get all entries for a single record based on a particular key.
+
+Parameters: 
+
+* `key` (Required): A unique UTF-8 string which identifies something in a register.
+
+```http
+GET /records/KIN/entries/ HTTP/1.1
+Host: local-authority-eng.register.gov.uk
+Accept: application/json
+Authorization: YOUR-API-KEY-HERE
+```
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+[
+  {
+    "index-entry-number": "265",
+    "entry-number": "265",
+    "entry-timestamp": "2016-10-21T16:11:20Z",
+    "key": "KIN",
+    "item-hash": [
+      "sha-256:5a8571fc6e78f8688c66b72ea45f921a7cd1562b9a9b5b9dab8f49f842d1e391"
+    ]
+  },
+  {
+    "index-entry-number": "357",
+    "entry-number": "357",
+    "entry-timestamp": "2017-01-26T12:34:10Z",
+    "key": "KIN",
+    "item-hash": [
+      "sha-256:3f4da33a33c24de11cca3539f14ee663359608be0ba218d4fc05792c1d19c00f"
+    ]
+  }
+]
+```

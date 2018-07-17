@@ -1,4 +1,4 @@
-# API documentation for registers
+# Registers API documentation
 
 Each register has an open, RESTful API you can use to access the data, which allows you to find out information about the register. You can:
 

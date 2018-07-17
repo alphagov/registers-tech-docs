@@ -1,12 +1,12 @@
 ## Getting updates
 
-You can find the latest entry number by looking at the register information (use the [`GET /register` endpoint](#getregister)) and comparing the most recent entry number with your own copy.
+You can find the latest entry number by looking at the register information (use the [`GET /register` endpoint](#get-register)) and comparing the most recent entry number with your own copy.
 
 Example request: `https://local-authority-eng.register.gov.uk/register`
 
-Download a full new copy of the register by using [the `GET /download-register` endpoint](#download).
+Download a full new copy of the register by using [the `GET /download-register` endpoint](#get-download-register).
 
-Download all updates for one record according to a particular key by [using the `GET /records/{key}/entries` endpoint](#get-record-key-entries):
+Download all updates for one record according to a particular key by [using the `GET /records/{key}/entries` endpoint](#get-records-key-entries):
 
 Example URL: `https://local-authority-eng.register.gov.uk/records/KIN/entries`
 
@@ -38,5 +38,5 @@ Example response:
 ```
 
 You can then download the latest item, for example entry 204 in the above example. Use the [`GET /items/{item-hash}
-` endpoint](#items) for downloading items. 
+` endpoint](#get-items-item-hash) for downloading items. 
 

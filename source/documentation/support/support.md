@@ -1,13 +1,5 @@
 ## Support
 
-### Error codes
-
-| Error code | Description           |
-|------------|-----------------------|
-| 200        | Ok                    |
-| 404        | Data not found        |
-| 500        | Internal server error |
-
 ### If you cannot find a specific record 
 
 Check you have the correct field value. You must use the exact field value to get a match from the register. 

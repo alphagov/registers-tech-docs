@@ -397,7 +397,7 @@ Content-Type: application/json
 ]
 ```
 
-### <a name="items">`GET /items/{item-hash}/`</a>
+### <a name="get-item-item-hash">`GET /items/{item-hash}/`</a>
 
 Get a specific item within a register.
 
@@ -421,7 +421,7 @@ Content-Type: application/json
 }
 ```
 
-### <a name="items">`GET /download-register/`</a>
+### <a name="get-download-register">`GET /download-register/`</a>
 
 Download the full contents of the register in a ZIP file.
 
@@ -434,4 +434,10 @@ Authorization: YOUR-API-KEY-HERE
 
 This will download every entry and item as an individual JSON file. If you only want to download records, use `GET /records`.
 
+### <a name="http-status-codes">HTTP status codes</a>
 
+| Status code | Description           |
+|------------|-----------------------|
+| 200        | Ok                    |
+| 404        | Data not found        |
+| 500        | Internal server error |

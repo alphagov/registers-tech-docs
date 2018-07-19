@@ -1,5 +1,3 @@
-### <a name="getregister">`GET /register/`</a>	
-
 Get information about a register.
 
 ```http

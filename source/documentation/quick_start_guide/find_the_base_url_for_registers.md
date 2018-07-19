@@ -1,4 +1,4 @@
-### Find the base URL for register(s) 
+### Find the base URL for registers 
 
 Find the base URL for each register on its API inspector. For example, the API inspector for the `local-authority-eng` register is located at `https://local-authority-eng.register.gov.uk/`. 
 

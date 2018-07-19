@@ -1,5 +1,3 @@
-### <a name="get-records">`GET /records/`</a>
-
 Get all records from a register.
 
 Parameters: 

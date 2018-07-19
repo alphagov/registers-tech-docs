@@ -1,4 +1,4 @@
-## Getting updates
+## Updating registers
 
 You can find the latest entry number by looking at the register information (use the [`GET /register` endpoint](#get-register)) and comparing the most recent entry number with your own copy.
 

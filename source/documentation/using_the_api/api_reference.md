@@ -397,7 +397,8 @@ Content-Type: application/json
 ]
 ```
 
-### <a name="get-item-item-hash">`GET /items/{item-hash}/`</a>
+
+### <a name="get-items-item-hash">`GET /items/{item-hash}/`</a>
 
 Get a specific item within a register.
 

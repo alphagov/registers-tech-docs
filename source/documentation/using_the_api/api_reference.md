@@ -397,7 +397,7 @@ Content-Type: application/json
 ]
 ```
 
-### <a name="items">`GET /items/{item-hash}/`</a>
+### <a name="get-items-item-hash">`GET /items/{item-hash}/`</a>
 
 Get a specific item within a register.
 
@@ -421,7 +421,7 @@ Content-Type: application/json
 }
 ```
 
-### <a name="items">`GET /download-register/`</a>
+### <a name="get-download-register">`GET /download-register/`</a>
 
 Download the full contents of the register in a ZIP file.
 

@@ -57,9 +57,7 @@ Link: <?start=206>; rel="next"
 
 To see what data is in the updates for each of these entries, you can use the [`GET /items/{item-hash}` endpoint](#items) on the value in the `item-hash` property. 
 
-Following the same example, you could use the following request for entry 208:
-
-Example request:
+Following the same example, you could make a request for entry 208:
 
 ```http
 GET /items/sha-256:f89f36ed8b2a1417237a8e95b810e8ab4ead844277ad7bc7794cb5f83732c976

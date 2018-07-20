@@ -83,7 +83,7 @@ Example response:
 
 You can use the [`GET /records/{key}/entries/` endpoint](#get-record-key-entries) to download all updates for a record. 
 
-For example, for the `KIN` key in the `local-authority-register`:
+Example request:
 
 ```http
 GET /records/KIN/entries/ HTTP/1.1
@@ -91,6 +91,8 @@ Host: local-authority-eng.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE
 ```
+
+Example response:
 
 ```http
 HTTP/1.1 200

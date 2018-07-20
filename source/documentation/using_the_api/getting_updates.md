@@ -1,19 +1,23 @@
 ## Getting updates
 
-You can use the [`GET /register/` endpoint](#getregister) to obtain the current highest entry number in a register from the `total-entries` property. If you keep track of this value, you can compare it with a new query to the register to find out if there are any updates.
+You can use the [`GET /register/` endpoint](#getregister) to get the current highest entry number in a register from the `total-entries` property. You can then regularly compare it with new queries to the register to see if there are any updates.
 
 ### Return all entries since your last update
 
 You can use the [`GET /entries/` endpoint](#getentries) with the `start` and `limit` parameters to return specific entries to a register. 
 
-For example, the highest entry number from the last time you got data from the `country` register could have been 205. You could then use the following request to find out how many updates there have been since (if any):
+For example, the last highest entry number you got from the `country` register could be 205. You could then use the following request to find out if there are any new entries:
+
+Request:
 
 ```http
-GET /entries/?start=206/ HTTP/1.1
+GET /entries?start=206/ HTTP/1.1
 Host: country.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE
 ```
+
+Response:
 
 ```http
 HTTP/1.1 200
@@ -53,14 +57,18 @@ Link: <?start=206>; rel="next"
 
 To see what data is in the updates for each of these entries, you can use the [`GET /items/{item-hash}` endpoint](#items) on the value in the `item-hash` property. 
 
-Following the example above, you could use the following request for entry 208:
+Following the same example, you could use the following request for entry 208:
+
+Request:
 
 ```http
-GET /items/sha-256:f89f36ed8b2a1417237a8e95b810e8ab4ead844277ad7bc7794cb5f83732c976 HTTP/1.1
+GET /items/sha-256:f89f36ed8b2a1417237a8e95b810e8ab4ead844277ad7bc7794cb5f83732c976
 Host: country.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE
 ```
+
+Response:
 
 ```http
 {
@@ -73,7 +81,7 @@ Authorization: YOUR-API-KEY-HERE
 
 ### Return all updates for a particular key 
 
-You can use the [`GET /records/{key}/entries/` endpoint](#get-record-key-entries) to download all updates for a record.
+You can use the [`GET /records/{key}/entries/` endpoint](#get-record-key-entries) to download all updates for a record. 
 
 For example, for the `KIN` key in the `local-authority-register`:
 

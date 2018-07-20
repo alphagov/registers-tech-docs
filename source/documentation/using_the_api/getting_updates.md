@@ -1,4 +1,4 @@
-## Updating registers
+## Getting updates
 
 You can use the [`GET /register/` endpoint](#getregister) to get the current highest entry number in a register from the `total-entries` property. You can then regularly compare it with new queries to the register to see if there are any updates.
 
@@ -8,7 +8,7 @@ You can use the [`GET /entries/` endpoint](#getentries) with the `start` and `li
 
 For example, the last highest entry number you got from the `country` register could be 205. You could then use the following request to find out if there are any new entries:
 
-Example request:
+Request:
 
 ```http
 GET /entries?start=206/ HTTP/1.1
@@ -17,7 +17,7 @@ Accept: application/json
 Authorization: YOUR-API-KEY-HERE
 ```
 
-Example response:
+Response:
 
 ```http
 HTTP/1.1 200
@@ -117,3 +117,5 @@ Content-Type: application/json
   }
 ]
 ```
+
+

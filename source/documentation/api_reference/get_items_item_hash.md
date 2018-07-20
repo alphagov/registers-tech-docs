@@ -1,5 +1,3 @@
-### <a name="items">`GET /items/{item-hash}/`</a>
-
 Get a specific item within a register.
 
 ```http

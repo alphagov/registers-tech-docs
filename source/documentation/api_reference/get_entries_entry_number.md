@@ -1,5 +1,3 @@
-### <a name="get-entries-entry-number">`GET /entries/{entry-number}/`</a>
-
 Get a specific entry from a register.
 
 ```http

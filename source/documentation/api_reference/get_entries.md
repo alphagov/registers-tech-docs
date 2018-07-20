@@ -1,5 +1,3 @@
-### <a name="get-entries">`GET /entries/`</a>
-
 Get all entries from a register.
 
 Parameters: 

@@ -1,5 +1,3 @@
-### <a name="get-records-key">`GET /records/{key}/`</a>
-
 Get a specific record within a register based on a particular key.
 
 Parameters: 

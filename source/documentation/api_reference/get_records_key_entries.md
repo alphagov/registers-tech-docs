@@ -1,5 +1,3 @@
-### <a name="get-records-key-entries">`GET /records/{key}/entries/`</a>
-
 Get all entries for a single record based on a particular key.
 
 Parameters: 

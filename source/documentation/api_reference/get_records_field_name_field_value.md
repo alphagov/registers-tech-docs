@@ -1,5 +1,3 @@
-### <a name="get-records-field-name-field-value">`GET /records/{field-name}/{field-value}/`</a>
-
 Get all records that share a `field-value` for a particular `field-name`.
 
 Parameters: 

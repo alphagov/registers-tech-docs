@@ -59,7 +59,7 @@ To see what data is in the updates for each of these entries, you can use the [`
 
 Following the same example, you could use the following request for entry 208:
 
-Request:
+Example request:
 
 ```http
 GET /items/sha-256:f89f36ed8b2a1417237a8e95b810e8ab4ead844277ad7bc7794cb5f83732c976
@@ -68,7 +68,7 @@ Accept: application/json
 Authorization: YOUR-API-KEY-HERE
 ```
 
-Response:
+Example response:
 
 ```http
 {

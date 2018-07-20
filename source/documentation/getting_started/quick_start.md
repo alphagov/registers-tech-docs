@@ -12,7 +12,7 @@ You should include your key in all requests using the `Authorization` header:
 
 `curl https://country.register.gov.uk/records/GB.json --header 'Authorization: YOUR-API-KEY-HERE'`
 
-### Find the base URL for register(s) 
+### Find the base URL for registers 
 
 Find the base URL for each register on its API inspector. For example, the API inspector for the `local-authority-eng` register is located at `https://local-authority-eng.register.gov.uk/`. 
 
@@ -45,10 +45,10 @@ Choose a response format by adding the appropriate suffix to the request URL:
 | Format | Suffix | Media type |
 |--------|--------|------------|
 | JSON | .json | application/json |
-| YAML | .yaml | text/ yaml |
+| YAML | .yaml | text/yaml |
 | CSV | .csv | text/csv |
-| TSV | .tsv | text/tsv |
-| Turtle | .ttl | text/ttl |
+| TSV | .tsv | text/tab-separated-values |
+| Turtle | .ttl | text/turtle |
 
 For example: 
 

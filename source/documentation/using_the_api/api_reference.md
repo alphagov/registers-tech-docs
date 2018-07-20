@@ -4,12 +4,16 @@
 
 Get information about a register.
 
+Example request:
+
 ```http
 GET /register/ HTTP/1.1
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE
 ```
+
+Example response:
 
 ```http
 HTTP/1.1 200
@@ -47,12 +51,16 @@ Parameters:
 * `page-index` (Optional): Collection page number. Defaults to 1.
 * `page-size` (Optional): Collection page size. Defaults to 100. Maximum is 5000. 
 
+Example request:
+
 ```http
 GET /records/?page-index=1&page-size=3 HTTP/1.1
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE
 ```
+
+Example response:
 
 ```http
 HTTP/1.1 200
@@ -115,12 +123,16 @@ Parameters:
 
 * `key` (Required): A unique UTF-8 string which identifies something in a register.
 
+Example request:
+
 ```http
 GET /records/KIN HTTP/1.1
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE
 ```
+
+Example response:
 
 ```http
 HTTP/1.1 200
@@ -152,12 +164,16 @@ Parameters:
 
 * `key` (Required): A unique UTF-8 string which identifies something in a register.
 
+Example request:
+
 ```http
 GET /records/KIN/entries/ HTTP/1.1
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE
 ```
+
+Example response:
 
 ```http
 HTTP/1.1 200
@@ -196,12 +212,16 @@ Parameters:
 * `page-index` (Optional): Collection page number. Defaults to 1.
 * `page-size` (Optional): Collection page size. Defaults to 100. Maximum is 5000. 
 
+Example request:
+
 ```http
 GET /records/local-authority-type/CTY/?page-index=1&page-size=3 HTTP/1.1 
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE
 ```
+
+Example response:
 
 ```http
 HTTP/1.1 200
@@ -262,12 +282,16 @@ Parameters:
 * `start` (Optional): Collection page number. Defaults to 1.
 * `limit` (Optional): Collection page size. Defaults to 100. Maximum is 5000. 
 
+Example request:
+
 ```http
 GET /entries/?start=1&limit=10 HTTP/1.1
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE
 ```
+
+Example response:
 
 ```http
 HTTP/1.1 200
@@ -373,12 +397,16 @@ Link: <?start=11&limit=10>; rel="next"
 
 Get a specific entry from a register.
 
+Example request:
+
 ```http
 GET /entries/204/ HTTP/1.1
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE
 ```
+
+Example response:
 
 ```http
 HTTP/1.1 200
@@ -397,9 +425,12 @@ Content-Type: application/json
 ]
 ```
 
-### <a name="items">`GET /items/{item-hash}/`</a>
+
+### <a name="get-items-item-hash">`GET /items/{item-hash}/`</a>
 
 Get a specific item within a register.
+
+Example request:
 
 ```http
 GET /items/sha-256:6c4c815895ea675857ee4ec3fb40571ce54faf5ebcdd5d73a2aae347d4003c31/ HTTP/1.1
@@ -407,6 +438,8 @@ Host: local-authority-eng.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE
 ```
+
+Example response:
 
 ```http
 HTTP/1.1 200
@@ -421,9 +454,11 @@ Content-Type: application/json
 }
 ```
 
-### <a name="items">`GET /download-register/`</a>
+### <a name="get-download-register">`GET /download-register/`</a>
 
 Download the full contents of the register in a ZIP file.
+
+Example request:
 
 ```http
 GET /download-register/ HTTP/1.1
@@ -434,4 +469,10 @@ Authorization: YOUR-API-KEY-HERE
 
 This will download every entry and item as an individual JSON file. If you only want to download records, use `GET /records`.
 
+### <a name="http-status-codes">HTTP status codes</a>
 
+| Status code | Description           |
+|------------|-----------------------|
+| 200        | Ok                    |
+| 404        | Data not found        |
+| 500        | Internal server error |

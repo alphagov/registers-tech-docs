@@ -1,4 +1,4 @@
-## Getting updates
+## Updating registers
 
 You can use the [`GET /register/` endpoint](#getregister) to get the current highest entry number in a register from the `total-entries` property. You can then regularly compare it with new queries to the register to see if there are any updates.
 

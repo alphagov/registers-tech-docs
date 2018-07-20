@@ -11,7 +11,7 @@ For example, the last highest entry number you got from the `country` register c
 Example request:
 
 ```http
-GET /entries?start=206/ HTTP/1.1
+GET /entries/?start=206 HTTP/1.1
 Host: country.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE
@@ -69,6 +69,8 @@ Authorization: YOUR-API-KEY-HERE
 Example response:
 
 ```http
+HTTP/1.1 200
+Content-Type: application/json
 {
   "country": "SZ",
   "official-name": "Kingdom of Eswatini",

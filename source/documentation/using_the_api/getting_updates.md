@@ -8,7 +8,7 @@ You can use the [`GET /entries/` endpoint](#getentries) with the `start` and `li
 
 For example, the last highest entry number you got from the `country` register could be 205. You could then use the following request to find out if there are any new entries:
 
-Request:
+Example request:
 
 ```http
 GET /entries?start=206/ HTTP/1.1
@@ -17,7 +17,7 @@ Accept: application/json
 Authorization: YOUR-API-KEY-HERE
 ```
 
-Response:
+Example response:
 
 ```http
 HTTP/1.1 200

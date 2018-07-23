@@ -20,7 +20,7 @@ Authorization: YOUR-API-KEY-HERE
 
 If you receive a response, you'll know there are updates.
 
-You should also look at the `Link` header. In the example response:
+You should also look at the `Link` header. The response to the example would contain this header:
 
 ```http
 HTTP/1.1 200
@@ -28,9 +28,9 @@ Content-Type: application/json
 Link: <?start=850&limit=100>; rel="next",<?start=650&limit=100>; rel="previous"
 ```
 
-Here, there are more than 100 new entries since the last update, as shown by `rel="next"`. 
+Here, there are more than 100 new entries since the last update, and `rel="next"` shows that these have been paginated. 
 
-In this situation, you could set the `limit` parameter higher. You could also make new requests, increasing the value of `start` each time, until a `Link` header is not returned with `rel="next"`.
+In this situation, you could set the `limit` parameter higher. You could also make new requests, increasing the value of `start` each time, until a `Link` header is returned without `rel="next"`.
 
 ### See what data is in each entry 
 

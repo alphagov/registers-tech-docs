@@ -25,7 +25,7 @@ You should also look at the `Link` header. The response to the example would con
 ```http
 HTTP/1.1 200
 Content-Type: application/json
-Link: <?start=850&limit=100>; rel="next",<?start=650&limit=100>; rel="previous"
+Link: <?start=851&limit=100>; rel="next",<?start=651&limit=100>; rel="previous"
 ```
 
 Here, there are more than 100 new entries since the last update. In this situation, you can follow the links in `rel="next"` until the `Link` header no longer contains one. 

@@ -1,5 +1,3 @@
-### <a name="items">`GET /download-register/`</a>
-
 Download the full contents of the register in a ZIP file.
 
 ```http

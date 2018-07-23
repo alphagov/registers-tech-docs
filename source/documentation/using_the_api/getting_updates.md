@@ -9,9 +9,7 @@ You can regularly compare this value with new queries to a register to see if th
 You can use the [`GET /entries/` endpoint](#getentries) to return specific entries to a register. This takes the parameters `start` and `limit`. 
 
 For example, your last highest entry number from the `government-organisation` register could
-be 750. You could then make a request to find out if there are any new entries. If you receive a response, you'll know there are updates.
-
-Example request:
+be 750. You could then make this request to find out if there are any new entries:
 
 ```http
 GET /entries/?start=751 HTTP/1.1
@@ -20,9 +18,9 @@ Accept: application/json
 Authorization: YOUR-API-KEY-HERE
 ```
 
-You should also look at the `Link` header in the response. 
+If you receive a response, you'll know there are updates.
 
-Example response header:
+You should also look at the `Link` header. In the example response:
 
 ```http
 HTTP/1.1 200
@@ -30,9 +28,9 @@ Content-Type: application/json
 Link: <?start=850&limit=100>; rel="next",<?start=650&limit=100>; rel="previous"
 ```
 
-In the example, there are more than 100 new entries since the last update, as shown by `rel="next"`. 
+Here, there are more than 100 new entries since the last update, as shown by `rel="next"`. 
 
-In this situation, you can set the `limit` parameter higher. You can also make new requests, increasing the value of `start` each time, until you no longer see a `Link` header returned with `rel="next"`.
+In this situation, you could set the `limit` parameter higher. You could also make new requests, increasing the value of `start` each time, until a `Link` header is not returned with `rel="next"`.
 
 ### See what data is in each entry 
 

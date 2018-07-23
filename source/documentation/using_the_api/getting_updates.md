@@ -37,30 +37,9 @@ In this situation, you can set the `limit` parameter higher. You can also make n
 ### See what data is in each entry 
 
 You can use the [`GET /items/{item-hash}` endpoint](#items) on the value in
-the `item-hash` property. 
+the `item-hash` property 
 
-Following the previous example, you could make a request using the
-`item-hash` value in entry 208:
-
-```http
-GET /items/sha-256:f89f36ed8b2a1417237a8e95b810e8ab4ead844277ad7bc7794cb5f83732c976 HTTP/1.1 
-Host: country.register.gov.uk
-Accept: application/json
-Authorization: YOUR-API-KEY-HERE
-```
-
-Example response:
-
-```http
-HTTP/1.1 200
-Content-Type: application/json
-{
-  "country": "SZ",
-  "official-name": "Kingdom of Eswatini",
-  "name": "Eswatini",
-  "citizen-names": "Swazi"
-}
-```
+You can read more about [this and how entries, items and records relate](how-entries-items-and-records-relate).
 
 
 

@@ -1,17 +1,13 @@
 ---
-title: Registers API Documentation
-weight: 10
+title: GOV.UK Registers quick start guide
+weight: 20
 ---
 
-# Introduction
+# GOV.UK Registers quick start guide
 
-Each register has an open, RESTful API you can use to access the data, which allows you to find out information about the register. You can:
-
-* get all the records from the register
-* find records that share attributes with each other
-* download the whole or part of the register
-* find a single record, entry or item
-
-Registers only provide raw data. You cannot use the APIs to search a register or match data. Depending on your requirements, you may have to build indexes on top of a register to fulfil specific requests.
-
-You can use the left-hand bar to navigate through this documentation.
+<%= partial 'documentation/quick_start_guide/generate_an_api_key' %>
+<%= partial 'documentation/quick_start_guide/authenticate_with_your_api_key' %>
+<%= partial 'documentation/quick_start_guide/find_the_base_url_for_registers' %>
+<%= partial 'documentation/quick_start_guide/choose_an_endpoint' %>
+<%= partial 'documentation/quick_start_guide/choose_a_response_format' %>
+<%= partial 'documentation/quick_start_guide/pagination' %>

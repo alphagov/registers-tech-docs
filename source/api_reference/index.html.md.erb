@@ -5,26 +5,16 @@ weight: 30
 
 # API reference 
 
-Click each link for further information:
+Each register has an open, RESTful API you can use to access the data, which
+allows you to find out information about the register. You can:
 
-[`GET /register/`](#get-register) 
+- get all the records from the register
+- find records that share attributes with each other
+- download the whole or part of the register
+- find a single record, entry or item
 
-[`GET /records/`](#get-records) 
+Each register API is read-only. 
 
-[`GET /records/{key}/`](#get-records-key) 
-
-[`GET /records/{key}/entries`](#get-records-key-entries) 
-
-[`GET /records/{field-name}/{field-value}/`](#get-records-field-name-field-value) 
-
-[`GET /entries/`](#get-entries)
-
-[`GET /entries/{entry-number}`](#get-entries-entry-number)
-
-[`GET /items/{item-hash}`](#get-items-item-hash)
-
-[`GET /download-register`](#get-download-register) 
-
-[HTTP status codes](#http-status-codes) 
-
-[Rate limits](#rate-limits) 
+Registers only provide raw data. You cannot use the APIs to search a register
+or match data. Depending on your requirements, you may have to build indexes
+on top of a register to fulfil specific requests.

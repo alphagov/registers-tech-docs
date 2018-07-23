@@ -25,7 +25,7 @@ Example response:
 ```http
 HTTP/1.1 200
 Content-Type: application/json
-Link <?start=206&limit=100>; rel="previous"
+Link <?start=106&limit=100>; rel="previous"
 
 [
   {
@@ -63,7 +63,7 @@ Link <?start=206&limit=100>; rel="previous"
 You can use the [`GET /items/{item-hash}` endpoint](#items) on the value in
 the `item-hash` property. 
 
-Following the previous example, you could make such a request for the
+Following the previous example, you could make a request using the
 `item-hash` value in entry 208:
 
 ```http
@@ -100,12 +100,12 @@ entries than the value of `limit`, you'll see `rel="next"`. For example:
 ```http
 HTTP/1.1 200
 Content-Type: application/json
-<?start=206&limit=100>; rel="next"
+Link <?start=306&limit=100>; rel="next", <?start=106&limit=100>; rel="previous"
 
 ...
 ```
 
 You could then make new requests, increasing the value of `start` each time, until
-you no longer see a `Link` header with `rel="next"`.
+you no longer see a `Link` header returned with `rel="next"`.
 
 

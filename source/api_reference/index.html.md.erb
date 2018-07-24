@@ -5,16 +5,22 @@ weight: 30
 
 # API reference 
 
-Each register has an open, RESTful API you can use to access the data, which
-allows you to find out information about the register. You can:
-
-- get all the records from the register
-- find records that share attributes with each other
-- download the whole or part of the register
-- find a single record, entry or item
+Each register has an open, RESTful API you can use to access the data. 
 
 Each register API is read-only. 
 
 Registers only provide raw data. You cannot use the APIs to search a register
 or match data. Depending on your requirements, you may have to build indexes
 on top of a register to fulfil specific requests.
+
+Using different endpoints, you can:
+
+* view [information about a register](#get-register) 
+* get all [records from a register](#get-records) 
+* get a [specific record within a register based on a particular key](#get-records-key) 
+* get all [entries for a single record based on a particular key](#get-records-key-entries) 
+* get all [records that share a `field-value` for a particular field](#get-records-field-name-field-value) 
+* get all [entries from a register](#get-entries)
+* get a [specific entry from a register](#get-entries-entry-number)
+* get a [specific item within a register](#get-items-item-hash)
+* download the [full contents of a register in a ZIP file](#get-download-register) 

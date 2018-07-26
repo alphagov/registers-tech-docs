@@ -17,3 +17,7 @@ header_links:
 ga_tracking_id: UA-86101042-3
 
 google_site_verification: "IJ5HOXpZrISM6la-YO_iX0rBUC5YFftpexygcKLsNs4"
+
+# Multi-page options
+multipage_nav: true
+collapsible_nav: true

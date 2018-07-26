@@ -1,0 +1,34 @@
+Get a specific record within a register based on a particular key.
+
+Parameters: 
+
+* `key` (Required): A unique UTF-8 string which identifies something in a register.
+
+```http
+GET /records/KIN HTTP/1.1
+Host: local-authority-eng.register.gov.uk
+Accept: application/json
+Authorization: YOUR-API-KEY-HERE
+```
+
+```http
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+  "KIN": {
+    "index-entry-number": "357",
+    "entry-number": "357",
+    "entry-timestamp": "2017-01-26T12:34:10Z",
+    "key": "KIN",
+    "item": [
+      {
+        "local-authority-type": "NMD",
+        "official-name": "Borough Council of King's Lynn and West Norfolk",
+        "local-authority-eng": "KIN",
+        "name": "King's Lynn and West Norfolk"
+      }
+    ]
+  }
+}
+```

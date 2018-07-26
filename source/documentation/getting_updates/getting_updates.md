@@ -1,5 +1,3 @@
-## Getting updates
-
 To follow this guidance, you need to know the current highest entry number for your copy of a register. 
 
 If there are new entries to the register, you can query the register to return the new entries.

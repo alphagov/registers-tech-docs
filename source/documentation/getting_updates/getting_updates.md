@@ -4,7 +4,7 @@ If there are new entries to the register, you can query the register to return t
 
 ### Return all new entries since your last update
 
-You can use the [`GET /entries/` endpoint](/api_reference/#getentries) to return specific entries to a register. 
+You can use the [`GET /entries/` endpoint](/api_reference/get_entries#getentries) to return specific entries to a register. 
 
 For example, your last highest entry number from the `government-organisation` register could be 750. To find out if there are any new entries, you could make this request:
 
@@ -29,8 +29,8 @@ In this example, there are more than 100 new entries since the last update, as s
 
 ### See what data is in each entry 
 
-You can use the [`GET /items/{item-hash}` endpoint](/api_reference/#items) on the value in
+You can use the [`GET /items/{item-hash}` endpoint](/api_reference/get_items_item_hash#items) on the value in
 the `item-hash` property. 
 
-You can read more about [this and how entries, items and records relate](/the_components_of_a_register/how-entries-items-and-records-relate).
+You can read more about [this and how entries, items and records relate](/the_components_of_a_register/#how-entries-items-and-records-relate).
 

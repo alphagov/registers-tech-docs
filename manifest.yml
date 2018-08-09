@@ -1,10 +1,10 @@
 ---
 applications:
-- name: registers-docs-testing
+- name: registers-docs
   memory: 64M
   instances: 2
   buildpack: staticfile_buildpack
   routes:
-    - route: registers-docs-testing-2.cloudapps.digital
+    - route: docs.registers.service.gov.uk
   services:
     - logit-ssl-drain

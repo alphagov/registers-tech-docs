@@ -4,7 +4,6 @@ Get information about a register.
 GET /register/ HTTP/1.1
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
-Authorization: YOUR-API-KEY-HERE
 ```
 
 ```http

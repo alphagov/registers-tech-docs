@@ -9,7 +9,6 @@ Parameters:
 GET /records/?page-index=1&page-size=3 HTTP/1.1
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
-Authorization: YOUR-API-KEY-HERE
 ```
 
 ```http

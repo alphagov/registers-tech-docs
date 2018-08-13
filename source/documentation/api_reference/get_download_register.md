@@ -1,5 +1,7 @@
 Download the full contents of the register in a ZIP file.
 
+Example request:
+
 ```http
 GET /download-register/ HTTP/1.1
 Host: local-authority-eng.register.gov.uk

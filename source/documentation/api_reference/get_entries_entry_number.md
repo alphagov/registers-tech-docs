@@ -1,11 +1,15 @@
 Get a specific entry from a register.
 
+Example request:
+
 ```http
 GET /entries/204/ HTTP/1.1
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE
 ```
+
+Example response:
 
 ```http
 HTTP/1.1 200

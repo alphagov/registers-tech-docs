@@ -5,12 +5,16 @@ Parameters:
 * `page-index` (Optional): Collection page number. Defaults to 1.
 * `page-size` (Optional): Collection page size. Defaults to 100. Maximum is 5000. 
 
+Example request:
+
 ```http
 GET /records/?page-index=1&page-size=3 HTTP/1.1
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE
 ```
+
+Example response:
 
 ```http
 HTTP/1.1 200

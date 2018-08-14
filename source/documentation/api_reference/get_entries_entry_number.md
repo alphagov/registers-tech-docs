@@ -4,7 +4,6 @@ Get a specific entry from a register.
 GET /entries/204/ HTTP/1.1
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
-Authorization: YOUR-API-KEY-HERE
 ```
 
 ```http

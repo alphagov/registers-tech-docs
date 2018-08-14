@@ -12,7 +12,6 @@ For example, your last highest entry number from the `government-organisation` r
 GET /entries/?start=751 HTTP/1.1
 Host: goverment-organisation.register.gov.uk
 Accept: application/json
-Authorization: YOUR-API-KEY-HERE
 ```
 
 If there are no updates, you will receive an empty response. If there are updates, you will receive the new entries in the response.

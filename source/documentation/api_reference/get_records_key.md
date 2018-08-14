@@ -4,11 +4,15 @@ Parameters:
 
 * `key` (Required): A unique UTF-8 string which identifies something in a register.
 
+Example request:
+
 ```http
 GET /records/KIN HTTP/1.1
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 ```
+
+Example response:
 
 ```http
 HTTP/1.1 200

@@ -1,10 +1,14 @@
 Get a specific item within a register.
 
+Example request:
+
 ```http
 GET /items/sha-256:6c4c815895ea675857ee4ec3fb40571ce54faf5ebcdd5d73a2aae347d4003c31/ HTTP/1.1
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 ```
+
+Example response:
 
 ```http
 HTTP/1.1 200

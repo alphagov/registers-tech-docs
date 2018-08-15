@@ -7,9 +7,8 @@ base URL of the form `https://{register}.register.gov.uk/records/`. This means t
 references the full set of records in that register.
 
 For example, you can find the datatype of the `organisation` at
-`https://field.register.gov.uk/records/organisation`. It's `curie`. In [the ‘E09’
-record of the `statistical-geography` register
-register](https://statistical-geography.register.gov.uk/records/E09.json), the
+`https://field.register.gov.uk/records/organisation`. It's `curie`. In the [‘E09’
+record of the `statistical-geography` register](https://statistical-geography.register.gov.uk/records/E09.json), the
 value of the `organisation` field is `government-organisation:D4`, so this record links to the `government-organisation` register. 
 
 In the example, 

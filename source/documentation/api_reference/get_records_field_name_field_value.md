@@ -4,13 +4,11 @@ Parameters:
 
 * `field-name` (Required): Field name. 
 * `field-value` (Required): Field value. 
-* `page-index` (Optional): Collection page number. Defaults to 1.
-* `page-size` (Optional): Collection page size. Defaults to 100. Maximum is 5000. 
 
 Example request:
 
 ```http
-GET /records/local-authority-type/CTY/?page-index=1&page-size=3 HTTP/1.1 
+GET /records/local-authority-type/CTY/ HTTP/1.1 
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE

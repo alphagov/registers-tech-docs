@@ -1,18 +1,11 @@
 ## CURIE
 
-The CURIE (compact URL) datatype provides a mechanism [to link registers](/linked_registers).
+Inspired by the [CURIE Syntax 1.0](https://www.w3.org/TR/curie/), the CURIE
+(compact URL) datatype provides a mechanism [to link
+registers](/linked_registers).  
 
-This datatype is inspired by the [CURIE Syntax
-1.0](https://www.w3.org/TR/curie/) but is of the form `{prefix}:{key}`.
-
-`{prefix}` is:
-
-* always filled
-* mapped to a base URL of the form
-`https://{name-of-register}.register.gov.uk/records/`. 
-
-The CURIE datatype complies with the URL specification rather than URL/URI/IRI
-IETF specifications.
+CURIEs are of the form `{prefix}:{key}`, where `{prefix}` is mapped to a base
+URL of the form `https://{name-of-register}.register.gov.uk/records/`. 
 
 ## Datetime
 

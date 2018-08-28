@@ -5,10 +5,7 @@ Choose a response format by adding the appropriate suffix to the request URL:
 | Format | Suffix | Media type |
 |--------|--------|------------|
 | JSON | .json | application/json |
-| YAML | .yaml | text/ yaml |
 | CSV | .csv | text/csv |
-| TSV | .tsv | text/tsv |
-| Turtle | .ttl | text/ttl |
 
 For example: 
 

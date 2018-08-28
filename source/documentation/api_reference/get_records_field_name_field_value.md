@@ -8,7 +8,7 @@ Parameters:
 Example request:
 
 ```http
-GET /records/local-authority-type/CTY/ HTTP/1.1 
+GET /records/local-authority-type/CTY HTTP/1.1 
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE

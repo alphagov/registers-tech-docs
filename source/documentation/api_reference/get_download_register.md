@@ -3,7 +3,7 @@ Download the full contents of the register in a ZIP file.
 Example request:
 
 ```http
-GET /download-register/ HTTP/1.1
+GET /download-register HTTP/1.1
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 Authorization: YOUR-API-KEY-HERE

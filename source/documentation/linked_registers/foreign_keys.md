@@ -2,7 +2,7 @@
 
 Some fields in registers are foreign keys which link to other registers. 
 
-To find this out, you can look at `https://field.register.gov.uk/records/{field}`. A field is a foreign key to another register if the `register` field is populated at this address. 
+To find this out, you can look at `https://field.register.gov.uk/records/{field}` for a given `{field}`. A field is a foreign key to another register if the `register` field is populated at this address. 
 
 The `local-authority-type` field is a foreign key: `https://field.register.gov.uk/records/local-authority-type`. It’s used in
 the `local-authority-eng` register. This means that the `local-authority-type`

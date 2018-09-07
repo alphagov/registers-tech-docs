@@ -4,15 +4,16 @@ If there are new entries to the register, you can query the register to return t
 
 ### Return all new entries since your last update
 
-You can use the [`GET /entries/` endpoint](/api_reference/get_entries#getentries) to return specific entries to a register. 
+You can use the [`GET /entries` endpoint](/api_reference/get_entries#getentries) to return specific entries to a register. 
 
-For example, your last highest entry number from the `government-organisation` register could be 750. To find out if there are any new entries, you could make this request:
+For example, your last highest entry number from the `government-organisation`
+register could be 750. To find out if there are any new entries, you could
+make this request:
 
 ```http
-GET /entries/?start=751 HTTP/1.1
+GET /entries?start=751 HTTP/1.1
 Host: goverment-organisation.register.gov.uk
 Accept: application/json
-Authorization: YOUR-API-KEY-HERE
 ```
 
 If there are no updates, you will receive an empty response. If there are updates, you will receive the new entries in the response.

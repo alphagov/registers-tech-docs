@@ -1,22 +1,20 @@
 ## Boolean
 
-A datatype which can have one of two states, `True` and `False`. 
+For values which are either "true" or "false". 
 
 ## CURIE
 
-Inspired by the [CURIE Syntax 1.0](https://www.w3.org/TR/curie/), the `CURIE`
-(compact URL) datatype provides a mechanism [to link
-registers](/linked_registers).
+[For linked registers](/linked_registers). Inspired by the [CURIE Syntax
+1.0](https://www.w3.org/TR/curie/).
 
-CURIEs are of the form `{prefix}:{key}`, where `{prefix}` is mapped to a base
-URL `https://{name-of-register}.register.gov.uk/records/`.
+In its string representation, the CURIE datatype is of the form
+`{prefix}:{key}`.  `{prefix}` is mapped to a base URL
+`https://{name-of-register}.register.gov.uk/records/` and `{key}` is a unique
+UTF-8 string which identifies something in a register.
 
 ## Datetime
 
-A datatype for date- and time-related data which conforms to a subset of
-[ISO8601](https://www.iso.org/standard/40874.html). 
-
-The date component is always required.
+For date- and time-related data. 
 
 The following are valid `Datetime` values:
 
@@ -29,9 +27,11 @@ The following are valid `Datetime` values:
 2001-01-31T23:20:55Z
 ```
 
+The date component is always required.
+
 ## Integer
 
-A datatype for base-10 numbers with no fractional components.
+For base-10 numbers with no fractional components.
 
 The following are valid `Integer` values:
 
@@ -45,8 +45,7 @@ Infinity and NaN are invalid.
 
 ## Period
 
-A datatype for periods of time. Conforms to a subset of
-[ISO8601](https://www.iso.org/standard/40874.html).
+For periods of time. 
 
 The following are valid `Period` values:
 
@@ -59,20 +58,16 @@ P1Y2M10DT2H30M
 
 ## String
 
-A datatype for sequences of one or more Unicode characters.
-
-Must be encoded in UTF-8.
-
-Empty strings are invalid.
+For UTF-8 strings.  
 
 ## Text
 
-A subset of the [`String`](#string) datatype. For sequences of Unicode
-characters formatted in Markdown.
+For UTF-8 strings formatted in Markdown. A subset of the [`String`](#string)
+datatype. 
 
 ## Timestamp
 
-A subset of the [`Datetime`](#datetime) datatype.
+For records of particular times. A subset of the [`Datetime`](#datetime) datatype.
 
 The following is a valid `Timestamp` value:
 
@@ -82,4 +77,4 @@ The following is a valid `Timestamp` value:
 
 ## URL
 
-A datatype to contain an absolute URL. 
+For absolute URLs. 

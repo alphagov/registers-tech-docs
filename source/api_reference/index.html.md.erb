@@ -1,13 +1,15 @@
 ---
-title: API reference 
+title: API reference
 weight: 50
 ---
 
-# API reference 
+# API reference
 
-Each register has an open, RESTful API you can use to access the data. 
+<%= partial 'documentation/data_format_deprecation_notice.md' %>
 
-Each register API is read-only. 
+Each register has an open, RESTful API you can use to access the data.
+
+Each register API is read-only.
 
 Registers only provide raw data. You cannot use the APIs to search a register
 or match data. Depending on your requirements, you may have to build indexes
@@ -15,12 +17,12 @@ on top of a register to fulfil specific requests.
 
 Using different endpoints, you can:
 
-* get [information about a register](/api_reference/get_register#get-register) 
-* get all [records from a register](/api_reference/get_records#get-records) 
-* get a [specific record within a register based on a particular key](/api_reference/get_records_key#get-records-key) 
-* get all [entries for a single record based on a particular key](/api_reference/get_records_key_entries#get-records-key-entries) 
-* get all [records that share a `field-value` for a particular field](/api_reference/get_records_field_name_field_value#get-records-field-name-field-value) 
+* get [information about a register](/api_reference/get_register#get-register)
+* get all [records from a register](/api_reference/get_records#get-records)
+* get a [specific record within a register based on a particular key](/api_reference/get_records_key#get-records-key)
+* get all [entries for a single record based on a particular key](/api_reference/get_records_key_entries#get-records-key-entries)
+* get all [records that share a `field-value` for a particular field](/api_reference/get_records_field_name_field_value#get-records-field-name-field-value)
 * get all [entries from a register](/api_reference/get_entries#get-entries)
 * get a [specific entry from a register](/api_reference/get_entries_entry_number#get-entries-entry-number)
 * get a [specific item within a register](/api_reference/get_items_item_hash#get-items-item-hash)
-* download the [full contents of a register in a ZIP file](/api_reference/get_download_register#get-download-register) 
+* download the [full contents of a register in a ZIP file](/api_reference/get_download_register#get-download-register)

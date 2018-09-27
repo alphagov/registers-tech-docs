@@ -2,10 +2,14 @@
 
 Choose a response format by adding the appropriate suffix to the request URL:
 
+<div style="height:1px;font-size:1px;">&nbsp;</div>
+
 | Format | Suffix | Media type |
 |--------|--------|------------|
 | JSON | .json | application/json |
 | CSV | .csv | text/csv |
+
+<div style="height:1px;font-size:1px;">&nbsp;</div>
 
 For example: 
 

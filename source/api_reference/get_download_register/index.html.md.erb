@@ -3,7 +3,19 @@ title: GET /download-register
 weight: 90
 ---
 
-# <a name="get-download-register">`GET /download-register`</a>
+# `GET /download-register`
 <%= partial 'documentation/data_format_deprecation_notice.md' %>
 
-<%= partial 'documentation/api_reference/get_download_register' %>
+Download the full contents of the register in a ZIP file.
+
+Example request:
+
+```http
+GET /download-register HTTP/1.1
+Host: local-authority-eng.register.gov.uk
+Accept: application/json
+```
+
+This will download every entry and item as an individual JSON file. If you only want to download records, use `GET /records`.
+
+

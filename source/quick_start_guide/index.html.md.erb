@@ -7,11 +7,11 @@ weight: 10
 
 <%= partial 'data_format_deprecation_notice.md' %>
 
-### Find the base URL for a register 
+### Find the base URL for a register
 
 Find the base URL for a register on its API inspector. For example, the API
 inspector for the `local-authority-eng` register is located at
-`https://local-authority-eng.register.gov.uk/`. 
+`https://local-authority-eng.register.gov.uk/`.
 
 The following are some examples of base URLs:
 
@@ -25,11 +25,20 @@ The following are some examples of base URLs:
 
 <div style="height:1px;font-size:1px;">&nbsp;</div>
 
-### Choose an endpoint  
+### Append the current version of the API
+The current version of the API is `v1`.
+
+You should add the version of the API you want to use to the end of the base URL. This step is optional for version 1 of the API and will become required when version 1 is no longer supported.
+
+For example, the full base URL for `v1` of the `local-authority-eng` register is `https://local-authority-eng.register.gov.uk/v1/`.
+
+See [version history](/api_reference/version-history) for the full list of versions.
+
+### Choose an endpoint
 
 You can use endpoints as described in the [API reference](/api_reference/)
-section. 
-### Choose a response format 
+section.
+### Choose a response format
 
 Choose a response format by adding the appropriate suffix to the request URL:
 
@@ -42,19 +51,19 @@ Choose a response format by adding the appropriate suffix to the request URL:
 
 <div style="height:1px;font-size:1px;">&nbsp;</div>
 
-For example: 
+For example:
 
 ```
-curl https://country.register.gov.uk/records/GB.json 
+curl https://country.register.gov.uk/records/GB.json
 ```
 
 You can also specify a format by making a request with the `Accept` header. For example:
 
 ```
-curl https://country.register.gov.uk/records/GB --header 'Accept: application/json' 
+curl https://country.register.gov.uk/records/GB --header 'Accept: application/json'
 ```
 
-### Pagination 
+### Pagination
 
 API calls on resource collections are paginated. Follow the specific guidance
 for each endpoint to get the page(s) of entries and records you need. For

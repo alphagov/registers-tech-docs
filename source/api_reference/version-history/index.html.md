@@ -7,7 +7,7 @@ weight: 0
 ## `v1`
 `v1` is the current version of the API.
 
-You can access v1 of the API using these base URLs:
+You can access `v1` of the API using these base URLs:
 
 - `https://{register}.register.gov.uk/v1/`
 - `https://{register}.register.gov.uk/`
@@ -23,7 +23,7 @@ The release schedule is:
 
 You can access the `next` version of the API using this base URL:
 
-- `https://{register-name}.register.gov.uk/next/`
+- `https://{register}.register.gov.uk/next/`
 
 ### Changes
 

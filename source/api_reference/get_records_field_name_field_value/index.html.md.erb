@@ -4,19 +4,18 @@ weight: 50
 ---
 
 # `GET /records/{field-name}/{field-value}`
-<%= partial 'data_format_deprecation_notice.md' %>
 
 Get all records that share a `field-value` for a particular `field-name`.
 
-Parameters: 
+Parameters:
 
-* `field-name` (Required): Field name. 
-* `field-value` (Required): Field value. 
+* `field-name` (Required): Field name.
+* `field-value` (Required): Field value.
 
 Example request:
 
 ```http
-GET /records/local-authority-type/CTY HTTP/1.1 
+GET /records/local-authority-type/CTY HTTP/1.1
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 ```
@@ -28,14 +27,14 @@ HTTP/1.1 200
 Content-Type: application/json
 Link: <?page-index=2&page-size=3>; rel="next"
 
-{  
-   "NTH":{  
+{
+   "NTH":{
       "index-entry-number":"269",
       "entry-number":"269",
       "entry-timestamp":"2016-10-21T16:11:20Z",
       "key":"NTH",
-      "item":[  
-         {  
+      "item":[
+         {
             "local-authority-type":"CTY",
             "official-name":"Northamptonshire County Council",
             "local-authority-eng":"NTH",
@@ -43,13 +42,13 @@ Link: <?page-index=2&page-size=3>; rel="next"
          }
       ]
    },
-   "WAR":{  
+   "WAR":{
       "index-entry-number":"334",
       "entry-number":"334",
       "entry-timestamp":"2016-10-21T16:11:20Z",
       "key":"WAR",
-      "item":[  
-         {  
+      "item":[
+         {
             "local-authority-type":"CTY",
             "official-name":"Warwickshire County Council",
             "local-authority-eng":"WAR",
@@ -57,13 +56,13 @@ Link: <?page-index=2&page-size=3>; rel="next"
          }
       ]
    },
-   "HRT":{  
+   "HRT":{
       "index-entry-number":"208",
       "entry-number":"208",
       "entry-timestamp":"2016-10-21T16:11:20Z",
       "key":"HRT",
-      "item":[  
-         {  
+      "item":[
+         {
             "local-authority-type":"CTY",
             "official-name":"Hertfordshire County Council",
             "local-authority-eng":"HRT",

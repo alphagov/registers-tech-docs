@@ -4,14 +4,13 @@ weight: 20
 ---
 
 # `GET /records`
-<%= partial 'data_format_deprecation_notice.md' %>
 
 Get all records from a register.
 
-Parameters: 
+Parameters:
 
 * `page-index` (Optional): Collection page number. Defaults to 1.
-* `page-size` (Optional): Collection page size. Defaults to 100. Maximum is 5000. 
+* `page-size` (Optional): Collection page size. Defaults to 100. Maximum is 5000.
 
 Example request:
 
@@ -28,14 +27,14 @@ HTTP/1.1 200
 Content-Type: application/json
 Link: <?page-index=2&page-size=3>; rel="next"
 
-{  
-   "KIN":{  
+{
+   "KIN":{
       "index-entry-number":"357",
       "entry-number":"357",
       "entry-timestamp":"2017-01-26T12:34:10Z",
       "key":"KIN",
-      "item":[  
-         {  
+      "item":[
+         {
             "local-authority-type":"NMD",
             "official-name":"Borough Council of King's Lynn and West Norfolk",
             "local-authority-eng":"KIN",
@@ -43,13 +42,13 @@ Link: <?page-index=2&page-size=3>; rel="next"
          }
       ]
    },
-   "GLA":{  
+   "GLA":{
       "index-entry-number":"356",
       "entry-number":"356",
       "entry-timestamp":"2016-11-01T14:16:54Z",
       "key":"GLA",
-      "item":[  
-         {  
+      "item":[
+         {
             "local-authority-type":"SRA",
             "official-name":"Greater London Authority",
             "local-authority-eng":"GLA",
@@ -58,13 +57,13 @@ Link: <?page-index=2&page-size=3>; rel="next"
          }
       ]
    },
-   "LND":{  
+   "LND":{
       "index-entry-number":"355",
       "entry-number":"355",
       "entry-timestamp":"2016-10-31T12:59:03Z",
       "key":"LND",
-      "item":[  
-         {  
+      "item":[
+         {
             "local-authority-type":"CC",
             "official-name":"City of London Corporation",
             "local-authority-eng":"LND",

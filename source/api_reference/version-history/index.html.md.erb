@@ -35,7 +35,8 @@ Registers no longer have "indexes" ([RFC-20](https://github.com/openregister/reg
 These changes mean that:
 
 - you now access the resource at `/blobs/{blob-hash}` instead of `/items/{item-hash}`
-- the field `item-hash` is now named `blob-hash`
+- the field `item-hash` has been replaced by `blob-hash`
+- `blob-hash` is computed differently from the existing `item-hash` vaues, so if your code relies on [updates](/getting_updates), you should fetch all the data again after updating to this version of the API
 - the field `index-entry-number` no longer exists (use `entry-number` instead)
 - `/entries/{entry-number}` now returns a single object instead of an array of objects
 - `/records/{key}` now returns a record object, instead of an object indexed by the entry key

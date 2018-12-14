@@ -46,9 +46,13 @@ These changes mean that:
 - `/records` now returns an array of record objects, instead of an object indexed by entry key
 - `/records/{field-name}/{field-value}` has moved to `name` and `value` query parameters on `/records`, for example `/records/local-authority-type/CTY` has moved to `/records?name=local-authority-type&value=CTY`
 
-### Added `/blobs`
-You can now use the `/blobs` endpoint to retrieve multiple blobs in a single request. This is faster than fetching blobs one by one when using the `/entries` endpoint.
+### New `/blobs` endpoint
+You can use the `/blobs` endpoint to retrieve multiple blobs in a single request. This is faster than fetching blobs one by one.
 
 `/blobs` is paginated, and by default it returns the first 100 blobs in the register. To fetch more data, query the URL provided in the `Link` header that has `rel=next`.
 
 Blobs are returned in the order they were added to the register. This guarantees that complete pages will always contain the same blobs.
+
+### Hash values are formatted using multihash
+
+We now use the [multihash](https://multiformats.io/multihash/) format to format hash values. This means that blob hashes are now prefixed with the string `1220` instead of `sha-256:`.

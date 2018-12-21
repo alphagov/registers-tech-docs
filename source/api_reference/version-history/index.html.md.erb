@@ -4,7 +4,7 @@ weight: 0
 ---
 # Version history
 
-## `v1`
+## Current version
 `v1` is the current version of the API.
 
 You can access `v1` of the API using these base URLs:
@@ -12,7 +12,7 @@ You can access `v1` of the API using these base URLs:
 - `https://{register}.register.gov.uk/v1/`
 - `https://{register}.register.gov.uk/`
 
-## `next`
+## API release cycle
 `next` is a preview of the upcoming API before that API becomes stable. You should not use it in production, since the API may change without notice.
 
 The release schedule is:
@@ -25,12 +25,14 @@ You can access the `next` version of the API using this base URL:
 
 - `https://{register}.register.gov.uk/next/`
 
-### Changes
+## Upgrading from `v1` to `next`
 
-#### Data model changes
-The term "blob" replaces the term "item" ([RFC-14](https://github.com/openregister/registers-rfcs/blob/master/content/blob-resource/index.md)).
+### Data model changes
+The registers data model has changed since v1 of the API:
 
-Registers no longer have "indexes" ([RFC-20](https://github.com/openregister/registers-rfcs/blob/master/content/indexes-removal/index.md)).
+- The term "blob" replaces the term "item" ([RFC-14](https://github.com/openregister/registers-rfcs/blob/master/content/blob-resource/index.md)).
+- Registers no longer have "indexes" ([RFC-20](https://github.com/openregister/registers-rfcs/blob/master/content/indexes-removal/index.md)).
+- Records are no longer defined in terms of entries ([RFC-25](https://github.com/openregister/registers-rfcs/blob/master/content/snapshot-resource/index.md)).
 
 These changes mean that:
 
@@ -39,6 +41,18 @@ These changes mean that:
 - `blob-hash` is computed differently from the existing `item-hash` vaues, so if your code relies on [updates](/getting_updates), you should fetch all the data again after updating to this version of the API
 - the field `index-entry-number` no longer exists (use `entry-number` instead)
 - `/entries/{entry-number}` now returns a single object instead of an array of objects
-- `/records/{key}` now returns a flat record object with the entry key using the reserved field `_id`,  instead of an object indexed by the entry key. In addition the `entry-number` and `entry-timestamp` have been removed from the object. If you require these you can get them using the `/records/{key}/entries` endpoint.  
+
+- `/records/{key}` now returns a flat record object with the entry key using the reserved field `_id`,  instead of an object indexed by the entry key. In addition the `entry-number` and `entry-timestamp` have been removed from the object. If you require these you can get them using the `/records/{key}/entries` endpoint.
 - `/records` now returns an array of record objects, instead of an object indexed by entry key
 - `/records/{field-name}/{field-value}` has moved to `name` and `value` query parameters on `/records`, for example `/records/local-authority-type/CTY` has moved to `/records?name=local-authority-type&value=CTY`
+
+### New `/blobs` endpoint
+You can use the `/blobs` endpoint to retrieve multiple blobs in a single request. This is faster than fetching blobs one by one.
+
+`/blobs` is paginated, and by default it returns the first 100 blobs in the register. To fetch more data, query the URL provided in the `Link` header that has `rel=next`.
+
+Blobs are returned in the order they were added to the register. This guarantees that complete pages will always contain the same blobs.
+
+### Hash values are formatted using multihash
+
+We now use the [multihash](https://multiformats.io/multihash/) format to format hash values. This means that blob hashes are now prefixed with the string `1220` instead of `sha-256:`.

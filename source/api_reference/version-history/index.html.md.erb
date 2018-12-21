@@ -41,3 +41,4 @@ These changes mean that:
 - `/entries/{entry-number}` now returns a single object instead of an array of objects
 - `/records/{key}` now returns a flat record object with the entry key using the reserved field `_id`,  instead of an object indexed by the entry key. In addition the `entry-number` and `entry-timestamp` have been removed from the object. If you require these you can get them using the `/records/{key}/entries` endpoint.  
 - `/records` now returns an array of record objects, instead of an object indexed by entry key
+- `/records/{field-name}/{field-value}` has moved to `name` and `value` query parameters on `/records` e.g. `/records/local-authority-type/CTY` has moved to `/records?name=local-authority-type&value=CTY`

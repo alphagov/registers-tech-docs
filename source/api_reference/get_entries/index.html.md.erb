@@ -9,13 +9,16 @@ Get all entries from a register.
 
 Parameters:
 
-* `start` (Optional): Collection page number. Defaults to 1.
-* `limit` (Optional): Collection page size. Defaults to 100. Maximum is 5000.
+* `start` (Optional): First entry number for the collection slice. Defaults to 1.
+
+Note that you should always rely on the `Link` header to paginate as parameters
+may change in the future.
+
 
 Example request:
 
 ```http
-GET /entries?start=1&limit=10 HTTP/1.1
+GET /entries?start=1 HTTP/1.1
 Host: local-authority-eng.register.gov.uk
 Accept: application/json
 ```
@@ -25,7 +28,7 @@ Example response:
 ```http
 HTTP/1.1 200
 Content-Type: application/json
-Link: <?start=11&limit=10>; rel="next"
+Link: <?start=101>; rel="next"
 
 
 [

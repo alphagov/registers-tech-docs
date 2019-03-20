@@ -49,7 +49,7 @@ These changes mean that:
 ### New `/blobs` endpoint
 You can use the `/blobs` endpoint to retrieve multiple blobs in a single request. This is faster than fetching blobs one by one.
 
-`/blobs` is paginated, and by default it returns the first 100 blobs in the register. To fetch more data, query the URL provided in the `Link` header that has `rel=next`.
+`/blobs` may be paginated. To fetch more data, query the URL provided in the `Link` header that has `rel=next`.
 
 Blobs are returned in the order they were added to the register. This guarantees that complete pages will always contain the same blobs.
 

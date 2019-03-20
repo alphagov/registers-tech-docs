@@ -9,7 +9,11 @@ Get all entries from a register.
 
 Parameters:
 
-* `start` (Optional): Collection page number. Defaults to 1.
+* `start` (Optional): First entry number for the collection slice. Defaults to 1.
+
+Note that you should always rely on the `Link` header to paginate as parameters
+may change in the future.
+
 
 Example request:
 
